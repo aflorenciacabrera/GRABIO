@@ -25,4 +25,16 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
+    public function acceso()
+    {
+        return view('acceder');
+    }
+
+    public function registro()
+    {
+        return view('registro');
+    }
+
 }
