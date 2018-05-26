@@ -27,14 +27,6 @@ class HomeController extends Controller
     }
 
 
-    public function acceso()
-    {
-        return view('acceder');
-    }
-
-    public function registro()
-    {
-        return view('registro');
-    }
-
+    
+    
 }
