@@ -41,33 +41,78 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest 
-                                {{-- login --}}
-                                    <li><div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="email" type="email" class="form-control" name="email" value="" placeholder="Correo electrónico"> </div></li> 
-                                    <li><div class="input-group">
+                                                {{-- login--}}
+
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                
+                             <div class="nav-item dropdown" style="width:160px;height:40px">      
+                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        <i class="glyphicon glyphicon-user"></i> Acceder <span class="caret"></span>
+                                      </a>
+                                      
+                                      <ul class="dropdown-menu multi-level"  style="width:270px"  role="menu" aria-labelledby="navbarDropdowndropdownMenu"> 
+                                            <li><div class="input-group dropdown-item">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <input id="email" type="email" style="width:200px;height:40px" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} " name="email" value="{{ old('email') }}" required autofocus  placeholder="Correo electrónico">
+                                                    @if ($errors->has('email'))
+                                                    <span class="invalid-feedback">
+                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div></li> 
+
+                                            <li class="divider"><br></li>
+
+                                            <li><div class="input-group dropdown-item">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                    <input id="password" type="password" style="width:200px;height:40px"  class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Contraseña"> 
+                                                    @if ($errors->has('password'))
+                                                    <span class="invalid-feedback">
+                                                        <strong>{{ $errors->first('password') }}</strong>
+                                                    </span>
+                                                    @endif
+                                            </div></li>
+                                                 
+                                            <li class="divider"><br></li>
+                                            <div class="dropdown-item">
+                                               <li><button type="submit" class="btn btn-default ">Aceptar</button></li> 
+                                           </div>
+                                      </ul>
+                              </div>
+                     </form> 
+                            {{-- login 2--}}
+                             
+                                  {{-- <div class="input-group">
+                                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="email" type="email" class="form-control" name="email" value="" placeholder="Correo electrónico"> </div>
+
+                                    <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="password" type="password" class="form-control" name="contrasena" value="" placeholder="Contraseña"> </div></li> 
-                                    <li><button type="submit" class="btn btn-default">Acceder</button></li> 
+                                        <input id="password" type="password" class="form-control" name="contrasena" value="" placeholder="Contraseña"> </div> 
+
+                                    <button type="submit" class="btn btn-default">Acceder</button> --}}
+                                   
                                     {{-- <li><a class="nav-link" href="#">{{ __('Acceder') }}</a></li>  --}}
                           @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                          
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            {{ __('Salir') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
                         @endguest
                     </ul>
                 </div>
@@ -77,6 +122,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+
+
     </div>
+
 </body>
 </html>
