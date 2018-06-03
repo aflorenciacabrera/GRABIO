@@ -24,7 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('img/images (9).png')}}" width="50" />
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,11 +40,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
-                        
-                            {{-- <li><a class="nav-link" href="{{ route('acceso') }}">{{ __('Acceder') }}</a></li> --}}
-                            <li><a class="nav-link" href="{{ url('registro') }}">{{ __('Registrarte') }}</a></li>
-                        @else
+                        @guest 
+                                {{-- login --}}
+                                    <li><div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="email" type="email" class="form-control" name="email" value="" placeholder="Correo electrónico"> </div></li> 
+                                    <li><div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="password" type="password" class="form-control" name="contrasena" value="" placeholder="Contraseña"> </div></li> 
+                                    <li><button type="submit" class="btn btn-default">Acceder</button></li> 
+                                    {{-- <li><a class="nav-link" href="#">{{ __('Acceder') }}</a></li>  --}}
+                          @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
