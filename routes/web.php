@@ -24,3 +24,8 @@ Auth::routes();
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+
+Route::get('investigador/registro','InvestigadorController@registro');	
+Route::get('responsable/registro','ResponsableController@registro');	
+Route::get('tecnico/registro','TecnicoController@registro');	

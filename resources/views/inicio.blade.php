@@ -6,7 +6,7 @@
 
         <div class="container">
         <div class="panel panel-default">
-              <div class="col-md-20  text-center"> <label class="control-label "><h3>Registrar </h3></label>
+              <div class="col-md-20  text-center"> <label class="control-label "><h1>Registros </h1></label>
               </div>
           </div> 
         </div>
@@ -17,15 +17,15 @@
                             <div class="container-fluid">
                                 <div class="col-md-12 col-md-offset-4">
                                     {{-- Responsable --}}
-                                    <a class="btn btn-info active btn-lg" role="button" href="{{ route('register') }}">
+                                    <a class="btn btn-info active btn-lg" role="button" href="{{url('responsable/registro') }}">
                                         <img src="{{asset('img/images (2).jpg')}}" width="100" /><br>
                                         <span class="label label-default">Responsable </span> </a>
                                     {{-- Investigador--}}
-                                    <a class="btn btn-warning active btn-lg" type="button" href="{{ route('register') }}">
+                                    <a class="btn btn-warning active btn-lg" type="button" href="{{url('investigador/registro') }}">
                                         <img src="{{asset('img/descarga (3).jpg')}}" width="100" /><br>
                                     <span class="label label-default">Investigador </span> </a>
                                     {{-- Técnico --}}
-                                    <a class="btn btn-danger active btn-lg" type="button"  href="{{ route('register') }}"> 
+                                    <a class="btn btn-danger active btn-lg" type="button"  href="{{ url('tecnico/registro')}}"> 
                                         <img src="{{asset('img/images (12).jpg')}}" width="100" /><br>
                                         <span class="label label-default">Técnico</span></a>
                                     
