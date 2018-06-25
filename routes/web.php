@@ -20,12 +20,11 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-
+// REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
 Route::get('responsable/registro','ResponsableController@registro');	
 Route::get('tecnico/registro','TecnicoController@registro');	
