@@ -53,7 +53,10 @@
                                       </a>
                                       
                                       <ul class="dropdown-menu multi-level"  style="width:270px"  role="menu" aria-labelledby="navbarDropdowndropdownMenu"> 
-                                            <li><div class="input-group dropdown-item">
+								            <div class="form-login text-center">
+								            <h4>Iniciar Sesión</h4>
+							            </div>
+				                                 <li><div class="input-group dropdown-item">
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                                     <input id="email" type="email" style="width:200px;height:40px" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} " name="email" value="{{ old('email') }}" required autofocus  placeholder="Correo electrónico">
                                                     @if ($errors->has('email'))
