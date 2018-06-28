@@ -1,6 +1,6 @@
 <?php
 
-use App\Role;
+use grabio\Role;
 
 use Illuminate\Database\Seeder;
 
@@ -14,13 +14,12 @@ class Roletableseeder extends Seeder
      */
     public function run()
     {
-        //
-        $role = new Role();
-        $role->name = 'admin';
-        $role->description = 'Administrator';
+        $role              = new Role();
+        $role->name        = 'admin';
+        $role->description = 'Admin';
         $role->save();
-        $role = new Role();
-        $role->name = 'user';
+        $role             = new Role();
+        $role->name        = 'user';
         $role->description = 'User';
         $role->save();
     }

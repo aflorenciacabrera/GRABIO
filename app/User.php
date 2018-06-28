@@ -27,12 +27,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function roles(){
-        retun $this
-            ->belongsToMany('App\Role')
-            ->withTimestamps()
-    }
 
+
+
+   public function roles()
+{
+    return $this
+        ->belongsToMany('grabio\Role')
+        ->withTimestamps();
+}
 
 
     public function authorizeRoles($roles)
