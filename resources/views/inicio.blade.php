@@ -55,14 +55,13 @@
        {{-- fin Andministrador --}}
 	
         <div class="container">
-        <div class="panel panel-default">
+        
          <hr style="width:75%;">           
               <div class="col-md-20  text-center"> <label class="control-label "><h1>Registros </h1></label></div>
-          </div> 
-        </div>
+          
                  {{-- Panel de botones --}}
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-10">
                             <div class="container-fluid">
                                 <div class="col-md-12 col-md-offset-4">
                                 	
@@ -82,10 +81,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                 {{--Fin de Panel de Botones--}}
              
-             
+             </div> 
+        </div>
     </div>
 </div>
 
