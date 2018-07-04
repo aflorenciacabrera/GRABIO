@@ -4,9 +4,15 @@
  
         @if(Auth::user()->hasRole('admin'))
             <div>Acceso como administrador</div>
-            @else
+
+            <a class="btn btn-success active btn-lg" role="button" href="{{url('responsable/principal') }}">
+                                      
+                                        Principal  </a>
+           
+
+           @else
             <div>Acceso usuario</div>
-            @endif
+         @endif
            
         <div class="flex-center position-ref full-height">
            

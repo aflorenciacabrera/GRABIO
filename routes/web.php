@@ -28,3 +28,6 @@ Route::get('/welcome', function () {
 Route::get('investigador/registro','InvestigadorController@registro');	
 Route::get('responsable/registro','ResponsableController@registro');	
 Route::get('tecnico/registro','TecnicoController@registro');	
+
+
+Route::get('responsable/principal', 'HomeController@index');
