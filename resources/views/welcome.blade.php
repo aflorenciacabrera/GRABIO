@@ -82,6 +82,13 @@
                     Laravel
                 </div>
 
+            @if(Auth::user()->hasRole('admin'))
+            <div>Acceso como administrador</div>
+            @else
+            <div>Acceso usuario</div>
+            @endif
+            You are logged in!
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
