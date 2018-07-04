@@ -30,7 +30,7 @@ class Usertableseeder extends Seeder
     
 
     $admin->email = 'admin@example.com';
-    $admin->password = bcrypt('secret');
+    $admin->password = bcrypt('123456');
     $admin->save();
     $admin->roles()->attach($role_admin);
     }
