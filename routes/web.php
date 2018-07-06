@@ -29,5 +29,5 @@ Route::get('investigador/registro','InvestigadorController@registro');
 Route::get('responsable/registro','ResponsableController@registro');	
 Route::get('tecnico/registro','TecnicoController@registro');	
 
-
+//Responsable
 Route::get('responsable/principal', 'HomeController@index');
