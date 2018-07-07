@@ -29,7 +29,12 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/welcome';
+     
+
+     protected $redirectTo = '/principal';
+         
+        
+    
 
     /**
      * Create a new controller instance.
@@ -99,11 +104,11 @@ class RegisterController extends Controller
         }
 
     return $user;
+    
+        
     }
 
 
-
-    
 
 
 }

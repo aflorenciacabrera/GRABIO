@@ -20,14 +20,15 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
+
+//Principal
+Route::get('/principal', 'HomeController@index');
 
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
 Route::get('responsable/registro','ResponsableController@registro');	
 Route::get('tecnico/registro','TecnicoController@registro');	
 
-//Responsable
-Route::get('responsable/principal', 'HomeController@index');

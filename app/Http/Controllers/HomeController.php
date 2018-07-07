@@ -3,6 +3,7 @@
 namespace grabio\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -26,10 +27,28 @@ class HomeController extends Controller
     //     return view('home');
     // }
 
-    public function index(Request $request)
+    public function index()
     {
-        $request->user()->authorizeRoles(['user', 'admin']);
-        return view('responsable.principal');
+       // $request->user()->authorizeRoles(['user', 'admin']);
+
+       if(Auth::user()->hasRole('admin')){
+            return view('administrador.principal');
+       }
+       
+           
+        if(Auth::user()->hasRole('responsable')){
+          return view('responsable.principal');
+        }
+        
+
+        if(Auth::user()->hasRole('tecnico')){
+            return view('tecnico.principal');
+        }
+       
+        if(Auth::user()->hasRole('investigador')){
+            return view('investigador.principal');
+        }
+            
     }
     /*
     public function someAdminStuff(Request $request)
