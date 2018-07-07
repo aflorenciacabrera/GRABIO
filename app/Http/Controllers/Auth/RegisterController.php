@@ -3,6 +3,7 @@
 namespace grabio\Http\Controllers\Auth;
 
 use grabio\User;
+use grabio\Role;
 use grabio\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/welcome';
 
     /**
      * Create a new controller instance.
@@ -51,6 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'rol'=> 'required|string|max:225',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -66,14 +68,36 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'rol' => $date['rol'],
+            'rol' => $data['rol'],
             'password' => Hash::make($data['password']),
             
         ]);
+        switch ($data['rol']) {
+            case 'admin':
+             $user
+                ->roles()
+                ->attach(Role::where('name', 'admin')->first());
+            break;
 
-        $user
-        ->roles()
-        ->attach(Role::where('name', 'user')->first());
+            case 'responsable':
+             $user
+                ->roles()
+                ->attach(Role::where('name', 'responsable')->first());
+            break;
+            
+            case 'tecnico':
+                $user
+                ->roles()
+                ->attach(Role::where('name', 'tecnico')->first());
+            break;
+
+           case 'investigador':
+               $user
+                ->roles()
+                ->attach(Role::where('name', 'investigador')->first());
+            break;
+        }
+
     return $user;
     }
 
