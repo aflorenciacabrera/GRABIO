@@ -6,29 +6,34 @@
 
 <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+         <div class=" 8 col-lg-8  col-lg-offset-2  toppad" >
 
-          <div class="panel panel-info">
+          <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">Perfil de Administrador</h3>
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > </div>
+                <div class="col-md-3 col-lg-3 " align="center"> {{-- <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > --}}
+                 <img alt="User Pic" src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;" id="profile-image1" class=" img-responsive"> 
+                        
+                        <input id="profile-image-upload" class="hidden" type="file">
+                        <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div> 
+                      </div>
                               <br>
                 <div class=" col-md-16 col-lg-9 "> 
                   <table class="table table-user-information">
 
                     <tbody>
-                       <tr>
-                       <label>Cambiar foto de perfil:</label>
-                              <form enctype="multipart/form-data" action="{{url('productor/perfil')}}" method="POST">   
+                      
+                      {{--  <label>Cambiar foto de perfil:</label> --}}
+                             {{--  <form enctype="multipart/form-data" action="{{url('productor/perfil')}}" method="POST">   
                                 <input type="file" value="Seleccionar imagen" name="avatar"  accept="image/*" >
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <br>
                                 <input type="submit" value="Cargar" class="pull-right btn btn-sm btn-primary">
-                              </form>
-                      </tr>
+                              </form> --}}
+                     
                       <tr>
                         <td>Department:</td>
                         <td>Programming</td>
@@ -67,17 +72,25 @@
               </div>
             </div>
                  <div class="panel-footer">
-                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary">Mensaje<i class="glyphicon glyphicon-envelope"></i></a>
+                        <a href="edit.html" data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary">Mensaje<i class="glyphicon glyphicon-envelope"></i></a>
                         <span class="pull-right">
-                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning">Editar <i class="glyphicon glyphicon-edit"></i></a>
-                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger">Eliminar<i class="glyphicon glyphicon-remove"></i></a>
-
+                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning">Editar <i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="edit.html" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger">Eliminar<i class="glyphicon glyphicon-remove"></i></a>
                         </span>
                     </div>
             
-          </div>
+         
         </div>
+
+        <script>
+              $(function() {
+    $('#profile-image1').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});       
+              </script> 
       </div>
     </div>
 
     @endsection
+
