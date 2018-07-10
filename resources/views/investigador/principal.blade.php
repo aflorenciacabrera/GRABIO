@@ -3,6 +3,7 @@
 @section('content')
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 {{-- <div class="text-center"><h4>Acceso como Investigador</h4></div> --}}
 
 
@@ -12,7 +13,7 @@
             <div align="center">
               <a href=""></a>
             
-            <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}" >Perfil</a>
+           {{--  <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}" >Perfil</a> --}}
            {{--  <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a>
             <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a> --}}
           <br>
@@ -20,7 +21,10 @@
         </div>
        
 
-  
+        
+         
+
+        
          
 
 <!------ Include the above in your HEAD tag ---------->

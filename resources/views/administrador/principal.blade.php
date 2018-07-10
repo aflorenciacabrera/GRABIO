@@ -10,7 +10,7 @@
             <div align="center">
               <a href=""></a>
             
-            <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('administrador/perfil') }}" >Perfil</a>
+            {{-- <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('administrador/perfil') }}" >Perfil</a> --}}
            {{--  <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a>
             <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a> --}}
           <br>
