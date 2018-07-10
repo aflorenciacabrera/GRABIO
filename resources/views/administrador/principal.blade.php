@@ -1,8 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-<div class="text-center"><h4>Acceso como Administrador</h4></div>
+{{-- <div class="text-center"><h4>Acceso como Administrador</h4></div> --}}
+
+        <div class="gallery  center">
+            <h1 class="gallery-title text-center">Acceso como Administrador</h1>
+            <div align="center">
+              <a href=""></a>
+            
+            <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('administrador/perfil') }}" >Perfil</a>
+           {{--  <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a>
+            <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a> --}}
+          <br>
+        </div>
+        </div>
 <div class="row">
   {{-- <section class="content"> --}}
     <div class="col-md-12 col-md-offset-">

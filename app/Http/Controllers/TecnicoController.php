@@ -12,4 +12,9 @@ class TecnicoController extends Controller
     {
         return view('tecnico.registro' );
     }
+
+    public function perfil()
+    {
+        return view('tecnico.perfil' );
+    }
 }

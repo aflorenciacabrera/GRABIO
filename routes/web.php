@@ -32,3 +32,8 @@ Route::get('investigador/registro','InvestigadorController@registro');
 Route::get('responsable/registro','ResponsableController@registro');	
 Route::get('tecnico/registro','TecnicoController@registro');	
 
+// PERFIL
+Route::get('investigador/perfil','InvestigadorController@perfil');
+Route::get('responsable/perfil','ResponsableController@perfil');	
+Route::get('tecnico/perfil','TecnicoController@perfil');
+Route::get('administrador/perfil','AdministradorController@perfil');

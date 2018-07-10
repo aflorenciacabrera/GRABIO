@@ -13,4 +13,10 @@ class ResponsableController extends Controller
         return view('responsable.registro' );
     }
 
+
+    public function perfil()
+    {
+        return view('responsable.perfil' );
+    }
+
 }

@@ -3,7 +3,18 @@
 @section('content')
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<div class="text-center"><h4>Acceso como Técnico</h4></div>
+{{-- <div class="text-center"><h4>Acceso como Técnico</h4></div> --}}
+ <div class="gallery center">
+            <h1 class="gallery-title text-center">Acceso como Técnico</h1>
+            <div align="center">
+              <a href=""></a>
+            
+            <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('tecnico/perfil') }}" >Perfil</a>
+           {{--  <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a>
+            <a class="btn btn-default filter-button active btn-lg" role="button" href="{{url('investigador/perfil') }}"></a> --}}
+          <br>
+        </div>
+        </div>
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="row affix-row">
