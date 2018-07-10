@@ -15,7 +15,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-3 col-lg-3 " align="center"> {{-- <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > --}}
-                 <img alt="User Pic" src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;" id="profile-image1" class=" img-responsive"> 
+                 <img alt="User Pic" src="{{asset('img/default.jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;" id="profile-image1" class=" img-responsive"> 
                         
                         <input id="profile-image-upload" class="hidden" type="file">
                         <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div> 
