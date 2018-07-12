@@ -26,6 +26,8 @@ Auth::routes();
 
 //Principal
 Route::get('/principal', 'HomeController@index');
+Route::get('/perfil','HomeController@perfil');
+Route::put('/perfil','HomeController@editarPerfil');	
 
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	

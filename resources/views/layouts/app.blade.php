@@ -115,7 +115,7 @@
       <div class=" col-lg-12 text-center">
         <ul class="list-inline ">
             <li> <a class="dropdown-item" role="button" > <h4>{{ Auth::user()->name }}</h4>  </a></li>
-            <li><a class="dropdown-item    " role="button" href="{{url('investigador/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a></li>
+            <li><a class="dropdown-item    " role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a></li>
             <li><a class=" dropdown-item    " role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a></li>
             <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }} <i class="glyphicon glyphicon-share"></i></a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

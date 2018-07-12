@@ -2,6 +2,7 @@
 
 namespace grabio\Http\Controllers;
 
+use grabio\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -50,6 +51,26 @@ class HomeController extends Controller
         }
             
     }
+
+    public function perfil(){
+        if(Auth::user()->hasRole('admin')){
+            return view('administrador.perfil');
+       }
+       
+           
+        if(Auth::user()->hasRole('responsable')){
+          return view('responsable.perfil');
+        }
+        
+
+        if(Auth::user()->hasRole('tecnico')){
+            return view('tecnico.perfil');
+        }
+       
+        if(Auth::user()->hasRole('investigador')){
+            return view('investigador.perfil');
+        }
+    }
     /*
     public function someAdminStuff(Request $request)
     {
@@ -57,6 +78,24 @@ class HomeController extends Controller
         return view(‘some.view’);
     }
     */
+
+    public function editarPerfil(Request $request)
+      {
+        $user =User::findOrFail($request->id);  
+       
+        $user->name2= $request->name2;
+        $user->apellido= $request->apellido;
+        $user->telefono= $request->telefono;
+        $user->telefono= $request->telefono;
+        
+        
+
+        $user->save();
+
+       // return view("institucion.mostrarCapacidad");
+        return redirect(url('/perfil'));
+   
+      }
     
     
 }
