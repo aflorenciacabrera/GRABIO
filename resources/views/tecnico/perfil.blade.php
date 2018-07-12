@@ -6,11 +6,11 @@
 
 <div class="container">
       <div class="row">
-         <div class=" 8 col-lg-8  col-lg-offset-2  toppad" >
+         <div class="  col-lg-8  col-lg-offset-2  toppad" >
 
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Perfil de Técnico</h3>
+              <h3 class="panel-title">Perfil de {{ Auth::user()->name }}</h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -35,49 +35,112 @@
                               </form> --}}
                      
                       <tr>
-                        <td>Department:</td>
-                        <td>Programming</td>
+                        <td>Usuario:</td>
+                        <td>{{ Auth::user()->name }}</td>
                       </tr>
+
                       <tr>
-                        <td>Hire date:</td>
-                        <td>06/23/2013</td>
-                      </tr>
-                      <tr>
-                        <td>Date of Birth</td>
-                        <td>01/24/1988</td>
-                      </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>Gender</td>
-                        <td>Female</td>
-                      </tr>
-                        <tr>
-                        <td>Home Address</td>
-                        <td>Kathmandu,Nepal</td>
-                      </tr>
-                      <tr>
-                        <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
-                      </tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                        </td>
-                           
+                        <td>Nombre :</td>
+                        <td>{{ Auth::user()->name2 }}</td>
                       </tr>
                      
+                      <tr>
+                        <td>Apellido:</td>
+                        <td>{{ Auth::user()->apellido }}</td>
+                      </tr>
+                      <tr>
+                        <td>Correo electrónico:</td>
+                        <td><a href="mailto:info@support.com">{{ Auth::user()->email }}</td>
+                      </tr>
+                      <tr>
+                        <td>Rol que desempeña:</td>
+                        <td>{{ Auth::user()->rol }}</td>
+                      </tr>
+                      <tr>
+                        <td>Teléfono de contacto:</td>
+                        <td>{{ Auth::user()->telefono }}</td>
+                      </tr>
                     </tbody>
                   </table>
                   </div>
+                 
               </div>
             </div>
                  <div class="panel-footer">
                         <a href="edit.html" data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary">Mensaje<i class="glyphicon glyphicon-envelope"></i></a>
                         <span class="pull-right">
-                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning">Editar <i class="glyphicon glyphicon-edit"></i></a>
+                           <a href="#ventana"  data-original-title="Editar Perfil" type="button" class="btn btn-sm btn-warning " data-toggle="modal" > Editar <i class="glyphicon glyphicon-edit"></i></a>
+                        {{-- <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning">Editar <i class="glyphicon glyphicon-edit"></i></a> --}}
                         <a href="edit.html" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger">Eliminar<i class="glyphicon glyphicon-trash"></i></a>
                         </span>
                     </div>
+
+                     <div class="modal fade in" id="ventana" >
+
+                      <div class="modal-dialog">
+                        <div class="container">
+                        <div class="row">
+                           <div class="  col-lg-6 col-lg-offset-0  toppad" >
+                              <div class="modal-content">
+                                 <div class="panel panel-default">
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                    </button>
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">Editar perfil de {{ Auth::user()->name }}</h3>
+                                    </div>
+                                  </div>
+                                  <form method="POST" action="{{url('/perfil')}}" class="bootstrap-form-with-validation">
+                                         {{ csrf_field() }}
+                                        {{ method_field('PUT') }}
+
+                <div class=" col-md-16 col-lg-12 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Usuario:</td>
+                        <td><input  class="form-control" type="" name="name" value="{{ Auth::user()->name }}"></td>
+                      </tr>
+
+                      <tr>
+                        <td>Nombre :</td>
+                        <td><input  class="form-control" type="" name="name2" value="{{ Auth::user()->name2 }}"></td>
+                      </tr>
+                     
+                      <tr>
+                        <td>Apellido:</td>
+                        <td><input  class="form-control" type="" name="apellido" value="{{ Auth::user()->apellido }}"></td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Teléfono de contacto:</td>
+                        <td><input  class="form-control" type="" name="telefono" value="{{ Auth::user()->telefono }}"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="modal-footer">
+                                    
+                                       <div class="row">
+                                              <div class="col-md-4 col-lg-offset-2 ">
+                                                   {{--Boton de Guaedar --}}  
+                                                  
+                                                   <input type="hidden" name="id" value="{{ Auth::user()->id }}" >
+                                                  <input type="submit" data-original-title="Editar perfil" data-toggle="tooltip" class="btn btn-sm btn-success" value="Guardar cambios " > </input>
+                                              </div>
+                                              {{--Boton de Guaedar --}}                                            
+                                       </div>{{-- end row --}}
+                                              
+                                    
+                                  </div>
+                                  </form> 
+                  </div>
+                              </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
             
          
         </div>
@@ -93,4 +156,3 @@
     </div>
 
     @endsection
-
