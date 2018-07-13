@@ -51,7 +51,7 @@
                       </tr>
                       <tr>
                         <td>Correo electrónico:</td>
-                        <td><a href="mailto:info@support.com">{{ Auth::user()->email }}</td>
+                        <td><a href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</td>
                       </tr>
                       <tr>
                         <td>Rol que desempeña:</td>
@@ -68,12 +68,14 @@
               </div>
             </div>
                  <div class="panel-footer">
-                        <a href="edit.html" data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary">Mensaje<i class="glyphicon glyphicon-envelope"></i></a>
-                        <span class="pull-right">
+                    {{-- <div class="btn-group col-lg-offset-4 "> --}}
+                        <a href="#" data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary">Mensaje<i class="glyphicon glyphicon-envelope"></i></a>
+                         <span class="pull-right"> 
                            <a href="#ventana"  data-original-title="Editar Perfil" type="button" class="btn btn-sm btn-warning " data-toggle="modal" > Editar <i class="glyphicon glyphicon-edit"></i></a>
                         {{-- <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning">Editar <i class="glyphicon glyphicon-edit"></i></a> --}}
                         <a href="edit.html" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger">Eliminar<i class="glyphicon glyphicon-trash"></i></a>
-                        </span>
+                         </span> 
+                         {{-- </div> --}}
                     </div>
 
                      <div class="modal fade in" id="ventana" >

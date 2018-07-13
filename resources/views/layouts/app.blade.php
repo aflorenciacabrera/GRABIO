@@ -52,12 +52,14 @@
 <div class="row" style="padding-top:30px">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-       
-                             <div class="nav-item dropdown  navbar-right " style="width:160px;height:40px">      
+
+                             <div class="nav-item dropdown  navbar-right " style="width:160px;height:40px"> 
+                                  
+                                    
                                      <a id="navbarDropdown" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         <i class="glyphicon glyphicon-user"></i> Acceder <span class="caret"></span>
                                       </a>
-                                      
+                                       
                                       <ul class="dropdown-menu multi-level"  style="width:270px"  role="menu" aria-labelledby="navbarDropdowndropdownMenu"> 
 								            <div class="form-login text-center">
 								            <h4>Iniciar Sesión</h4>
@@ -89,6 +91,8 @@
                                                <li><button type="submit" class="btn btn-default ">Aceptar</button></li> 
                                            </div>
                                       </ul>
+
+                              
                               </div>
                      </form> 
                      </div>
@@ -108,21 +112,36 @@
                                       </ul>
                           @else
 
-                         
-
+                      
+ <div class="col-md-8 col-md-offset-4" > <p> <h4> <i class="glyphicon glyphicon-tags"></i> {{ Auth::user()->rol }}:   {{ Auth::user()->name2 }}</h4> </p></div>
 <ul class="navbar-nav ml-auto navbar-right ">
-     <div class="row" style="padding-top:30px"> 
+    
+     <div class="row" style="padding-top:10px"> 
+
       <div class=" col-lg-12 text-center">
-        <ul class="list-inline ">
+
+        <div class="btn-group">
+            
+             <span class="pull-right"> 
+               <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
+            <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a>
+            <a  class="btn btn-sm btn-default" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }} <i class="glyphicon glyphicon-share"></i></a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </span> 
+
+        {{-- <ul class="list-inline ">
             <li> <a class="dropdown-item" role="button" > <h4>{{ Auth::user()->name }}</h4>  </a></li>
-            <li><a class="dropdown-item    " role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a></li>
-            <li><a class=" dropdown-item    " role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a></li>
-            <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }} <i class="glyphicon glyphicon-share"></i></a>
+            <li><a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a></li>
+            <li><a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a></li>
+            <li><a  class="btn btn-sm btn-default" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }} <i class="glyphicon glyphicon-share"></i></a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form></li>                             
-        </ul>  
+        </ul>   --}}
        </div>
+        </div>
         </div>
  </ul>
        
