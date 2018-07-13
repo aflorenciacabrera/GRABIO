@@ -8,8 +8,5 @@ class AdministradorController extends Controller
 {
     //
 
-    public function perfil()
-    {
-        return view('administrador.perfil' );
-    }
+   
 }

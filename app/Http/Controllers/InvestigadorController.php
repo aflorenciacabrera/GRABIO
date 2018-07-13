@@ -13,8 +13,5 @@ class InvestigadorController extends Controller
         return view('investigador.registro' );
     }
 
-     public function perfil()
-    {
-        return view('investigador.perfil' );
-    }
+     
 }

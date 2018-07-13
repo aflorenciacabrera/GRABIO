@@ -56,21 +56,21 @@ class HomeController extends Controller
 
     public function perfil(){
         if(Auth::user()->hasRole('admin')){
-            return view('administrador.perfil');
+            return view('perfil');
        }
        
            
         if(Auth::user()->hasRole('responsable')){
-          return view('responsable.perfil');
+          return view('perfil');
         }
         
 
         if(Auth::user()->hasRole('tecnico')){
-            return view('tecnico.perfil');
+            return view('perfil');
         }
        
         if(Auth::user()->hasRole('investigador')){
-            return view('investigador.perfil');
+            return view('perfil');
         }
     }
     /*

@@ -14,9 +14,5 @@ class ResponsableController extends Controller
     }
 
 
-    public function perfil()
-    {
-        return view('responsable.perfil' );
-    }
 
 }

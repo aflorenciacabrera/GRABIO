@@ -1,12 +1,8 @@
-@extends('layouts.app')
-
-@section('content')
-
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <div class="container">
       <div class="row">
-         <div class="  col-lg-8  col-lg-offset-2  toppad" >
+      	 <div class="  col-lg-8  col-lg-offset-2  toppad" >
 
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -15,15 +11,15 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-3 col-lg-3 " align="center"> {{-- <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > --}}
-               <div class="col-lg-offset-1 " > 
+                 <div class="col-lg-offset-1 " > 
                   <img alt="User Pic" src="/cargas/avatars/{{ Auth::user()->avatar }}" style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
                    </div>
                         <form enctype="multipart/form-data" action="{{url('/perfil')}}" method="POST">   
-                        <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file">
+                        <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
                             <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" value="Cargar" class="pull btn btn-sm btn-default active">
-                        </form> 
+                        </form>  
                       </div>
                               <br>
                 <div class=" col-md-16 col-lg-9 "> 
@@ -159,5 +155,3 @@
               </script> 
       </div>
     </div>
-
-    @endsection
