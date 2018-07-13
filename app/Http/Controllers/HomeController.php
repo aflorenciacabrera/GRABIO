@@ -37,7 +37,6 @@ class HomeController extends Controller
        if(Auth::user()->hasRole('admin')){
             return view('administrador.principal');
        }
-       
            
         if(Auth::user()->hasRole('responsable')){
           return view('responsable.principal');
@@ -88,9 +87,6 @@ class HomeController extends Controller
         $user->name2= $request->name2;
         $user->apellido= $request->apellido;
         $user->telefono= $request->telefono;
-        $user->telefono= $request->telefono;
-        
-        
 
         $user->save();
 
@@ -115,6 +111,7 @@ class HomeController extends Controller
       return redirect(url('/perfil'));
 
     }
+
     
     
 }

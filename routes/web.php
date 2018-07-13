@@ -31,6 +31,8 @@ Route::get('/perfil','HomeController@perfil');
 Route::put('/perfil','HomeController@editarPerfil');	
 Route::post('/perfil', 'HomeController@update_avatar');
 
+
+
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
 Route::get('responsable/registro','ResponsableController@registro');	

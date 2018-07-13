@@ -65,7 +65,7 @@
                             <div class="container-fluid">
                                 <div class="col-md-12 col-md-offset-4">
                                 	
-                                    {{-- Responsable --}}
+                                     {{-- Responsable --}}
                                     <a class="btn btn-success active btn-lg" role="button" href="{{url('responsable/registro') }}">
                                         <img src="{{asset('img/images (2).jpg')}}" width="100" /><br>
                                         <span class="label label-default">Responsable </span> </a>

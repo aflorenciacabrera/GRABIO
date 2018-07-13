@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Usuario') }}</label>
 
@@ -25,7 +25,9 @@
                                 @endif
                             </div>
                         </div>
-                        
+
+                        <input type="hidden" value="tecnico" name="rol">
+                         
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __(' Correo Electrónico') }}</label>
 
@@ -40,8 +42,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" value="investigador" name="rol">
-
+                   
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
@@ -64,13 +65,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                       {{--  <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Aceptar') }}
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
+                        <div class="panel-footer">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Aceptar') }}
+                            </button>
+                            <span class="pull-right">                        
+                            <a href="{{ url('/') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
+                            </span>
+                    </div>
                     </form>
                 </div>
             </div>
