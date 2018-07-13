@@ -15,10 +15,15 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-3 col-lg-3 " align="center"> {{-- <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > --}}
-                 <img alt="User Pic" src="{{asset('img/default.jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;" id="profile-image1" class=" img-responsive"> 
-                        
-                        <input id="profile-image-upload" class="hidden" type="file">
-                        <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div> 
+               <div class="col-lg-offset-1 " > 
+                  <img alt="User Pic" src="/cargas/avatars/{{ Auth::user()->avatar }}" style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
+                   </div>
+                        <form enctype="multipart/form-data" action="{{url('/perfil')}}" method="POST">   
+                        <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file">
+                            <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" value="Cargar" class="pull btn btn-sm btn-default active">
+                        </form> 
                       </div>
                               <br>
                 <div class=" col-md-16 col-lg-9 "> 

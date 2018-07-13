@@ -28,6 +28,7 @@ Auth::routes();
 Route::get('/principal', 'HomeController@index');
 Route::get('/perfil','HomeController@perfil');
 Route::put('/perfil','HomeController@editarPerfil');	
+Route::post('/perfil', 'HomeController@update_avatar');
 
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	

@@ -5,6 +5,8 @@ namespace grabio\Http\Controllers;
 use grabio\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
+ 
 
 class HomeController extends Controller
 {
@@ -82,7 +84,7 @@ class HomeController extends Controller
     public function editarPerfil(Request $request)
       {
         $user =User::findOrFail($request->id);  
-       
+        $user->name= $request->name;
         $user->name2= $request->name2;
         $user->apellido= $request->apellido;
         $user->telefono= $request->telefono;
@@ -96,6 +98,23 @@ class HomeController extends Controller
         return redirect(url('/perfil'));
    
       }
+
+      public function update_avatar(Request $request){
+
+      // Handle the user upload of avatar
+      if($request->hasFile('avatar')){
+        $avatar = $request->file('avatar');
+        $filename = time() . '.' . $avatar->getClientOriginalExtension();
+        Image::make($avatar)->resize(300, 300)->save( public_path('/cargas/avatars/'.$filename ) );
+
+        $user =Auth::user();
+        $user->avatar = $filename;
+        $user->save();
+      }
+
+      return redirect(url('/perfil'));
+
+    }
     
     
 }
