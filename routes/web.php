@@ -40,3 +40,4 @@ Route::get('tecnico/registro','TecnicoController@registro');
 
 // Route::get('responsable/principal','HomeController@getDashboard');
 
+

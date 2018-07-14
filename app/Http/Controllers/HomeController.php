@@ -29,6 +29,10 @@ class HomeController extends Controller
     // {
     //     return view('home');
     // }
+    protected function guard()
+     {
+      return Auth::guard('user');
+     }
 
     public function index()
     {
@@ -128,5 +132,8 @@ class HomeController extends Controller
     }
 
     
-    
+    public function logout(){
+        Session::flush();
+        return redirect('/');
+    }
 }

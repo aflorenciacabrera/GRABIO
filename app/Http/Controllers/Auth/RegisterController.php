@@ -8,6 +8,7 @@ use grabio\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Session;
 
 class RegisterController extends Controller
 {
@@ -23,6 +24,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    
 
     /**
      * Where to redirect users after registration.
@@ -30,7 +32,7 @@ class RegisterController extends Controller
      * @var string
      */
      
-
+     
      protected $redirectTo = '/principal';
          
         
@@ -42,7 +44,7 @@ class RegisterController extends Controller
      * @return void
      */
     public function __construct()
-    {
+     {
         $this->middleware('guest');
     }
 
@@ -103,6 +105,8 @@ class RegisterController extends Controller
                 ->attach(Role::where('name', 'tecnico')->first());
             break;
         }
+
+         Session::flash('registro', 'Tu usuario ha sido registrado con éxito. El administrador del sitio evaluará tu solicitud y realizará el alta definitiva. Te avisaremos con un correo electrónico.');
 
     return $user;
     

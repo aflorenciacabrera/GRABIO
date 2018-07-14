@@ -35,6 +35,7 @@
                <th>Desactivar</th>
              </thead>
              <tbody> 
+              @if($users->count())  
             @foreach( $users as $user )  
              @if($user->hasRole('tecnico'))              
                
@@ -48,8 +49,8 @@
                </tr>
                 @endif 
                  @endforeach 
-                @if($users->count(null))  
-                          
+               
+                      @else    
               <tr>
                 <td colspan="8">No hay técnico registrados !!</td>
               </tr>

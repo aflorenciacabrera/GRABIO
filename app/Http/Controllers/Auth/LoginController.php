@@ -4,6 +4,7 @@ namespace grabio\Http\Controllers\Auth;
 
 use grabio\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Session;
 
 class LoginController extends Controller
 {
@@ -36,4 +37,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+  
 }
