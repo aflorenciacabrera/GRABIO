@@ -38,12 +38,12 @@
                <th>Desactivar</th>
              </thead>
              <tbody>
-             {{--  @if($user->count())   --}}
-              {{-- @foreach($user as $user)   --}}
+              @if($users->count())   
+               @foreach($users as $user)   
               <tr>
-                <td>name</td>
-                <td>name</td>
-                <td>name</td>
+                 <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->rol }}</td> 
                 
                <td><a class="btn btn-primary btn-xs " href="" ><span class="glyphicon glyphicon-ok"></span></a></td> 
                 <td>
@@ -54,12 +54,12 @@
                    <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-remove"></span></button>
                  </td>
                </tr>
-               {{-- @endforeach 
-               @else --}}
+                @endforeach 
+               @else 
                <tr>
                 <td colspan="8">No hay responsables registrados !!</td>
               </tr>
-             {{--  @endif --}}
+              @endif 
             </tbody>
 
           </table>

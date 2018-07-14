@@ -32,14 +32,22 @@ class HomeController extends Controller
 
     public function index()
     {
+
        // $request->user()->authorizeRoles(['user', 'admin']);
 
        if(Auth::user()->hasRole('admin')){
-            return view('administrador.principal');
+         $users = User::where('rol', 'responsable')->take(10)->get();
+          return view('administrador.principal',compact('users'));
        }
            
         if(Auth::user()->hasRole('responsable')){
-          return view('responsable.principal');
+          
+
+           $users = User::all()->take(10);
+
+
+        return view('responsable.principal', compact('users'));
+
         }
         
 
@@ -110,6 +118,13 @@ class HomeController extends Controller
 
       return redirect(url('/perfil'));
 
+    }
+
+     public function getDashboard()
+    {
+        $users = User::all();
+
+        return view('responsable.principal', compact('users'));
     }
 
     

@@ -4,6 +4,7 @@ namespace grabio;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use grabio\user;
 
 class User extends Authenticatable
 {
@@ -27,12 +28,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
 public function users()
-    {
-        return $this->hasMany('grabio\user');
-    }
-
-
+  {
+    return $this->belongsTo('User', 'id');
+  }
 
    public function roles()
 {
