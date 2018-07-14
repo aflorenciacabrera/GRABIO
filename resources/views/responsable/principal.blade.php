@@ -26,6 +26,10 @@
                <a href="" class="btn btn-info" ><span class="glyphicon glyphicon-plus"></span> Crear Biobanco </a>
             </div>         
           </div>
+          {{-- @if(Auth::user()->hasRole('responsable')) --}}
+          
+            {{-- @foreach( $users as $user ) --}}
+             
           <div class="table-container">
             <table id="mytable" class="table table-bordred table-striped">
              <thead>
@@ -37,9 +41,10 @@
              </thead>
              <tbody>            
               <tr>
-                <td>name</td>
-                <td>name</td>
-                <td>name</td>          
+
+                {{-- <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->rol }}</td>    --}}       
                <td><a class="btn btn-primary btn-xs " href="" ><span class="glyphicon glyphicon-ok"></span></a></td> 
                 <td> 
                    <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-remove"></span></button>
@@ -51,7 +56,10 @@
              
             </tbody>
           </table>
-        </div>     
+        </div>   
+       {{--  @endforeach 
+        @endif --}}
+         
  </div>
 
 

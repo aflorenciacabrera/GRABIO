@@ -27,6 +27,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+public function users()
+    {
+        return $this->hasMany('grabio\user');
+    }
 
 
 

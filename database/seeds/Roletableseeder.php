@@ -31,7 +31,7 @@ class Roletableseeder extends Seeder
 
         $role               = new Role();
         $role -> name       = 'tecnico';
-        $role->description  = 'Tecnico';
+        $role->description  = 'Técnico';
         $role -> save();
 
     }

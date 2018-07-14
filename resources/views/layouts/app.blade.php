@@ -113,7 +113,7 @@
                           @else
 
                       
- <div class="col-md-8 col-md-offset-4" > <p> <h4> <i class="glyphicon glyphicon-tags"></i> {{ Auth::user()->rol }}:   {{ Auth::user()->name2 }}</h4> </p></div>
+ <div class="col-md-8 col-md-offset-4" > <p> <h4> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name2 }}</h4> </p></div>
 <ul class="navbar-nav ml-auto navbar-right ">
     
      <div class="row" style="padding-top:10px"> 
