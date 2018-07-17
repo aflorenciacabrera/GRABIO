@@ -28,12 +28,12 @@
     
 </head>
 <body>
-    <div id="app">
+    <div id="app" >
         
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
             
-           <div class="nav-header">
-                <a class="navbar-brand " href="{{ url('#') }}"><img src="{{asset('img/images (9).png')}}" width="40" />
+           <div class="nav-header" >
+                <a class="navbar-brand " href="{{ url('#') }}"><img src="{{asset('img/images (9).png')}}" width="35" />
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,12 @@
                        
                                                 {{-- login--}}
 <div class="row" style="padding-top:30px">
-                    <form method="POST" action="{{ route('login') }}">
+ <div class=" col-lg-12 text-center">
+   <a  class=" btn btn-sm btn-default"  role="button" href="{{ route('login') }}">
+            <i class="glyphicon glyphicon-user"></i> Acceder             
+        </a></div>
+
+                   {{--  <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                              <div class="nav-item dropdown  navbar-right " style="width:160px;height:40px"> 
@@ -90,11 +95,12 @@
                                             <div class="dropdown-item">
                                                <li><button type="submit" class="btn btn-default ">Aceptar</button></li> 
                                            </div>
+
                                       </ul>
 
                               
                               </div>
-                     </form> 
+                     </form> --}} 
                      </div>
                             {{-- login 2--}}
                              
