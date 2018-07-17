@@ -59,5 +59,7 @@ class Kernel extends HttpKernel
         'guest' => \grabio\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'Admin' => \inetweb\Http\Middleware\Admin::class,
+        'UsuarioActivado' => \inetweb\Http\Middleware\UsuarioActivado::class,
     ];
 }

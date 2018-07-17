@@ -36,6 +36,7 @@
                
                <th>Activar</th>
                <th>Desactivar</th>
+               
              </thead>
              <tbody>
               @if($users->count())   
@@ -53,6 +54,7 @@
 
                    <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-remove"></span></button>
                  </td>
+
                </tr>
                 @endforeach 
                @else 
@@ -71,4 +73,6 @@
  </div>
  {{-- </div> --}}
   </div>
+
+ 
 @endsection

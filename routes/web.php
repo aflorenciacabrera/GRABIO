@@ -24,6 +24,9 @@ Auth::routes();
  //     return view('welcome');
  // });
 
+ //Route::group(['middleware'=>['Auth']],function(){
+
+Route::group(['middleware'=>('auth')],function(){
 //Principal
 Route::get('/principal', 'HomeController@index');
 // PERFIL
@@ -31,7 +34,16 @@ Route::get('/perfil','HomeController@perfil');
 Route::put('/perfil','HomeController@editarPerfil');	
 Route::post('/perfil', 'HomeController@update_avatar');
 
+});
+// Route::middleware('Admin')->group(function(){
+// 	Route::get('admin','AdminController@index');
 
+// 	////activar y desactivar usuarios
+
+// 	Route::get('admin/activar/{tipo}/{user}','AdminController@activar');
+// 	Route::get('admin/suspender/{tipo}/{user}','AdminController@suspender');
+	
+// });
 
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
