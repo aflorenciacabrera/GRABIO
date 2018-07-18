@@ -34,6 +34,9 @@ Route::get('/perfil','HomeController@perfil');
 Route::put('/perfil','HomeController@editarPerfil');	
 Route::post('/perfil', 'HomeController@update_avatar');
 
+Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
+Route::get('admin/suspender/{tipo}/{user}','HomeController@suspender');
+
 });
 
 

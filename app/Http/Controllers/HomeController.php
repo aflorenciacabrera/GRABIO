@@ -136,4 +136,41 @@ class HomeController extends Controller
         Session::flush();
         return redirect('/');
     }
+
+public function activar($tipo,$user){
+        if($tipo=='responsable'){
+        $user = User::findOrFail($user);
+      }
+      if ($tipo=='tecnico') {
+        $user = User::findOrFail($user);
+      }
+       if ($tipo=='investigador') {
+        $user = User::findOrFail($user);
+      }
+
+        $user->estado = 1;
+        $user->save();
+
+       return back()->with('activado','Usuario '.$user->name .' activado');
+
+    }
+    public function suspender($tipo,$user){
+      if($tipo=='responsable'){
+        $user = User::findOrFail($user);
+      }
+      if ($tipo=='tecnico') {
+        $user = User::findOrFail($user);
+      }
+       if ($tipo=='investigador') {
+        $user = User::findOrFail($user);
+      }
+        
+        $user->estado = 0;
+        $user->save();
+return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
+      
+
+    }
+
+
 }

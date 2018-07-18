@@ -19,14 +19,23 @@ class Admin
         // {
         //     return redirect('/principal');
         // }
+    if (Auth::user()->hasRole('responsable')) 
+    {
         if (Auth::user()->estado == 0) 
         {
             return redirect('/')->with('activacion','su cuenta aun no ha sido activada, comuniquese con el Administrador');
         }
+        
+            
+    }
+    if (Auth::user()->estado == 0) 
+        {
+            return redirect('/')->with('activacion','su cuenta aun no ha sido activada, comuniquese con el Responsable');
+        }
 
         return $next($request);
     }
-
+    
 
 }
 
