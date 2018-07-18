@@ -19,18 +19,22 @@ class Admin
         // {
         //     return redirect('/principal');
         // }
+
     if (Auth::user()->hasRole('responsable')) 
     {
+       
         if (Auth::user()->estado == 0) 
         {
-            return redirect('/')->with('activacion','su cuenta aun no ha sido activada, comuniquese con el Administrador');
+            return redirect('/')->with('activacion','Su usuario ha sido registrado con éxito, 
+                El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
         }
         
             
     }
     if (Auth::user()->estado == 0) 
         {
-            return redirect('/')->with('activacion','su cuenta aun no ha sido activada, comuniquese con el Responsable');
+            return redirect('/')->with('activacion','Su usuario ha sido registrado con éxito, 
+                El RESPONSABLE del sitio evaluará su solicitud y realizará el alta definitiva.');
         }
 
         return $next($request);

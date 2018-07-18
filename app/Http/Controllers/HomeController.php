@@ -33,7 +33,7 @@ class HomeController extends Controller
      {
       return Auth::guard('user');
      }
-
+    
     public function index()
     {
 

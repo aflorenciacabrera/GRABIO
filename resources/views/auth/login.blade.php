@@ -10,7 +10,12 @@
  
 
                 <div class="card-body">
-                     
+                     @if(Session::has('registro'))     
+                        <div class="alert alert-success text-uppercase text-center" role="alert">
+                            <span>{{Session::get('registro')}}</span> 
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                       </div>
+                    @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

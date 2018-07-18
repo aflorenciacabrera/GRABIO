@@ -90,6 +90,7 @@ class RegisterController extends Controller
              $user
                 ->roles()
                 ->attach(Role::where('name', 'responsable')->first());
+               
             break;
             
 
@@ -97,20 +98,21 @@ class RegisterController extends Controller
                $user
                 ->roles()
                 ->attach(Role::where('name', 'investigador')->first());
+               
             break;
 
             case 'tecnico':
                 $user
                 ->roles()
                 ->attach(Role::where('name', 'tecnico')->first());
+               
             break;
         }
 
-         Session::flash('registro', 'Tu usuario ha sido registrado con éxito. El administrador del sitio evaluará tu solicitud y realizará el alta definitiva. Te avisaremos con un correo electrónico.');
-
+           
     return $user;
     
-        
+       
     }
 
 

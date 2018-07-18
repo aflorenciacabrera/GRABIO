@@ -27,6 +27,8 @@ Auth::routes();
  //Route::group(['middleware'=>['Auth']],function(){
 
 Route::group(['middleware'=>['auth','Admin']],function(){
+
+	
 //Principal
 Route::get('/principal', 'HomeController@index');
 // PERFIL
