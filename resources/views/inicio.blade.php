@@ -72,9 +72,16 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
+                @if(Session::has('activacion'))     
+                        <div class="alert alert-danger text-uppercase text-center" role="alert">
+                            <span>{{Session::get('activacion')}}</span> 
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                       </div>
+                    @endif
                 <div class="card-header text-center"><h4>{{ __('Iniciar Sesión') }}</h4></div>
 
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -106,7 +113,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                       {{--  <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
@@ -114,17 +121,17 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-8 offset-md-5">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

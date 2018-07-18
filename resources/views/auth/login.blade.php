@@ -3,11 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                
+                <div class="card-header text-center">{{ __('Iniciar Sesión') }}</div>
+ 
 
                 <div class="card-body">
+                     
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -39,7 +42,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                       {{--  <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
@@ -47,7 +50,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         
 
@@ -60,9 +63,9 @@
                             <a href="{{ url('/') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
                             </span>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

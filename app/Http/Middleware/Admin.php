@@ -15,10 +15,18 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-         if (!Auth::user()->hasRole('admin')->check()) 
+        //  if (!Auth::user()->hasRole('admin')) 
+        // {
+        //     return redirect('/principal');
+        // }
+        if (Auth::user()->estado == 0) 
         {
-            return redirect('/');
+            return redirect('/')->with('activacion','su cuenta aun no ha sido activada, comuniquese con el Administrador');
         }
+
         return $next($request);
     }
+
+
 }
+
