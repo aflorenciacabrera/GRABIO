@@ -84,6 +84,11 @@ class HomeController extends Controller
             return view('perfil');
         }
     }
+
+     public function espera(){
+          return view('homeEspera');
+        
+    }
     /*
     public function someAdminStuff(Request $request)
     {

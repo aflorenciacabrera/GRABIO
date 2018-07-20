@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get ('/homeEspera','HomeController@espera');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -28,7 +29,7 @@ Auth::routes();
 
 Route::group(['middleware'=>['auth','Admin']],function(){
 
-	
+
 //Principal
 Route::get('/principal', 'HomeController@index');
 // PERFIL
