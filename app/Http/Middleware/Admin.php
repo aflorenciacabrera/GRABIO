@@ -25,16 +25,14 @@ class Admin
        
         if (Auth::user()->estado == 0) 
         {
-            return redirect('/homeEspera')->with('activacion','Su usuario ha sido registrado con éxito, 
-                El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
+            return redirect('/homeEspera')->with('activacion','El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
         }
         
             
     }
     if (Auth::user()->estado == 0) 
         {
-            return redirect('/homeEspera')->with('activacion','Su usuario ha sido registrado con éxito, 
-                El RESPONSABLE del sitio evaluará su solicitud y realizará el alta definitiva.');
+            return redirect('/homeEspera')->with('activacion',' El RESPONSABLE del sitio evaluará su solicitud y realizará el alta definitiva.');
         }
 
         return $next($request);

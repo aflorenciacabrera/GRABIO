@@ -73,12 +73,7 @@
         <div class="col-md-6">
             <div class="card">
 
-                @if(Session::has('activacion'))     
-                        <div class="alert alert-danger  text-center" role="alert">
-                            <span>{{Session::get('activacion')}}</span> 
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                       </div>
-                    @endif
+               
                 <div class="card-header text-center"><h4>{{ __('Iniciar Sesión') }}</h4></div>
 
                 <div class="card-body">

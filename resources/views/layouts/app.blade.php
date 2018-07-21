@@ -33,7 +33,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
             
            <div class="nav-header" >
-                <a class="navbar-brand " href="{{ url('#') }}"><img src="{{asset('img/images (9).png')}}" width="35" />
+                <a class="navbar-brand " ><img src="{{asset('img/images (9).png')}}" width="35" />
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +53,9 @@
  <div class=" col-lg-12 text-center">
    <a  class=" btn btn-sm btn-default"  role="button" href="{{ route('login') }}">
             <i class="glyphicon glyphicon-user"></i> Acceder             
+        </a>
+      <a  class=" btn btn-sm btn-default"  role="button" href="{{ url('/') }}">
+            <i class="glyphicon glyphicon-home"></i> INICIO             
         </a></div>
 
                    {{--  <form method="POST" action="{{ route('login') }}">
@@ -119,7 +122,7 @@
                           @else
 
                       
- <div class="col-md-8 col-md-offset-4" > <p> <h4> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name2 }}</h4> </p></div>
+ <div class="col-md-8 col-md-offset-3" > <p> <h4> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h4> </p></div>
 <ul class="navbar-nav ml-auto navbar-right ">
     
      <div class="row" style="padding-top:10px"> 

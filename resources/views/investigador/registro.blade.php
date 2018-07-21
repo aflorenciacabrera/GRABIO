@@ -4,7 +4,6 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header text-center"><h4>{{ __('Registro Investigador') }}</h4></div>
@@ -12,7 +11,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Usuario') }}</label>
 
@@ -26,7 +25,8 @@
                                 @endif
                             </div>
                         </div>
-                         <input name="rol" valu="investigador" type="hidden" >
+
+                        <input type="hidden" value="investigador" name="rol">
                          
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __(' Correo Electrónico') }}</label>
@@ -42,7 +42,7 @@
                             </div>
                         </div>
 
-                        
+                   
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
