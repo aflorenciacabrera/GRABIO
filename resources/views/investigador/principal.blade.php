@@ -26,46 +26,46 @@
         <li class="active">
           <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
           <h4>
-          Control Panel
+          Unidad de Almacenamiento
           <br>
-          <small>IOSDSV <span class="caret"></span></small>
+          <small>Heladera <span class="caret"></span></small>
           </h4>
           </a>
           <div class="collapse" id="toggleDemo0" style="height: 0px;">
             <ul class="nav nav-list">
-              <li><a href="#">ProfileSubMenu1</a></li>
-              <li><a href="#">ProfileSubMenu2</a></li>
-              <li><a href="#">ProfileSubMenu3</a></li>
+              <li><a href="#">20°-Congelador</a></li>
+              <li><a href="#">80°-Congelador</a></li>
+              <li><a href="#">160°-Congelador</a></li>
             </ul>
           </div>
         </li>
         <li>
           <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
-          <span class="glyphicon glyphicon-cloud"></span> Submenu 1 <span class="caret pull-right"></span>
+          <span class="glyphicon glyphicon-cloud"></span> Torre A <span class="caret pull-right"></span>
           </a>
           <div class="collapse" id="toggleDemo" style="height: 0px;">
             <ul class="nav nav-list">
-              <li><a href="#">Submenu1.1</a></li>
-              <li><a href="#">Submenu1.2</a></li>
-              <li><a href="#">Submenu1.3</a></li>
+              <li><a href="#">caja.1</a></li>
+              <li><a href="#">caja.2</a></li>
+              <li><a href="#">caja.3</a></li>
             </ul>
           </div>
         </li>
         <li class="active">
           <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed">
-          <span class="glyphicon glyphicon-inbox"></span> Submenu 2 <span class="caret pull-right"></span>
+          <span class="glyphicon glyphicon-inbox"></span> Torre B  <span class="caret pull-right"></span>
           </a>
           <div class="collapse" id="toggleDemo2" style="height: 0px;">
             <ul class="nav nav-list">
-              <li><a href="#">Submenu2.1</a></li>
-              <li><a href="#">Submenu2.2</a></li>
-              <li><a href="#">Submenu2.3</a></li>
+              <li><a href="#">caja.1</a></li>
+              <li><a href="#">caja.2</a></li>
+              <li><a href="#">caja.3</a></li>
             </ul>
           </div>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
-        <li><a href=""><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Archivos</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Historial </a></li>
+        <li><a href=""><span class="glyphicon glyphicon-cog"></span> Configuración</a></li>
       </ul>
       </div><!--/.nav-collapse -->
     </div>

@@ -15,6 +15,8 @@ class CreateMuestrasTable extends Migration
     {
         Schema::create('muestras', function (Blueprint $table) {
             $table->increments('id');
+             $table->integer('paciente_id')->unsigned();
+            $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

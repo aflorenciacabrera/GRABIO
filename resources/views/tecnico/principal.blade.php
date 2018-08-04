@@ -24,9 +24,9 @@
         <li class="active">
           <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
           <h4>
-          Control Panel
+          Unidad de Almacenamiento
           <br>
-          <small>IOSDSV <span class="caret"></span></small>
+          <small>Heladera <span class="caret"></span></small>
           </h4>
           </a>
           <div class="collapse" id="toggleDemo0" style="height: 0px;">

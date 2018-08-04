@@ -4,7 +4,7 @@ namespace grabio;
 
 use Illuminate\Database\Eloquent\Model;
 
-class muestras extends Model
+class proceso extends Model
 {
     //
 }
