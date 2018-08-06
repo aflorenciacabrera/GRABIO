@@ -1,6 +1,6 @@
 
 
-@extends('layouts.app')
+@extends('layouts.menu')
 @section('content')
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   
