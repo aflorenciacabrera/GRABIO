@@ -1,10 +1,13 @@
-@extends('layouts.app')
 
+
+@extends('layouts.app')
 @section('content')
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  
 
-                   <div class="row">
- <div class="text-center col-md-6 col-md-offset-3">
+  {{-- Mensaje de activado o desactivado--}}  
+<div class="row">
+ <div class="text-center col-md-6 col-md-offset-2">
                @if(session('activado'))
                         <div class="alert alert-success text-center" role="alert">
 
@@ -19,12 +22,13 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                        </div>
                     @endif 
-      </div> </div>
+      </div> 
+</div>
     
 {{-- lista de Técnicos --}}
 
 <div class="row">
-    <div class="col-md-12 col-md-offset-">    
+    <div class="col-md-12 col-md-offset-0">    
        
         <div class="panel-body">
           <div class="pull-left"><h3>Lista de técnico</h3></div>
@@ -134,6 +138,9 @@
 </div>
 
 
+         
+     
+
 <script src="{{ asset('js/jquery.min.js') }} "></script>
   <script>
 
@@ -162,5 +169,6 @@
             })
         })
     </script>
+    
 
 @endsection

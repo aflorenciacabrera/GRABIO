@@ -177,5 +177,9 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
 
     }
 
+    public function paciente(){
+      return view('paciente');
+    }
+
 
 }

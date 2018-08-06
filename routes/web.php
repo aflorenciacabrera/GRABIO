@@ -36,10 +36,11 @@ Route::get('/principal', 'HomeController@index');
 Route::get('/perfil','HomeController@perfil');
 Route::put('/perfil','HomeController@editarPerfil');	
 Route::post('/perfil', 'HomeController@update_avatar');
-
+//Activar y suspender usuarios
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
 Route::get('admin/suspender/{tipo}/{user}','HomeController@suspender');
-
+//Pacientes
+Route::get('/paciente','HomeController@paciente');
 });
 
 
