@@ -75,11 +75,14 @@
             </div>
         </nav>
  
-      {{-- <div class="row affix-row"> --}}
+   
+<!------ Menu Vertical ---------->
+
+{{-- <div class="row affix-row"> --}}
     <div class="col-sm-3 col-md-2 affix-sidebar">
-        <div class="sidebar-nav">
-  <div class="navbar navbar" role="navigation">
-    <div class="navbar-header">
+    <div class="sidebar-nav navbar ">
+  <div class="navbar navbar-default" > 
+   {{--  <div class="navbar-header ">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
@@ -87,57 +90,73 @@
       <span class="icon-bar"></span>
       </button>
       <span class="visible-xs navbar-brand">Sidebar menu</span>
-    </div>
-    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+    </div> --}}
+{{--     <div class="navbar-collapse collapse sidebar-navbar-collapse active"> --}}
       <ul class="nav navbar-nav" id="sidenav01">
-        {{-- <li class=""> --}}
-          <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed ">
+        <li class="active">
+          <a data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
           <h4>
-          Unidad de Almacenamiento
+          Unidad de almacenamientoo
           <br>
-          <small>Heladera <span class="caret"></span></small>
+          <small>Biobanco {{-- <span class="caret"> --}}</span></small>
           </h4>
           </a>
-          <div class="collapse" id="toggleDemo0" style="height: 0px;">
+         {{--  <div class="collapse" id="toggleDemo0" style="height: 0px;"> --}}
             <ul class="nav nav-list">
-              <li><a href="#">ProfileSubMenu1</a></li>
-              <li><a href="#">ProfileSubMenu2</a></li>
-              <li><a href="#">ProfileSubMenu3</a></li>
+              <li><a href="#">Pacientes</a></li>
+              <li><a href="#">Muestras</a></li>
+              <li><a href="#">Historicos</a></li>
             </ul>
-          </div>
-       {{--  </li> --}}
-        {{-- <li> --}}
-          <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
-          <span class="glyphicon glyphicon-cloud"></span> Submenu 1 <span class="caret pull-right"></span>
+         {{--  </div> --}}
+        </li>
+        <li class="active">
+          <a class="active">
+          {{-- <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed " class="active" > --}}
+          <span class="glyphicon glyphicon-cloud"></span> Freezer {{-- <span class="caret pull-right"></span> --}}
+       </a> 
+       {{--    <div class="collapse" id="toggleDemo" style="height: 0px;"> --}}
+            <ul class="nav nav-list">
+              <li><a href="#">120º</a></li>
+              <li><a href="#">60º</a></li>
+              <li><a href="#">30º</a></li>
+            </ul>
+         {{--  </div> --}}
+        </li>
+        <li class="active">
+          <a >
+          {{-- <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="active"> --}}
+          <span class="glyphicon glyphicon-inbox"></span> Heladera {{--  <span class="caret pull-right"></span> --}}
           </a>
-          <div class="collapse" id="toggleDemo" style="height: 0px;">
+          {{-- <div class="collapse" id="toggleDemo2" style="height: 0px;"> --}}
             <ul class="nav nav-list">
-              <li><a href="#">Submenu1.1</a></li>
-              <li><a href="#">Submenu1.2</a></li>
-              <li><a href="#">Submenu1.3</a></li>
+               
+              <li><a href="#">Estante</a></li><br><br>
+              <li><a href="#">Caja</a></li><br><br>
+              <li><a href="#">estante</a></li><br>
+               <li><a href="#">Slot</a></li>
             </ul>
-          </div>
-        {{-- </li> --}}
-        {{-- <li class="active"> --}}
-          <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed">
-          <span class="glyphicon glyphicon-inbox"></span> Submenu 2 <span class="caret pull-right"></span>
-          </a>
-          <div class="collapse" id="toggleDemo2" style="height: 0px;">
-            <ul class="nav nav-list">
-              <li><a href="#">Submenu2.1</a></li>
-              <li><a href="#">Submenu2.2</a></li>
-              <li><a href="#">Submenu2.3</a></li>
-            </ul>
-          </div>
-        {{-- </li> --}}
-       {{--  <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
+      {{--     </div>  --}}
+        </li>
+        {{-- <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
         <li><a href=""><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li> --}}
       </ul>
-      </div><!--/.nav-collapse -->
-    </div>
+     {{--  </div>  --}}
+    </div> 
   </div>
-    </div>{{-- </div> --}}
+  </div>
+   </div><!--/.nav-collapse -->
+ {{--  <div class="col-sm-9 col-md-10 affix-content">
+    <div class="container">
+      
+        <div class="page-header">
+  <h3><span class="glyphicon glyphicon-th-list"></span> Navigation</h3>
+</div>
+<p></p>
+      
+    </div>
+  </div> --}}
+{{-- </div> --}}
 @endguest 
    
         <main class="py-4">
