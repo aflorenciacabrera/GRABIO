@@ -181,5 +181,14 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return view('paciente');
     }
 
+     public function muestra(){
+      return view('muestra');
+    }
+
+
+    public function historico(){
+      return view('historico');
+    }
+
 
 }

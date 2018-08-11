@@ -41,6 +41,10 @@ Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
 Route::get('admin/suspender/{tipo}/{user}','HomeController@suspender');
 //Pacientes
 Route::get('/paciente','HomeController@paciente');
+//Muestras
+Route::get('/muestra','HomeController@muestra');
+//Historicos
+Route::get('/historico','HomeController@historico');
 });
 
 
