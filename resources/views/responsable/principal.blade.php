@@ -33,7 +33,7 @@
         <div class="panel-body">
           <div class="pull-left"><h3>Lista de técnico</h3></div>
           <div class="pull-right">
-            <a href="" class="btn btn-info" ><span class="glyphicon glyphicon-plus"></span> Crear Biobanco </a>
+           {{--  <a href="" class="btn btn-info" ><span class="glyphicon glyphicon-plus"></span> Crear Biobanco </a> --}}
           </div>
           <div class="table-container">
             <table id="mytable" class="table table-bordred table-striped">

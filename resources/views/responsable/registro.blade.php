@@ -7,7 +7,72 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center"><h4>{{ __('Registro Responsable') }}</h4></div>
+                <div class="card-header text-center"><h4>{{ __('Registro Responsable') }}</h4> 
+                     <div class="pull-right"><a href="#biobanco"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Biobanco <i class="glyphicon-plus" ></i></a></div>
+
+                    {{-- Inicio de ventana de Biobanco --}}
+                     <div class="modal fade in" id="biobanco" >
+                      <div class="modal-dialog">
+                        <div class="container">
+                        <div class="row">
+                           <div class="  col-lg-6 col-lg-offset-0  toppad" >
+                              <div class="modal-content">
+                                 <div class="panel panel-default">
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                    </button>
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">Crear Biobanco </h3>
+                                    </div>
+                                  </div>
+                         <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                                <div class=" col-md-16 col-lg-12 "> 
+                                          <table class="table table-user-information">
+                                            <tbody>
+                                              <tr>
+                                                <td>Nombre:</td>
+                                                <td><input  class="form-control" type="" name="name" ></td>
+                                              </tr>
+
+                                              <tr>
+                                                <td>Código :</td>
+                                                <td><input  class="form-control" type="" name="name2" ></td>
+                                              </tr>
+                                             
+                                              <tr>
+                                                <td>Decripción:</td>
+                                                <td><input  class="form-control" type="" name="apellido" ></td>
+                                              </tr>
+                                              
+                                              <tr>
+                                                <td>Teléfono de contacto:</td>
+                                                <td><input  class="form-control" type="" name="telefono" ></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+
+                                          <div class="modal-footer">
+                                                            
+                                               <div class="row">
+                                                      <div class="col-md-4 col-lg-offset-2 ">
+                                                           {{--Boton de Guaedar --}}  
+                                                         
+                                                          <button type="submit" class="btn btn-primary">
+                                                            {{ __('Aceptar') }}
+                                                        </button>
+                                                      </div>
+                                                      {{--Boton de Guaedar --}}                                            
+                                               </div>{{-- end row --}}                                                          
+                                          </div> 
+                                           </form>        
+                                  </div>
+                              </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> {{-- Fin de ventna --}}
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

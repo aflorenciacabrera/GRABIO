@@ -6,7 +6,77 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center"><h4>{{ __('Registro Técnico') }}</h4></div>
+                <div class="card-header text-center"><h4>{{ __('Registro Técnico') }}</h4><div class="pull-right"><a href="#seleccion"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Seleccionar <i class="glyphicon-plus" ></i></a></div>
+
+<div class="modal fade in" id="seleccion" >
+                      <div class="modal-dialog">
+                        <div class="container">
+                        <div class="row">
+                           <div class="  col-lg-6 col-lg-offset-0  toppad" >
+                              <div class="modal-content">
+                                 <div class="panel panel-default">
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                    </button>
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">Seleccione Representante </h3>
+                                    </div>
+                                  </div>
+                         <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                                <div class=" col-md-16 col-lg-12 "> 
+                                          <table class="table table-user-information">
+                                            <tbody>
+                                              <tr>
+                                                <td>Representante:</td>
+                                               
+                                                <td><select   >
+                                                    <option value="">Representante</option>
+                                                     
+                                                </select> </td>
+                                               
+                                              </tr>
+                                             
+                                                <td><div class="panel-title ">Datos de Biobanco</div> </td>
+                                                
+                                             
+                                              <tr>
+                                                <td>Nombre:</td>
+                                                <td><label for=""></label></td>
+                                              </tr>
+                                              
+                                              <tr>
+                                                <td>Descrición</td>
+                                                 <td><label for=""></label></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Telefono:</td>
+                                                 <td><label for=""></label></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+
+                                          <div class="modal-footer">
+                                                            
+                                               <div class="row">
+                                                      <div class="col-md-4 col-lg-offset-2 ">
+                                                           {{--Boton de Guaedar --}}  
+                                                         
+                                                          <button type="submit" class="btn btn-primary">
+                                                            {{ __('Aceptar') }}
+                                                        </button>
+                                                      </div>
+                                                      {{--Boton de Guaedar --}}                                            
+                                               </div>{{-- end row --}}                                                          
+                                          </div> 
+                                           </form>        
+                                  </div>
+                              </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> {{-- Fin de ventna --}}
+            </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

@@ -3,6 +3,7 @@
 namespace grabio\Http\Controllers;
 
 use grabio\User;
+use grabio\paciente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -178,13 +179,40 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
     }
 
     public function paciente(){
-      return view('paciente');
+      return view('paciente.paciente');
     }
+
+    public function pacienteRegistro(){
+      return view('paciente.pacienteRegistro');
+    }
+
+    public function crearPaciente (Request $request)
+      {
+
+         
+        $p = new paciente; 
+
+      $p->nombre= $request->nombre;
+      $p->apellido= $request->apellido;
+      $p->dni= $request->dni;
+      $p->direccion= $request->direccion;
+      $p->telefono= $request->telefono;
+      $p->grufo= $request->grufo;
+      
+      $p->save();
+
+     // return view("institucion.mostrarCapacidad");
+      return redirect(url('paciente'));
+   
+      }
 
      public function muestra(){
-      return view('muestra');
+      return view('muestra.muestra');
     }
 
+    public function muestraRegistro(){
+      return view('muestra.muestraRegistro');
+    }
 
     public function historico(){
       return view('historico');
