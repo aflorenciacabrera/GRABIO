@@ -11,17 +11,35 @@
                     <form method="POST" action="{{url('muestra/ingreso')}}">
                         @csrf
 
+                        <ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 1</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> Nombre</label>
+                            <label for="name" class="col-md-2 col-form-label "> Nombre:</label>
 
                             <div class="col-md-8">
                                 <input id="name" type="text" class="form-control" name="nombre" value="" required autofocus>
                             </div>
                         </div>
-                        
-                       
 
+                        <div class="form-group row">
+                            <label for="name" class="col-md-2 col-form-label "> tipo:</label>
 
+                            <div class="col-md-8">
+                                <input id="name" type="text" class="form-control" name="tipo" value="" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-2 col-form-label "> </label>
+
+                            <div class="col-md-8">
+                                <input id="name" type="text" class="form-control" name="" value="" required autofocus>
+                            </div>
+                        </div>
 
                         <div class="panel-footer">
                             <button type="submit" class="btn btn-primary">

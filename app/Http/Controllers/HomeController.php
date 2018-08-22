@@ -197,7 +197,9 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       $p->dni= $request->dni;
       $p->direccion= $request->direccion;
       $p->telefono= $request->telefono;
-      $p->grufo= $request->grufo;
+      $p->grupo= $request->grupo;
+      $p->factor= $request->factor;
+      $p->sexo= $request->sexo;
       
       $p->save();
 

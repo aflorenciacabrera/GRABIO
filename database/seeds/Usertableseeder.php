@@ -35,6 +35,7 @@ class Usertableseeder extends Seeder
     $responsable->name='Responsable';
     $responsable->email = 'respo@example.com';
     $responsable->rol = 'responsable';
+    $admin->estado = '1';
     $responsable->password = bcrypt('123456');
     $responsable->save();
     $responsable->roles()->attach($role_responsable);
@@ -43,6 +44,7 @@ class Usertableseeder extends Seeder
     $tecnico->name = 'Tecnico'; 
     $tecnico->email = 'tecnico@example.com';
     $tecnico->rol = 'tecnico';
+    $admin->estado = '1';
     $tecnico->password = bcrypt('123456');
     $tecnico->save();
     $tecnico->roles()->attach($role_tecnico);
@@ -51,6 +53,7 @@ class Usertableseeder extends Seeder
     $investigador->name = 'Investigador';
     $investigador->email = 'investi@example.com';
     $investigador->rol = 'investigador';
+    $admin->estado = '1';
     $investigador->password =bcrypt('123456');
     $investigador->save();
     $investigador->roles()->attach($role_investigador);
