@@ -11,7 +11,7 @@
                     <form method="POST" action="{{url('muestra/ingreso')}}">
                         @csrf
 
-                        <ul class="nav nav-tabs">
+{{-- <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
   <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
   <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
@@ -30,8 +30,7 @@
     <h3>Menu 2</h3>
     <p>Some content in menu 2.</p>
   </div>
-</div>
-
+</div> --}}
 
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Nombre:</label>
