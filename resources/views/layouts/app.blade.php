@@ -52,9 +52,9 @@
                                                 {{-- login--}}
 <div class="row" style="padding-top:30px">
  <div class=" col-lg-12 text-center">
-   <a  class=" btn btn-sm btn-default"  role="button" href="{{ route('login') }}">
+   {{-- <a  class=" btn btn-sm btn-default"  role="button" href="{{ route('login') }}">
             <i class="glyphicon glyphicon-user"></i> Acceder             
-        </a>
+        </a> --}}
       <a  class=" btn btn-sm btn-default"  role="button" href="{{ url('/') }}">
             <i class="glyphicon glyphicon-home"></i> INICIO             
         </a></div>

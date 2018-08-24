@@ -33,22 +33,22 @@
 </div> --}}
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> Nombre:</label>
+                            <label for="name" class="col-md-2 col-form-label "> Muestra:</label>
 
                             <div class="col-md-8">
-                                <input id="name" type="text" class="form-control" name="nombre" value="" required autofocus>
+                                <input id="name" type="text" class="form-control" name="cesion_id" value="" required autofocus>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> tipo:</label>
+                            <label for="name" class="col-md-2 col-form-label "> Fuente:</label>
 
                             <div class="col-md-8">
                                 <input id="name" type="text" class="form-control" name="tipo" value="" required autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> </label>
+                            <label for="name" class="col-md-2 col-form-label ">Naturaleza </label>
 
                             <div class="col-md-8">
                                 <input id="name" type="text" class="form-control" name="" value="" required autofocus>

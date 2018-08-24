@@ -96,7 +96,7 @@
         <li class="active">
           <a data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
           <h4>
-          Unidad de almacenamientoo
+          Unidad de almacenamiento
           <br>
           <small>Biobanco {{-- <span class="caret"> --}}</span></small>
           </h4>

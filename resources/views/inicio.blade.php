@@ -68,13 +68,34 @@
     
 {{-- 
 <div class="container collapse menu" id="menu"> --}}
-    <div class="container ">
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#acceder">Acceder</a></li>
+  <li ><a data-toggle="tab" href="#registrar">Registrar</a></li>
+  
+</ul>
+
+{{-- <div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="menu1" class="tab-pane fade  ">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  
+</div>  --}}
+{{-- <br> <hr style="width:75%;">         --}} 
+<div class="tab-content">
+    <div id="acceder" class="tab-pane fade in active">
+    <div  class="container ">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
 
                
-                <div class="card-header text-center"><h4>{{ __('Iniciar Sesión') }}</h4></div>
+                <div class="card-header text-center"><h4>{{ __('Iniciar sesión') }}</h4></div>
 
                 <div class="card-body">
 
@@ -136,12 +157,14 @@
         </div>
     </div>
 </div>
-<br> <hr style="width:75%;">         
-         <div class="container ">
+</div>
+{{-- <br> <hr style="width:75%;">  --}}
+<div id="registrar" class="tab-pane fade  ">        
+         <div id="registra"   class="container ">
    
         <div class="col-md-8 col-md-offset-2">
             <div class="card">
-             <div class="card-header text-center"><h4>Registros</h4> </div>
+             <div class="card-header text-center"><h4>Registrarte como</h4> </div>
           
               
           <br>
@@ -177,6 +200,8 @@
  
  
     </div>
+</div>
+</div>
 </div>
 
  </div>
