@@ -7,6 +7,8 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
+
+              
                 <div class="card-header text-center"><h4>{{ __('Registro Responsable') }}</h4> 
                      <div class="pull-right"><a href="#biobanco"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Biobanco <i class="glyphicon-plus" ></i></a></div>
 
@@ -18,6 +20,7 @@
                            <div class="  col-lg-6 col-lg-offset-0  toppad" >
                               <div class="modal-content">
                                  <div class="panel panel-default">
+
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                                     </button>
                                     <div class="panel-heading">
@@ -75,8 +78,20 @@
                 </div>
 
                 <div class="card-body">
+                  
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+
+                        <div class="col-md-4 col-lg-3 " align="center">
+                           <div class="col-lg-offset-2 " > 
+                            <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
+                            </div>
+                                 
+                                  <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
+                                      <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  
+                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                          {{-- <input type="submit" value="Cargar" class="pull btn btn-sm btn-default active">  --}}           
+                        </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label ">{{ __('Usuario') }}</label>
@@ -159,6 +174,10 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                         <div class="form-group row">
+                        <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificacion por GRABIO </label>
+                        <input type="file" accept="application/pdf" /> 
+                         </div>
 
                        {{--  <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -181,5 +200,11 @@
         </div>
     </div>
 </div>
-
+ <script>
+              $(function() {
+    $('#profile-image1').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});       
+              </script> 
 @endsection
