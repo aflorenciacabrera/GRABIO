@@ -4,6 +4,7 @@ namespace grabio\Http\Controllers;
 
 use grabio\User;
 use grabio\paciente;
+use grabio\muestra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -200,12 +201,10 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       $p->grupo= $request->grupo;
       $p->factor= $request->factor;
       $p->sexo= $request->sexo;
-      
-      $p->save();
 
+      $p->save();
      // return view("institucion.mostrarCapacidad");
       return redirect(url('paciente'));
-   
       }
 
      public function muestra(){
@@ -215,6 +214,26 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
     public function muestraRegistro(){
       return view('muestra.muestraRegistro');
     }
+
+    public function crearMuestra (Request $request)
+      { 
+        $m = new muestra; 
+      $m->muestra = $request->muestra;  
+      $m->id_cesion = $request->id_cesion;
+      $m->id_fuente = $request->id_fuente;
+      $m->naturaleza = $request->naturaleza;
+      $m->cantidad = $request->cantidad;
+      $m->concentracion = $request->concentracion;
+      $m->fecha_entrada = $request->fecha_entrada;
+      $m->fecha_salida = $request->fecha_salida;
+      $m->localizacion = $request->localizacion;
+      $m->diagnostico = $request->diagnostico;
+      $m->paciente_id = $request->paciente_id;
+
+      $m->save();
+     // return view("institucion.mostrarCapacidad");
+      return redirect(url('muestra'));
+      }
 
     public function historico(){
       return view('historico');

@@ -46,6 +46,7 @@ Route::post('paciente/ingreso','HomeController@crearPaciente');
 //Muestras
 Route::get('/muestra','HomeController@muestra');
 Route::get('/muestra/ingreso','HomeController@muestraRegistro');
+Route::post('muestra/ingreso','HomeController@crearMuestra');
 //Historicos
 Route::get('/historico','HomeController@historico');
 });
