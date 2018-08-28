@@ -15,6 +15,14 @@ class CreateBiobancosTable extends Migration
     {
         Schema::create('biobancos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('foto')->nullable(); 
+            $table->string('nombreComp');
+            $table->string('nombreCor');
+            $table->string('direccion');
+            $table->string('telefono');
+            $table->string('correo');
+            $table->integer('biobanco_id')->unsigned();
+            $table->foreign('biobanco_id')->references('id')->on('biobancos')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -28,29 +28,43 @@
                                     </div>
                                   </div>
                          <form method="POST" action="{{ route('register') }}">
-                        @csrf
-                                <div class=" col-md-16 col-lg-12 "> 
+                              @csrf
+                                <div class=" col-md-16 col-lg-12"  > 
                                           <table class="table table-user-information">
                                             <tbody>
                                               <tr>
-                                                <td>Nombre:</td>
-                                                <td><input  class="form-control" type="" name="name" ></td>
+                                                 <td><div class=" col-lg-offset-4 " > 
+                                                    <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:100px; height:100px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
+                                                    </div></td>
+                                                <td> <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
+                                      <div  class="col-md-8" style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  <br><br>
+                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                         {{--  <input  type="submit" value="Cargar" class="pull btn btn-sm btn-default active">    --}}</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Nombre completo:</td>
+                                                <td><input  class="form-control" type="" name="nombreComp" ></td>
                                               </tr>
 
                                               <tr>
-                                                <td>Código :</td>
-                                                <td><input  class="form-control" type="" name="name2" ></td>
+                                                <td>Nombre corto:</td>
+                                                <td><input  class="form-control" type="" name="nombreCor" ></td>
                                               </tr>
                                              
                                               <tr>
-                                                <td>Decripción:</td>
-                                                <td><input  class="form-control" type="" name="apellido" ></td>
+                                                <td>Direccón:</td>
+                                                <td><input  class="form-control" type="" name="direccion" ></td>
                                               </tr>
                                               
                                               <tr>
                                                 <td>Teléfono de contacto:</td>
                                                 <td><input  class="form-control" type="" name="telefono" ></td>
                                               </tr>
+                                              <tr>
+                                                <td>Correo Electrónico:</td>
+                                                <td><input  class="form-control" type="" name="correo" ></td>
+                                              </tr>
+
                                             </tbody>
                                           </table>
 
@@ -65,9 +79,9 @@
                                                         </button>
                                                       </div>
                                                       {{--Boton de Guaedar --}}                                            
-                                               </div>{{-- end row --}}                                                          
+                                               </div>{{-- end row --}}                                                       
                                           </div> 
-                                           </form>        
+                            </form>        
                                   </div>
                               </div>
                                 </div>
@@ -175,8 +189,8 @@
                             </div>
                         </div>
                          <div class="form-group row">
-                        <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificacion por GRABIO </label>
-                        <input type="file" accept="application/pdf" /> 
+                              <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificacion por GRABIO </label>
+                              <input type="file" accept="application/pdf" /> 
                          </div>
 
                        {{--  <div class="form-group row mb-0">
