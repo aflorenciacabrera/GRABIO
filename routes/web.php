@@ -51,7 +51,7 @@ Route::post('muestra/ingreso','HomeController@crearMuestra');
 Route::get('/historico','HomeController@historico');
 });
 
-
+Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
 Route::get('responsable/registro','ResponsableController@registro');	

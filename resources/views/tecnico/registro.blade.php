@@ -39,18 +39,18 @@
                                                 <td><div class="panel-title ">Datos de Representante</div> </td>
                                                 
                                              
-                                              <tr>
+                                               <tr>
                                                 <td>Nombre:</td>
-                                                <td><label for=""></label></td>
+                                                <td><label for="" > {{ Auth::user()->nombre }}</label></td>
                                               </tr>
                                               
                                               <tr>
                                                 <td>Apellido</td>
-                                                 <td><label for=""></label></td>
+                                                 <td><label for=""> {{ Auth::user()->apellido }}</label></td>
                                               </tr>
                                               <tr>
-                                                <td>Telefono de Contacto:</td>
-                                                 <td><label for=""></label></td>
+                                                <td>Telefono de contacto:</td>
+                                                 <td><label for=""> {{ Auth::user()->telefono }}</label></td>
                                               </tr>
                                             </tbody>
                                           </table>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" value="responsable" name="rol">
+                        <input type="hidden" value="tecnico" name="rol">
 
                         <div class="form-group row">
                             <label  class="col-md-2 col-form-label -">{{ __('Nombre') }}</label>
@@ -202,5 +202,11 @@
         </div>
     </div>
 </div>
-
+<script>
+              $(function() {
+    $('#profile-image1').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});       
+              </script> 
 @endsection

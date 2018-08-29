@@ -36,10 +36,10 @@
                                                  <td><div class=" col-lg-offset-4 " > 
                                                     <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:100px; height:100px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
                                                     </div></td>
-                                                <td> <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
-                                      <div  class="col-md-8" style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  <br><br>
-                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                         {{--  <input  type="submit" value="Cargar" class="pull btn btn-sm btn-default active">    --}}</td>
+                                                 <td> <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
+                                                <div  class="col-md-8" style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  <br><br>
+                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                   {{--  <input  type="submit" value="Cargar" class="pull btn btn-sm btn-default active">    --}}</td>
                                               </tr>
                                               <tr>
                                                 <td>Nombre completo:</td>
@@ -99,6 +99,7 @@
                         <div class="col-md-4 col-lg-3 " align="center">
                            <div class="col-lg-offset-2 " > 
                             <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
+                            
                             </div>
                                  
                                   <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
