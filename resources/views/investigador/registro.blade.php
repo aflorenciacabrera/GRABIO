@@ -175,7 +175,7 @@
                             </div>
                         </div>
                          <div class="form-group row">
-                              <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificacion por GRABIO </label>
+                              <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificación por GRABIO </label>
                               <input type="file" accept="application/pdf" /> 
                          </div>
 

@@ -8,6 +8,7 @@ use grabio\muestra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
  
 
 class HomeController extends Controller
@@ -114,6 +115,7 @@ class HomeController extends Controller
    
       }
 
+
       public function update_avatar(Request $request){
 
       // Handle the user upload of avatar
@@ -130,6 +132,22 @@ class HomeController extends Controller
       return redirect(url('/perfil'));
 
     }
+     public function subir_imagen(Request $request){
+      if($request->hasFile('avatar')){
+        $avatar = $request->file('avatar');
+        $filename = time() . '.' . $avatar->getClientOriginalExtension();
+        Image::make($avatar)->resize(300, 300)->save( public_path('/cargas/avatars/'.$filename ) );
+
+        //$user =User::findOrFail($user);
+        //$user->avatar = $filename;
+        dd($avatar);
+        \Storage::disk(‘local’)->put($file,  \File::get($file));
+      }
+       
+
+       return redirect(url('tecnico/registro'));
+       
+     }
 
      public function getDashboard()
     {

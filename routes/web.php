@@ -52,10 +52,12 @@ Route::get('/historico','HomeController@historico');
 });
 
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
+
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
 Route::get('responsable/registro','ResponsableController@registro');	
-Route::get('tecnico/registro','TecnicoController@registro');	
+Route::get('tecnico/registro','TecnicoController@registro');
+Route::post('tecnico/registro', 'HomeController@subir_imagen');	
 
 // Route::get('responsable/principal','HomeController@getDashboard');
 

@@ -41,16 +41,16 @@
                                              
                                                <tr>
                                                 <td>Nombre:</td>
-                                                <td><label for="" > {{ Auth::user()->nombre }}</label></td>
+                                                <td><label for="" > </label></td>
                                               </tr>
                                               
                                               <tr>
                                                 <td>Apellido</td>
-                                                 <td><label for=""> {{ Auth::user()->apellido }}</label></td>
+                                                 <td><label for=""> </label></td>
                                               </tr>
                                               <tr>
                                                 <td>Telefono de contacto:</td>
-                                                 <td><label for=""> {{ Auth::user()->telefono }}</label></td>
+                                                 <td><label for=""> </label></td>
                                               </tr>
                                             </tbody>
                                           </table>
@@ -79,20 +79,25 @@
             </div>
 
                 <div class="card-body">
+                 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        
+                         <div class="form-group row">
+                         <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
                         <div class="col-md-4 col-lg-3 " align="center">
-                           <div class="col-lg-offset-2 " > 
-                            <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
-                            </div>
-                                 
-                                  <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
-                                      <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  
-                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                          {{-- <input type="submit" value="Cargar" class="pull btn btn-sm btn-default active">  --}}           
-                        </div>
 
+                       {{--   <div class="col-lg-offset-2 " > 
+                            <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
+                               </div>   
+                            --}}
+                             
+                                 <input type="file" accept="image/*" /> 
+                                  <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
+                                  {{--     <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>   --}}
+                                  
+                                                     
+                        </div>
+                      </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label ">{{ __('Usuario') }}</label>
 
@@ -175,7 +180,7 @@
                             </div>
                         </div>
                          <div class="form-group row">
-                              <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificacion por GRABIO </label>
+                              <label for="" class="col-md-4 col-form-label ">Adjunte archivo PDF de certificación por GRABIO <i class="glyphicon glyphicon-paperclip"></i></label>
                               <input type="file" accept="application/pdf" /> 
                          </div>
 
