@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header text-center"><h4>{{ __('Registro Técnico') }}</h4><div class="pull-right"><a href="#seleccion"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Seleccionar <i class="glyphicon-plus" ></i></a></div>
 
-<div class="modal fade in" id="seleccion" >
+                <div class="modal fade in" id="seleccion" >
                       <div class="modal-dialog">
                         <div class="container">
                         <div class="row">
@@ -21,54 +21,48 @@
                                       <h3 class="panel-title">Seleccione Representante </h3>
                                     </div>
                                   </div>
-                         <form method="POST" action="{{ route('register') }}">
-                        @csrf
-                                <div class=" col-md-16 col-lg-12 "> 
-                                          <table class="table table-user-information">
-                                            <tbody>
-                                              <tr>
-                                                <td>Biobanco:</td>
-                                               
-                                                <td><select   >
-                                                    <option value="">Biobanco</option>
-                                                     
-                                                </select> </td>
-                                               
-                                              </tr>
-                                             
-                                                <td><div class="panel-title ">Datos de Representante</div> </td>
-                                                
-                                             
-                                               <tr>
-                                                <td>Nombre:</td>
-                                                <td><label for="" > </label></td>
-                                              </tr>
-                                              
-                                              <tr>
-                                                <td>Apellido</td>
-                                                 <td><label for=""> </label></td>
-                                              </tr>
-                                              <tr>
-                                                <td>Telefono de contacto:</td>
-                                                 <td><label for=""> </label></td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-
-                                          <div class="modal-footer">
-                                                            
-                                               <div class="row">
-                                                      <div class="col-md-4 col-lg-offset-2 ">
-                                                           {{--Boton de Guaedar --}}  
+                                   <form method="POST" action="{{ route('register') }}">
+                                       @csrf
+                                          <div class=" col-md-16 col-lg-12 "> 
+                                                    <table class="table table-user-information">
+                                                      <tbody>
+                                                        <tr>
+                                                          Biobanco:
                                                          
-                                                          <button type="submit" class="btn btn-primary">
-                                                            {{ __('Aceptar') }}
-                                                        </button>
-                                                      </div>
-                                                      {{--Boton de Guaedar --}}                                            
-                                               </div>{{-- end row --}}                                                          
-                                          </div> 
-                                           </form>        
+                                                          <select   >
+                                                              <option value="">Biobanco</option>
+                                                               
+                                                          </select> 
+                                                         
+                                                        </tr>
+                                                       <hr style="width:75%;">
+                                                          <div class="panel-title "><label >Datos de Representante</label></div> 
+                                                         <tr>
+                                                          <td>Nombre:</td>
+                                                          <td> </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>Apellido:</td>
+                                                           <td> </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>Telefono de contacto:</td>
+                                                           <td> </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <div class="modal-footer">                    
+                                                         <div class="row">
+                                                                <div class="col-md-4 col-lg-offset-2 ">
+                                                                     {{--Boton de Guaedar --}}  
+                                                                    <button type="submit" class="btn btn-primary">
+                                                                      {{ __('Aceptar') }}
+                                                                  </button>
+                                                                </div>
+                                                                {{--Boton de Guaedar --}}               
+                                                             </div>{{-- end row --}}                   
+                                                    </div> 
+                                      </form>        
                                   </div>
                               </div>
                                 </div>
@@ -77,25 +71,15 @@
                           </div>
                         </div> {{-- Fin de ventna --}}
             </div>
-
+      
                 <div class="card-body">
-                 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                         <div class="form-group row">
+                      <div class="form-group row">
                          <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
                         <div class="col-md-4 col-lg-3 " align="center">
-
-                       {{--   <div class="col-lg-offset-2 " > 
-                            <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
-                               </div>   
-                            --}}
-                             
-                                 <input type="file" accept="image/*" /> 
-                                  <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
-                                  {{--     <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>   --}}
-                                  
-                                                     
+                         <input type="file" accept="image/*" /> 
+                          <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
                         </div>
                       </div>
                         <div class="form-group row">

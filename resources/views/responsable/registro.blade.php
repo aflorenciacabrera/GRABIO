@@ -33,13 +33,13 @@
                                           <table class="table table-user-information">
                                             <tbody>
                                               <tr>
-                                                 <td><div class=" col-lg-offset-4 " > 
-                                                    <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:100px; height:100px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
-                                                    </div></td>
-                                                 <td> <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
-                                                <div  class="col-md-8" style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  <br><br>
-                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                   {{--  <input  type="submit" value="Cargar" class="pull btn btn-sm btn-default active">    --}}</td>
+                                                <div class="form-group row">
+                                                   <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
+                                                  <div class="col-md-4 col-lg-3 " align="center">
+                                                   <input type="file" accept="image/*" /> 
+                                                    <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
+                                                  </div>
+                                                </div>
                                               </tr>
                                               <tr>
                                                 <td>Nombre completo:</td>
@@ -96,18 +96,13 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                         <div class="form-group row">
+                         <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
                         <div class="col-md-4 col-lg-3 " align="center">
-                           <div class="col-lg-offset-2 " > 
-                            <img alt="User Pic" src="{{asset('img/default.jpg')}}"  style="width:120px; height:120px; float:left; margin-right:50px;" id="profile-image1" class=" img-responsive"> 
-                            
-                            </div>
-                                 
-                                  <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
-                                      <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  
-                                       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                          {{-- <input type="submit" value="Cargar" class="pull btn btn-sm btn-default active">  --}}           
+                         <input type="file" accept="image/*" /> 
+                          <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
                         </div>
-
+                      </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label ">{{ __('Usuario') }}</label>
 
@@ -189,8 +184,8 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-                         <div class="form-group row">
-                              <label for="password" class="col-md-6 col-form-label ">Adjunte archivo PDF de certificación por GRABIO </label>
+                          <div class="form-group row">
+                              <label for="" class="col-md-4 col-form-label ">Adjunte archivo PDF de certificación por GRABIO <i class="glyphicon glyphicon-paperclip"></i></label>
                               <input type="file" accept="application/pdf" /> 
                          </div>
 
