@@ -31,7 +31,7 @@ Route::group(['middleware'=>['auth','Admin']],function(){
 
 
 //Principal
-Route::get('/principal', 'HomeController@index');
+Route::get('/principal', 'HomeController@principal');
 // PERFIL
 Route::get('/perfil','HomeController@perfil');
 Route::put('/perfil','HomeController@editarPerfil');	

@@ -37,7 +37,7 @@ class HomeController extends Controller
       return Auth::guard('user');
      }
     
-    public function index()
+    public function principal()
     {
 
        // $request->user()->authorizeRoles(['user', 'admin']);
