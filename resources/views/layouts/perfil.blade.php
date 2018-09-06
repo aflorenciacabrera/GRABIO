@@ -42,7 +42,7 @@
 
                       <tr>
                         <td>Nombre :</td>
-                        <td>{{ Auth::user()->name2 }}</td>
+                        <td>{{ Auth::user()->nombre }}</td>
                       </tr>
                      
                       <tr>
