@@ -21,7 +21,7 @@ class CreateBiobancosTable extends Migration
             $table->string('direccion');
             $table->string('telefono');
             $table->string('correo');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

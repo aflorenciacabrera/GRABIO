@@ -29,16 +29,19 @@
                                                         <tr>
                                                           Biobanco:
                                                          
-                                                          <select   >
-                                                              <option value="">Biobanco</option>
-                                                               
-                                                          </select> 
-                                                         
+                                                          <select name="biobanco_id"   required>
+                                                             @foreach($biobancos as $biobanco)
+                                                                  <option  value="{{ $biobanco->id }}" selected>{{ $biobanco->nombreCor }}</option>
+                                                              @endforeach
+                                                          </select>
+                                                   
                                                         </tr>
                                                        <hr style="width:75%;">
                                                           <div class="panel-title "><label >Datos de Representante</label></div> 
+                                                         @foreach($users as $user)
+                                                          @if ( $biobanco->user_id == $user->id )
                                                          <tr>
-                                                          <td>Nombre:</td>
+                                                          <td>Nombre:{{ $user->id }}</td>
                                                           <td> </td>
                                                         </tr>
                                                         <tr>
@@ -49,6 +52,9 @@
                                                           <td>Telefono de contacto:</td>
                                                            <td> </td>
                                                         </tr>
+                                                        @endif
+                                                       @endforeach
+                                                            
                                                       </tbody>
                                                     </table>
                                                     <div class="modal-footer">                    
@@ -75,7 +81,9 @@
                 <div class="card-body">
                   <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+ 
+                                                         
+                                                         
                          <div class="form-group row">
                          <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
                         <div class="col-md-4 col-lg-3 " align="center">

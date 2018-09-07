@@ -27,7 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('archivo');
             $table->string('password');
             $table->boolean('estado')->default(false);
-            
+            $table->integer('biobanco_id')->nullable();
+            // $table->foreign('biobanco_id')->references('id')->on('biobancos')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

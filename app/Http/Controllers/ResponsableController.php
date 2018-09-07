@@ -18,6 +18,7 @@ class ResponsableController extends Controller
 
     public function biobanco()
     {
+    	
         return view('responsable.biobanco' );
     }
 

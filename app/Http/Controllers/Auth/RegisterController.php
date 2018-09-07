@@ -67,6 +67,8 @@ class RegisterController extends Controller
             'hospital' => 'required|string|max:255',
             'trabajo' => 'required|string|max:255',
             'archivo' => 'required|string|max:255',
+            ' biobanco_id' => 'required|string|max:255',
+          
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -90,6 +92,8 @@ class RegisterController extends Controller
             'hospital' => $data['hospital'],
             'trabajo' => $data['trabajo'],
              'archivo' => $data['archivo'],
+               'biobanco_id' => $data['biobanco_id'],
+           
             'password' => Hash::make($data['password']),
             
         ]);

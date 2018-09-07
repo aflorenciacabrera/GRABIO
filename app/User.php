@@ -5,6 +5,7 @@ namespace grabio;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use grabio\user;
+use grabio\biobanco;
 
 class User extends Authenticatable
 {
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'avatar','name', 'email','nombre','apellido', 'rol','telefono','hospital','trabajo', 'archivo','password',
+        'avatar','name', 'email','nombre','apellido', 'rol','telefono','hospital','trabajo', 'archivo' ,'biobanco_id','password',
     ];
 
     /**
@@ -34,12 +35,18 @@ public function users()
     return $this->belongsTo('User', 'id');
   }
 
+ public function biobancos()
+  {
+    return $this->belongsToMany('grabio\biobanco');
+  }
+
    public function roles()
 {
     return $this
         ->belongsToMany('grabio\Role')
         ->withTimestamps();
 }
+ 
 
 
     public function authorizeRoles($roles)
@@ -71,5 +78,6 @@ public function hasRole($role)
     }
     return false;
 }
+
     
 }
