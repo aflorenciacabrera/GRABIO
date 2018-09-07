@@ -25,7 +25,8 @@ class Admin
        
         if (Auth::user()->estado == 0) 
         {
-            return redirect('/homeEspera')->with('activacion','El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
+            return redirect('responsable/biobanco');
+           // ->with('activacion','El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
         }
         
             

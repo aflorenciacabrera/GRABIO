@@ -5,6 +5,7 @@ namespace grabio\Http\Controllers;
 use grabio\User;
 use grabio\paciente;
 use grabio\muestra;
+use grabio\biobanco;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -256,6 +257,27 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
     public function historico(){
       return view('historico');
     }
+
+
+
+    public function crearBiobanco (Request $request)
+      {
+
+         
+        $b = new biobanco; 
+
+      $b->foto= $request->foto;
+      $b->nombreComp= $request->nombreComp;
+      $b->nombreCor= $request->nombreCor;
+      $b->direccion= $request->direccion;
+      $b->telefono= $request->telefono;
+      $b->correo= $request->correo;   
+      $b->user_id= $request->user_id;
+
+      $b->save();
+     
+      return redirect(url('/homeEspera'))->with('activacion','El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
+      }
 
 
 }

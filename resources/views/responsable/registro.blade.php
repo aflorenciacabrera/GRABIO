@@ -10,87 +10,8 @@
 
               
                 <div class="card-header text-center"><h4>{{ __('Registro Responsable') }}</h4> 
-                     <div class="pull-right"><a href="#biobanco"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Biobanco <i class="glyphicon-plus" ></i></a></div>
-
-                    {{-- Inicio de ventana de Biobanco --}}
-                     <div class="modal fade in" id="biobanco" >
-                      <div class="modal-dialog">
-                        <div class="container">
-                        <div class="row">
-                           <div class="  col-lg-6 col-lg-offset-0  toppad" >
-                              <div class="modal-content">
-                                 <div class="panel panel-default">
-
-                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                                    </button>
-                                    <div class="panel-heading">
-                                      <h3 class="panel-title">Crear Biobanco </h3>
-                                    </div>
-                                  </div>
-                         <form method="POST" action="{{ route('register') }}">
-                              @csrf
-                                <div class=" col-md-16 col-lg-12"  > 
-                                          <table class="table table-user-information">
-                                            <tbody>
-                                              <tr>
-                                                <div class="form-group row">
-                                                   <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
-                                                  <div class="col-md-4 col-lg-3 " align="center">
-                                                   <input type="file" accept="image/*" /> 
-                                                    <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
-                                                  </div>
-                                                </div>
-                                              </tr>
-                                              <tr>
-                                                <td>Nombre completo:</td>
-                                                <td><input  class="form-control" type="" name="nombreComp" ></td>
-                                              </tr>
-
-                                              <tr>
-                                                <td>Nombre corto:</td>
-                                                <td><input  class="form-control" type="" name="nombreCor" ></td>
-                                              </tr>
-                                             
-                                              <tr>
-                                                <td>Direccón:</td>
-                                                <td><input  class="form-control" type="" name="direccion" ></td>
-                                              </tr>
-                                              
-                                              <tr>
-                                                <td>Teléfono de contacto:</td>
-                                                <td><input  class="form-control" type="" name="telefono" ></td>
-                                              </tr>
-                                              <tr>
-                                                <td>Correo Electrónico:</td>
-                                                <td><input  class="form-control" type="" name="correo" ></td>
-                                              </tr>
-
-                                            </tbody>
-                                          </table>
-
-                                          <div class="modal-footer">
-                                                            
-                                               <div class="row">
-                                                      <div class="col-md-4 col-lg-offset-2 ">
-                                                           {{--Boton de Guaedar --}}  
-                                                         
-                                                          <button type="submit" class="btn btn-primary">
-                                                            {{ __('Aceptar') }}
-                                                        </button>
-                                                      </div>
-                                                      {{--Boton de Guaedar --}}                                            
-                                               </div>{{-- end row --}}                                                       
-                                          </div> 
-                            </form>        
-                                  </div>
-                              </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div> {{-- Fin de ventna --}}
-                </div>
-
+                    
+                    </div> 
                 <div class="card-body">
                   
                     <form method="POST" action="{{ route('register') }}">

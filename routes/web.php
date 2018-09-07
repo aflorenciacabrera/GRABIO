@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get ('/homeEspera','HomeController@espera');
-
+Route::get('responsable/biobanco','ResponsableController@biobanco');
+Route::post('responsable/biobanco','HomeController@crearBiobanco');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -28,6 +29,8 @@ Route::get ('/homeEspera','HomeController@espera');
  //Route::group(['middleware'=>['Auth']],function(){
 
 Route::group(['middleware'=>['auth','Admin']],function(){
+
+
 
 
 //Principal
@@ -55,7 +58,8 @@ Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
 
 // REGISTROS
 Route::get('investigador/registro','InvestigadorController@registro');	
-Route::get('responsable/registro','ResponsableController@registro');	
+Route::get('responsable/registro','ResponsableController@registro');
+// Route::get('responsable/biobanco','ResponsableController@biobanco');	
 Route::get('tecnico/registro','TecnicoController@registro');
 Route::post('tecnico/registro', 'HomeController@subir_imagen');	
 
