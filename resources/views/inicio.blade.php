@@ -175,15 +175,15 @@
                                 <div class="col-md- col-md-offset-3">
                                 	
                                      {{-- Responsable --}}
-                                    <a class="btn btn-success active btn-lg" role="button" href="{{url('responsable/registro') }}">
+                                    <a class="btn btn-default active btn-lg" role="button" href="{{url('responsable/registro') }}">
                                         <img src="{{asset('img/images (2).jpg')}}" width="100" /><br>
                                         <span class="label label-default">Responsable </span> </a>
                                     {{-- Investigador--}}
-                                    <a class="btn btn-warning active btn-lg" type="button" href="{{url('investigador/registro') }}">
+                                    <a class="btn btn-default active btn-lg " role="button"  href="{{url('investigador/registro') }}">
                                         <img src="{{asset('img/descarga (3).jpg')}}" width="100" /><br>
                                     <span class="label label-default">Investigador </span> </a>
                                     {{-- Técnico --}}
-                                    <a class="btn btn-danger active btn-lg" type="button"  href="{{ url('tecnico/registro')}}"> 
+                                    <a class="btn btn-default active btn-lg" role="button"   href="{{ url('tecnico/registro')}}"> 
                                         <img src="{{asset('img/images (12).jpg')}}" width="100" /><br>
                                         <span class="label label-default">Técnico</span></a>
                                     

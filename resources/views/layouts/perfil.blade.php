@@ -61,6 +61,18 @@
                         <td>Teléfono de contacto:</td>
                         <td>{{ Auth::user()->telefono }}</td>
                       </tr>
+                      <tr>
+                        <td>Hospital:</td>
+                        <td>{{ Auth::user()->hospital}}</td>
+                      </tr>
+                      <tr>
+                        <td>Trabajo:</td>
+                        <td>{{ Auth::user()->trabajo }}</td>
+                      </tr>
+                      <tr>
+                        <td>Archivo PDF:</td>
+                        <td>{{ Auth::user()->archivo }}</td>
+                      </tr>
                     </tbody>
                   </table>
                   </div>
@@ -106,7 +118,7 @@
 
                       <tr>
                         <td>Nombre :</td>
-                        <td><input  class="form-control" type="" name="name2" value="{{ Auth::user()->name2 }}"></td>
+                        <td><input  class="form-control" type="" name="name2" value="{{ Auth::user()->nombre }}"></td>
                       </tr>
                      
                       <tr>

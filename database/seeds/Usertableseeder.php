@@ -23,6 +23,7 @@ class Usertableseeder extends Seeder
 
 
     $admin = new User();
+    $admin->avatar = 'default.jpg';
     $admin->name = 'Manager Name';
     $admin->email = 'admin@example.com';
     $admin->rol = 'admin';
@@ -31,12 +32,14 @@ class Usertableseeder extends Seeder
     $admin->telefono = '3795053426';
     $admin->hospital = 'hospital';
     $admin->trabajo = 'trabajo';
+    $admin->archivo = 'recibo.pdf';
     $admin->estado = '1';
     $admin->password = bcrypt('123456');
     $admin->save();
     $admin->roles()->attach($role_admin);   
    
     $responsable = new User();
+    $responsable->avatar = 'default.jpg';
     $responsable->name='Responsable';
     $responsable->email = 'respo@example.com';
     $responsable->rol = 'responsable';
@@ -45,6 +48,7 @@ class Usertableseeder extends Seeder
     $responsable->telefono = '3795053430';
     $responsable->hospital = 'hospital';
     $responsable->trabajo = 'trabajo';
+    $responsable->archivo = 'recibo.pdf';
     $responsable->estado = '1';
     $responsable->password = bcrypt('123456');
     $responsable->save();
@@ -53,6 +57,7 @@ class Usertableseeder extends Seeder
     
 
     $tecnico = new User();
+    $tecnico->avatar = 'default.jpg';
     $tecnico->name = 'Tecnico'; 
     $tecnico->email = 'tecnico@example.com';
     $tecnico->rol = 'tecnico';
@@ -61,12 +66,14 @@ class Usertableseeder extends Seeder
     $tecnico->telefono = '3795053426';
     $tecnico->hospital = 'hospital';
     $tecnico->trabajo = 'trabajo';
+    $tecnico->archivo = 'recibo.pdf';
     $tecnico->estado = '1';
     $tecnico->password = bcrypt('123456');
     $tecnico->save();
     $tecnico->roles()->attach($role_tecnico);
 
     $investigador = new User();
+     $investigador->avatar = 'default.jpg';
     $investigador->name = 'Investigador';
     $investigador->email = 'investi@example.com';
     $investigador->rol = 'investigador';
@@ -75,6 +82,7 @@ class Usertableseeder extends Seeder
     $investigador->telefono = '3795053426';
     $investigador->hospital = 'hospital';
     $investigador->trabajo = 'trabajo';
+    $investigador->archivo = 'recibo.pdf';
     $investigador->estado = '1';
     $investigador->password =bcrypt('123456');
     $investigador->save();

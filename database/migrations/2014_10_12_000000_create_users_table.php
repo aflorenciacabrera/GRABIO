@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('avatar')->default('default.jpg'); 
+            $table->string('avatar'); 
             $table->string('name');
             $table->string('email');
             $table->string('nombre');
@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('telefono');
             $table->string('hospital');
             $table->string('trabajo');
+            $table->string('archivo');
             $table->string('password');
             $table->boolean('estado')->default(false);
             $table->integer('biobanco_id')->unsigned()->nullable();

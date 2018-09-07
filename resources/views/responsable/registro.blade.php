@@ -99,8 +99,7 @@
                          <div class="form-group row">
                          <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
                         <div class="col-md-4 col-lg-3 " align="center">
-                         <input type="file" accept="image/*" /> 
-                          <input  value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >
+                          <input id="avatar" name="avatar"  type="file" accept="image/*" value="{{ old('avatar') }}" required autofocus>
                         </div>
                       </div>
                         <div class="form-group row">
@@ -135,11 +134,11 @@
                             <label  class="col-md-2 col-form-label -">{{ __('Nombre') }}</label>
 
                             <div class="col-md-4">
-                                <input id="nombre" type="text" class="form-control" name="nombre" value="{{ old('name') }}" required autofocus>
+                                <input id="nombre" type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" required autofocus>
                             </div>
                             <label  class="col-md-2 col-form-label ">{{ __('Apellido') }}</label>
                              <div class="col-md-4">
-                                <input id="apellido" type="text" class="form-control" name="apellido" value="{{ old('name') }}" required autofocus>                            
+                                <input id="apellido" type="text" class="form-control" name="apellido" value="{{ old('apellido') }}" required autofocus>                            
                             </div>
                         </div>
 
@@ -147,18 +146,18 @@
                             <label  class="col-md-2 col-form-label -">{{ __('Teléfono de Contacto') }}</label>
 
                             <div class="col-md-4">
-                                <input id="nombre" type="text" class="form-control" name="telefono" value="{{ old('name') }}" required autofocus>
+                                <input id="nombre" type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" required autofocus>
                             </div>
                             <label  class="col-md-2 col-form-label ">{{ __('Hospital') }}</label>
                              <div class="col-md-4">
-                                <input id="apellido" type="text" class="form-control" name="hospital" value="{{ old('name') }}" required autofocus>                            
+                                <input id="apellido" type="text" class="form-control" name="hospital" value="{{ old('hospital') }}" required autofocus>                            
                             </div>
                         </div>
                          <div class="form-group row">
                             <label  class="col-md-2 col-form-label -">{{ __('Lugar de Trabajo') }}</label>
 
                             <div class="col-md-10">
-                                <input id="nombre" type="text" class="form-control" name="trabajo" value="{{ old('name') }}" required autofocus>
+                                <input id="nombre" type="text" class="form-control" name="trabajo" value="{{ old('trabajo') }}" required autofocus>
                             </div>
                             
                         </div>
@@ -186,7 +185,7 @@
                         </div>
                           <div class="form-group row">
                               <label for="" class="col-md-4 col-form-label ">Adjunte archivo PDF de certificación por GRABIO <i class="glyphicon glyphicon-paperclip"></i></label>
-                              <input type="file" accept="application/pdf" /> 
+                              <input id="archivo" type="file" accept="application/pdf" name="archivo" value="{{ old('archivo') }}" required autofocus/> 
                          </div>
 
                        {{--  <div class="form-group row mb-0">
