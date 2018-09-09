@@ -1,10 +1,12 @@
 @extends('layouts.app')
-
 @section('content')
+
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+{{-- Mensajes de Alerta --}}
  <div class="row">
- <div class="text-center col-md-6 col-md-offset-3">
+      <div class="text-center col-md-6 col-md-offset-3">
+                {{-- Mensaje de activado de Representante --}}
                @if(session('activado'))
                         <div class="alert alert-success text-center" role="alert">
 
@@ -12,6 +14,7 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                        </div>
                     @endif 
+                     {{-- Mensaje de desactivado de Representante --}}
                      @if(session('suspendido'))
                         <div class="alert alert-danger text-center" role="alert">
 
@@ -19,21 +22,19 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                        </div>
                     @endif 
-      </div> </div>
-           
+       </div>
+    </div>
+     
+{{-- Panel de lista de Representantes registrados       --}}
 <div class="row">
-  {{-- <section class="content"> --}}
     <div class="col-md-12 col-md-offset-">
-      {{-- <div class="panel panel-default"> --}}
         <div class="panel-body">
-          <div class="pull-left"><h3>Lista Responsables</h3></div>
-          <div class="pull-right">
-            {{-- <div class="btn-group">
-               <a href="" class="btn btn-info" > </a>
-            </div> --}}
-          </div>
+          {{-- Titulo --}}
+          <div class="pull-left"><h3>Lista Responsables</h3></div>   
+          {{-- contenido de la tabla --}}     
           <div class="table-container">
             <table id="mytable" class="table table-bordred table-striped">
+              {{-- Lista de la tabla --}}
              <thead>
                <th>Nombre</th>
                <th>Correo Electrónico</th>
@@ -41,7 +42,7 @@
                
                <th>Activar</th>
                <th>Desactivar</th>
-               
+
              </thead>
              <tbody>
               @if($users->count())   
@@ -67,7 +68,6 @@
 
                   {{--  <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-remove"></span></button>
                  </td> --}}
-
                </tr>
                 @endforeach 
                @else 
@@ -76,23 +76,19 @@
               </tr>
               @endif 
             </tbody>
-
           </table>
+         </div>
         </div>
-     
-     {{--  {{ $libros->links() }} --}}
-   
-{{-- </section>--}}
- </div>
- {{-- </div> --}}
-  </div>
-   </div>
+      </div>
+</div>
+
+{{-- Acciones de java --}}
   <script src="{{ asset('js/jquery.min.js') }} "></script>
   <script>
 
         $(document).ready(function(){
             
-
+          // acción del boton activar
             $('.boton-activar').click(function(){
                 var t = $(this)
                 var user = t.attr('user');
@@ -103,6 +99,7 @@
                     window.location.href = ('/admin/activar/'+tipo+'/'+user);
                 }
             })
+             // acción del boton desactivar
              $('.boton-desactivar').click(function(){
                 var t = $(this)
                 var user = t.attr('user');

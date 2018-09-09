@@ -1,98 +1,93 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header text-center"><h4>{{ __('Registro Investigador') }}</h4>
-                    <div class="pull-right"><a href="#seleccion"  class="btn  btn-info  right" type='button'  data-toggle="modal" > Seleccionar Biobanco <i class="glyphicon glyphicon-hand-up"></i></a></div>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+       {{--  Panel de Registro de Investigador --}}
+          <div class="card-header text-center"><h4>{{ __('Registro Investigador') }}</h4>
+              {{-- Botón de seleccionar biobanco --}}
+              <div class="pull-right"><a href="#seleccion"  class="btn  btn-info  right" type='button'  data-toggle="modal" > Seleccionar Biobanco <i class="glyphicon glyphicon-hand-up"></i></a></div>
 
-                    <div class="modal fade in" id="seleccion" >
-                      <div class="modal-dialog">
-                        <div class="container">
-                        <div class="row">
-                           <div class="  col-lg-6 col-lg-offset-0  toppad" >
-                              <div class="modal-content">
+               {{-- Ventana de Modal de selección de Biobanco --}}
+                <div class="modal fade in" id="seleccion" >
+                  <div class="modal-dialog">
+                   <div class="container">
+                    <div class="row">
+                       <div class="  col-lg-6 col-lg-offset-0  toppad" >
+
+                         <div class="modal-content">
                                  <div class="panel panel-default">
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                                     </button>
+                                    {{-- Título  --}}
                                     <div class="panel-heading">
                                       <h3 class="panel-title">Seleccione Biobanco </h3>
                                     </div>
                                   </div>
 
-                                 
-                         <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                           {{-- Contenido de la tabla de selecciones de biobanco       --}}
+                              <form method="POST" action="{{ route('register') }}">  @csrf
                                 <div class=" col-md-16 col-lg-12 "> 
-                                          <table class="table table-user-information">
-                                            <tbody>
-                                              <tr>
-                                                <label for="">Biobanco:</label>
-
-                                               
-                                                          <select name="biobanco_id"   required>
-                                                             @foreach($biobancos as $biobanco)
-                                                                  <option  value="{{ $biobanco->id }}" selected>{{ $biobanco->nombreCor }}</option>
-                                                              @endforeach
-                                                          </select>
-                                               
-                                              </tr>
-                                             
-                                                <td><div class="panel-title ">Datos de Representante</div> </td>
-                                                
-                                             
-                                              <tr>
-                                                <td>Nombre:</td>
-                                                <td><label for="" > </label></td>
-                                              </tr>
-                                              
-                                              <tr>
-                                                <td>Apellido</td>
-                                                 <td><label for=""> </label></td>
-                                              </tr>
-                                              <tr>
-                                                <td>Telefono de contacto:</td>
-                                                 <td><label for=""> </label></td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-
-                                          <div class="modal-footer">
-                                                            
-                                               <div class="row">
-                                                      <div class="col-md-4 col-lg-offset-2 ">
-                                                           {{--Boton de Guaedar --}}  
-                                                         
-                                                          <button type="submit" class="btn btn-primary">
-                                                            {{ __('Aceptar') }}
-                                                        </button>
-                                                      </div>
-                                                      {{--Boton de Guaedar --}}                                            
-                                               </div>{{-- end row --}}                                                          
-                                          </div> 
-                                           </form>        
-                                  </div>
-                              </div>
-                                </div>
-                              </div>
+                                    <table class="table table-user-information">
+                                      <tbody>
+                                        <tr>
+                                          <label for="">Biobanco:</label>
+                                              <select name="biobanco_id"   required>
+                                                 @foreach($biobancos as $biobanco)
+                                                      <option  value="{{ $biobanco->id }}" selected>{{ $biobanco->nombreCor }}</option>
+                                                  @endforeach
+                                              </select>
+                                        </tr>
+                                        {{-- Datos de representante precargados --}}
+                                          <td><div class="panel-title ">Datos de Representante</div> </td>        
+                                         <tr>
+                                          <td>Nombre:</td>
+                                          <td><label for="" > </label></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                          <td>Apellido</td>
+                                           <td><label for=""> </label></td>
+                                        </tr>
+                                        <tr>
+                                          <td>Telefono de contacto:</td>
+                                           <td><label for=""> </label></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    {{-- Footer Aceptar --}}
+                                      <div class="modal-footer">           
+                                           <div class="row">
+                                                  <div class="col-md-4 col-lg-offset-2 ">
+                                                       {{--Boton de Guaedar --}}  
+                                                      <button type="submit" class="btn btn-primary">
+                                                        {{ __('Aceptar') }}
+                                                    </button>
+                                                  </div>                                   
+                                           </div>                                                
+                                      </div> 
+                              </form>        
                             </div>
-                          </div>
-                        </div> {{-- Fin de ventna --}}
-                </div>
-
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> {{-- Fin de Ventana de selecciones de biobanco --}}
+              </div></div>
+              {{-- Panel de Perfil de Investigador --}}
                 <div class="card-body">
                   <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                                    {{-- carga de imagen de perfil --}}
                          <div class="form-group row">
                          <label  class="col-md-4 col-form-label">Seleccionar Imagen de Perfil <i class="glyphicon glyphicon-user"></i></label>
                         <div class="col-md-4 col-lg-3 " align="center">
                           <input id="avatar" name="avatar"  type="file" accept="image/*" value="{{ old('avatar') }}" required autofocus>
                         </div>
                       </div>
+                                 {{--  carga de datos --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label ">{{ __('Usuario') }}</label>
 
@@ -174,18 +169,13 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                                  {{-- carga de Archivos --}}
                           <div class="form-group row">
                               <label for="" class="col-md-4 col-form-label ">Adjunte archivo PDF de certificación por GRABIO <i class="glyphicon glyphicon-paperclip"></i></label>
                               <input id="archivo" type="file" accept="application/pdf" name="archivo" value="{{ old('archivo') }}" required autofocus/> 
                          </div>
 
-                       {{--  <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Aceptar') }}
-                                </button>
-                            </div>
-                        </div> --}}
+                       
                         <div class="panel-footer">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Aceptar') }}
@@ -195,16 +185,11 @@
                             </span>
                     </div>
                     </form>
-                </div>
+                </div> {{-- Fin de tabla de registro de Investigador --}}
             </div>
         </div>
     </div>
 </div>
-<script>
-              $(function() {
-    $('#profile-image1').on('click', function() {
-        $('#profile-image-upload').click();
-    });
-});       
-              </script> 
+
+
 @endsection
