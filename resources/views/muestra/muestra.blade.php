@@ -12,6 +12,7 @@
         <div align="center">
         	<a href="{{url('muestra/ingreso')}}" class="btn btn-default filter-button">Ingreso de Muestra</a>
         	<a href="" class="btn btn-default filter-button">Lista de Muestras</a>
+        	{{-- <a href="{{url('paciente/ingreso')}}" class="btn btn-default filter-button">Ingreso de Paciente</a> --}}
 
           </div>
            

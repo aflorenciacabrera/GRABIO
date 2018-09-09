@@ -6,6 +6,8 @@ use grabio\User;
 use grabio\paciente;
 use grabio\muestra;
 use grabio\biobanco;
+use grabio\seleccion;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -217,13 +219,13 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       $p->dni= $request->dni;
       $p->direccion= $request->direccion;
       $p->telefono= $request->telefono;
-      $p->grupo= $request->grupo;
-      $p->factor= $request->factor;
+      // $p->grupo= $request->grupo;
+      // $p->factor= $request->factor;
       $p->sexo= $request->sexo;
 
       $p->save();
      // return view("institucion.mostrarCapacidad");
-      return redirect(url('paciente'));
+      return redirect(url('muestra'));
       }
 
      public function muestra(){
@@ -279,5 +281,23 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return redirect(url('/homeEspera'))->with('activacion','El ADMINISTRADOR del sitio evaluará su solicitud y realizará el alta definitiva.');
       }
 
+
+      // public function seleccion(Request $request)
+      // {
+
+      //   $seleccion = new seleccion;
+      //   $seleccion->tecnico_id = $request->tecnico_id;
+      //   $seleccion->investigador_id = $request->investigador_id;
+      //   $seleccion->biobanco_id = $request->biobanco_id;
+      //   $seleccion->save();
+
+      //   $institucion =institucion::findOrFail($request);
+       
+
+      //     //Mail::to($institucion)->send(new nuevaSeleccion($institucion));
+      //   ///para el flashh
+      //   return redirect(url('/productor/buscar'));
+
+      // }
 
 }

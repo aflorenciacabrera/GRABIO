@@ -103,7 +103,7 @@
           </a>
          {{--  <div class="collapse" id="toggleDemo0" style="height: 0px;"> --}}
             <ul class="nav nav-list">
-              <li><a href="{{ url('/paciente') }}">Pacientes</a></li>
+              {{-- <li><a href="{{ url('/paciente') }}">Pacientes</a></li> --}}
               <li><a href="{{ url('/muestra') }}">Muestras</a></li>
               <li><a href="{{ url('/historico') }}">Historicos</a></li>
             </ul>

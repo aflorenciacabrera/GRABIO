@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header text-center"><h4>{{ __('Registro Técnico') }}</h4><div class="pull-right"><a href="#seleccion"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Seleccionar <i class="glyphicon-plus" ></i></a></div>
+                <div class="card-header text-center"><h4>{{ __('Registro Técnico') }}</h4><div class="pull-right"><a href="#seleccion"  class="btn  btn-info  right" type='button'  data-toggle="modal" >Seleccionar Biobanco <i class="glyphicon glyphicon-hand-up"></i></a></div> 
 
                 <div class="modal fade in" id="seleccion" >
                       <div class="modal-dialog">
@@ -18,7 +18,7 @@
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                                     </button>
                                     <div class="panel-heading">
-                                      <h3 class="panel-title">Seleccione Representante </h3>
+                                      <h3 class="panel-title">Seleccione Biobanco </h3>
                                     </div>
                                   </div>
                                    <form method="POST" action="{{ route('register') }}">
@@ -27,7 +27,7 @@
                                                     <table class="table table-user-information">
                                                       <tbody>
                                                         <tr>
-                                                          Biobanco:
+                                                          <label for="">Biobanco:</label>
                                                          
                                                           <select name="biobanco_id"   required>
                                                              @foreach($biobancos as $biobanco)

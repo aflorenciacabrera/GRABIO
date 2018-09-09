@@ -8,7 +8,7 @@
                 <div class="card-header text-center"><h4>{{ __('Ingreso de Paciente') }}</h4></div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{url('muestra/ingreso')}}">
+                    <form method="POST" action="{{url('paciente/ingreso')}}">
                         @csrf
 
                         <div class="form-group row">
@@ -74,7 +74,7 @@
                                 {{ __('Aceptar') }}
                             </button>
                             <span class="pull-right">                        
-                            <a href="{{ url('/muestra') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
+                            <a href="{{ url('/paciente') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
                             </span>
                     </div>
                     </form>

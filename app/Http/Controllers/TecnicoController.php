@@ -14,7 +14,7 @@ class TecnicoController extends Controller
     {
     	$biobancos = biobanco::all();
     	$users = user::all();
-        return view('tecnico.registro', compact('biobancos') , compact('users'));
+        return view('tecnico.registro', compact('biobancos') , compact('users') );
     }
 
     
