@@ -75,7 +75,7 @@
                                 {{ __('Aceptar') }}
                             </button>
                             <span class="pull-right">                        
-                            <a href="{{ url('/muestra') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
+                            <a  href="" aria-label="Close" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
                             </span>
                     </div>
                     </form>
