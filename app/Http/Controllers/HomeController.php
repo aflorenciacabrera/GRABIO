@@ -196,22 +196,23 @@ public function activar($tipo,$user){
         $user->estado = 0;
         $user->save();
 return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
-      
 
     }
 
-    public function paciente(){
-      return view('paciente.paciente');
-    }
+    
 
-    public function pacienteRegistro(){
-      return view('paciente.pacienteRegistro');
+   //Deposito
+     public function deposito(){
+      return view('deposito.deposito');
     }
-
-    public function crearPaciente (Request $request)
+    public function depositanteRegistro(){
+      return view('deposito.depositanteRegistro');
+    }
+    
+    //Depositante
+     public function crearDepositante (Request $request)
       {
-
-         
+ 
         $p = new paciente; 
 
       $p->nombre= $request->nombre;
@@ -225,17 +226,39 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
 
       $p->save();
      // return view("institucion.mostrarCapacidad");
-      return redirect(url('muestra'));
+      return redirect(url('deposito'));
       }
 
-     public function muestra(){
-      return view('muestra.muestra');
+      public function pacienteRegistro(){
+      return view('deposito.pacienteRegistro');
     }
 
-    public function muestraRegistro(){
-      return view('muestra.muestraRegistro');
+    //Paciente
+     public function crearPaciente (Request $request)
+      {
+        $p = new paciente; 
+
+      $p->nombre= $request->nombre;
+      $p->apellido= $request->apellido;
+      $p->dni= $request->dni;
+      $p->direccion= $request->direccion;
+      $p->telefono= $request->telefono;
+      // $p->grupo= $request->grupo;
+      // $p->factor= $request->factor;
+      $p->sexo= $request->sexo;
+
+      $p->save();
+     // return view("institucion.mostrarCapacidad");
+      return redirect(url('deposito'));
+      }
+
+       //Muestra
+
+      public function muestraRegistro(){
+      return view('deposito.muestraRegistro');
     }
 
+   
     public function crearMuestra (Request $request)
       { 
         $m = new muestra; 
@@ -253,7 +276,7 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
 
       $m->save();
      // return view("institucion.mostrarCapacidad");
-      return redirect(url('muestra'));
+      return redirect(url('deposito'));
       }
 
     public function historico(){

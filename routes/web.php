@@ -42,14 +42,17 @@ Route::post('/perfil', 'HomeController@update_avatar');
 //Activar y suspender usuarios
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
 Route::get('admin/suspender/{tipo}/{user}','HomeController@suspender');
+//Deposito
+Route::get('/deposito','HomeController@deposito');
+//Depositante
+Route::get('/deposito/depositante','HomeController@depositanteRegistro');
+Route::post('deposito/depositante','HomeController@crearDepositante');
 //Pacientes
-Route::get('/paciente','HomeController@paciente');
-Route::get('/paciente/ingreso','HomeController@pacienteRegistro');
-Route::post('paciente/ingreso','HomeController@crearPaciente');
+Route::get('/deposito/paciente','HomeController@pacienteRegistro');
+Route::post('deposito/paciente','HomeController@crearPaciente');
 //Muestras
-Route::get('/muestra','HomeController@muestra');
-Route::get('/muestra/ingreso','HomeController@muestraRegistro');
-Route::post('muestra/ingreso','HomeController@crearMuestra');
+Route::get('deposito/muestra','HomeController@muestraRegistro');
+Route::post('deposito/muestra','HomeController@crearMuestra');
 //Historicos
 Route::get('/historico','HomeController@historico');
 });

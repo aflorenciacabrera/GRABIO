@@ -8,7 +8,7 @@
                 <div class="card-header text-center"><h4>{{ __('Ingreso de Muestra') }}</h4> </div>
 
                 <div class="card-body">
-                    <div class="pull-right"><a href="#paciente"  class="btn  btn-info  right" type='button'  data-toggle="modal" >  Ingresar datos de paciente <i class="glyphicon glyphicon-plus"></i></a></div>
+                    <div class="pull-right"><a href="#paciente"  class="btn  btn-info  right" type='button'  data-toggle="modal" >  Ingresar  paciente <i class="glyphicon glyphicon-plus"></i></a></div>
 
                      <div class="modal fade in" id="paciente" >
                       <div class="modal-dialog">
@@ -24,7 +24,7 @@
                                     </div>
                                   </div>
                                    <div class="card-body">
-                    <form method="POST" action="{{url('paciente/ingreso')}}">
+                    <form method="POST" action="{{url('deposito/paciente')}}">
                         @csrf
 
                         <div class="form-group row">
@@ -85,7 +85,7 @@
 
 
 
-                    <form method="POST" action="{{url('muestra/ingreso')}}">
+                    <form method="POST" action="{{url('deposito/muestra')}}">
                         @csrf
 
 {{-- <ul class="nav nav-tabs">
@@ -108,7 +108,16 @@
     <p>Some content in menu 2.</p>
   </div>
 </div> --}}
+                        <div class="form-group row col-lg-offset-4"   align="center">
+                        <label for="name" class="col-md-3 col-form-label "> Paciente:</label>
 
+                            <div class="col-md-3">
+                                <select name="paciente_id" id="">
+                                    <option value="1">  Seleccione paciente</option>
+                                </select>
+                               
+                            </div>
+                            </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Muestra:</label>
 
@@ -116,14 +125,7 @@
                                 <input id="name" type="text" class="form-control" name="muestra" value="" required autofocus>
                             </div>
 
-                           {{--  <label for="name" class="col-md-2 col-form-label "> Paciente:</label>
-
-                            <div class="col-md-2">
-                                <select name="paciente_id" id="">
-                                    <option value="1">  </option>
-                                </select>
-                               
-                            </div> --}}
+                           
 
                             <label for="name" class="col-md-2 col-form-label "> Cesion:</label>
 

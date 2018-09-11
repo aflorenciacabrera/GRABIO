@@ -96,44 +96,47 @@
         <li class="active">
           <a data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
           <h4>
-          Unidad de almacenamiento
+          <span class="glyphicon glyphicon-inbox"></span> Unidad de almacenamiento
           <br>
           <small>Biobanco {{-- <span class="caret"> --}}</span></small>
           </h4>
           </a>
          {{--  <div class="collapse" id="toggleDemo0" style="height: 0px;"> --}}
             <ul class="nav nav-list">
-              {{-- <li><a href="{{ url('/paciente') }}">Pacientes</a></li> --}}
-              <li><a href="{{ url('/muestra') }}">Muestras</a></li>
-              <li><a href="{{ url('/historico') }}">Historicos</a></li>
+              <li><a href="#">Congelador</a></li>
+              <li><a href="#">Tanques</a></li>
+              <li><a href="#">Armarios</a></li>
+               
             </ul>
          {{--  </div> --}}
         </li>
         <li class="active">
-          <a class="active">
+          <a class="active"  href="{{ url('/deposito') }}">
           {{-- <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed " class="active" > --}}
-          <span class="glyphicon glyphicon-cloud"></span> Freezer {{-- <span class="caret pull-right"></span> --}}
+          <span ><h4>Depósito</h4></span>  {{-- <span class="caret pull-right"></span> --}}
+        
+          <small>Gestión de Muestras {{-- <span class="caret"> --}}</span></small>
        </a> 
        {{--    <div class="collapse" id="toggleDemo" style="height: 0px;"> --}}
             <ul class="nav nav-list">
-              <li><a href="#">120º</a></li>
-              <li><a href="#">60º</a></li>
-              <li><a href="#">30º</a></li>
+              <li><a href="{{ url('/deposito/depositante') }}">Depositante</a></li> 
+              <li><a href="{{ url('deposito/paciente') }}">Pacientes</a></li>
+              <li><a href="{{ url('deposito/muestra') }}">Muestras</a></li>
+             <li><a href="{{ url('/historico') }}"><i class="glyphicon glyphicon-list-alt"></i> Historicos</a></li>
             </ul>
          {{--  </div> --}}
         </li>
         <li class="active">
           <a >
           {{-- <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="active"> --}}
-          <span class="glyphicon glyphicon-inbox"></span> Heladera {{--  <span class="caret pull-right"></span> --}}
+          <span ></span> Gestion de Viales {{--  <span class="caret pull-right"></span> --}}
           </a>
           {{-- <div class="collapse" id="toggleDemo2" style="height: 0px;"> --}}
             <ul class="nav nav-list">
                
-              <li><a href="#">Estante</a></li><br><br>
-              <li><a href="#">Caja</a></li><br><br>
-              <li><a href="#">estante</a></li><br>
-               <li><a href="#">Slot</a></li>
+              <li><a href="#">Selección de Muestras para cortes</a></li><br><br>
+             
+               <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Operación </a></li>
             </ul>
       {{--     </div>  --}}
         </li>
