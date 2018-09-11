@@ -340,4 +340,8 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return view('almacenamiento.tanque');
     }
 
+    public function posiciones(){
+      return view('almacenamiento.posiciones');
+    }
+
 }

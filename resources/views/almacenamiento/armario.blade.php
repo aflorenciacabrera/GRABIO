@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="col-md-8 col-md-offset-0" class="text-center" > 
        
         <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
@@ -31,10 +32,10 @@
 			                        @csrf
 
 			                        <div class="form-group row">
-			                            <label for="name" class="col-md-2 col-form-label "> Estante</label>
+			                            <label for="name" class="col-md-2 col-form-label "> Estante </label>
 
 			                            <div class="col-md-4">
-			                                <input id="name" type="text" class="form-control" name="nombre" value="" required autofocus>
+			                                <input id="name" type="text" class="form-control" placeholder=" A-B-C-D " name="nombre" value="" required autofocus>
 			                            </div>
 			                        
 			                       
@@ -83,37 +84,38 @@
 			          <th>B</th>
 			          <th>C</th>
 			          <th>D</th>
-			          <th>E</th>
-			          <th>F</th>
+			         {{--  <th>E</th>
+			          <th>F</th> --}}
 			        </tr>
 			      </thead>
 			      <tbody>
 			        <tr>
 			          <th scope="row">1</th>
-			          	  <td>A.1</td>
-				          <td>B.1</td>
-				          <td>C.1</td>
-				          <td>D.1</td>
-				          <td>E.1</td>
-				          <td>F.1</td>
+			          	  <td><a href="{{ url('/almacenamiento/posiciones') }}" type="button" class="btn btn-primary btn-circle">A.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="" type="button" class="btn btn-success btn-circle ">B.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="" type="button" class="btn btn-danger btn-circle ">C.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="" type="button" class="btn btn-warning btn-circle ">D.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          {{-- <td>E.1</td>
+				          <td>F.1</td> --}}
 			        </tr>
+
 			        <tr>
 			          <th scope="row">2</th>
-			          	  <td>A.2</td>
-				          <td>B.2</td>
-				          <td>C.2</td>
-				          <td>D.2</td>
-				          <td>E.2</td>
-				          <td>F.2</td>
+			          	  <td></td>
+				          <td></td>
+				          <td></td>
+				          <td></td>
+				          {{-- <td>E.2</td>
+				          <td>F.2</td> --}}
 			        </tr>
 			        <tr>
 			          <th scope="row">3</th>
-			          	  <td>A.3</td>
-				          <td>B.3</td>
-				          <td>C.3</td>
-				          <td>D.3</td>
-				          <td>E.3</td>
-				          <td>F.3</td>
+			          	  <td></td>
+				          <td></td>
+				          <td></td>
+				          <td></td>
+				          {{-- <td>E.3</td>
+				          <td>F.3</td> --}}
 			        </tr>
 			      </tbody>
     		</table>

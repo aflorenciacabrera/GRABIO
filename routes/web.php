@@ -64,6 +64,8 @@ Route::post('almacenamiento/congelador','HomeController@crearCongelador');
 //Tanque
 Route::get('/almacenamiento/tanque','HomeController@tanqueRegistro');
 Route::post('almacenamiento/tanque','HomeController@crearTanque');
+
+Route::get('/almacenamiento/posiciones','HomeController@posiciones');
 });
 
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
