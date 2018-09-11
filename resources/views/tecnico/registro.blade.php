@@ -23,39 +23,34 @@
                                    <form method="POST" action="{{ route('register') }}">
                                        @csrf
                                           <div class=" col-md-16 col-lg-12 "> 
-                                                    <table class="table table-user-information">
-                                                      <tbody>
-                                                        <tr>
-                                                          <label for="">Biobanco:</label>
-                                                         
-                                                          <select name="biobanco_id"   required>
-                                                             @foreach($biobancos as $biobanco)
-                                                                  <option  value="{{ $biobanco->id }}" selected>{{ $biobanco->nombreCor }}</option>
-                                                              @endforeach
-                                                          </select>
-                                                   
-                                                        </tr>
-                                                       <hr style="width:75%;">
-                                                          <div class="panel-title "><label >Datos de Representante</label></div> 
-                                                         @foreach($users as $user)
-                                                          @if ( $biobanco->user_id == $user->id )
-                                                         <tr>
-                                                          <td>Nombre:{{ $user->id }}</td>
-                                                          <td> </td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Apellido:</td>
-                                                           <td> </td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td>Telefono de contacto:</td>
-                                                           <td> </td>
-                                                        </tr>
-                                                        @endif
-                                                       @endforeach
-                                                            
-                                                      </tbody>
-                                                    </table>
+                                                   <table class="table table-user-information">
+                                                        <tbody>
+                                                          <tr>
+                                                            <label for="">Biobanco:</label>
+                                                                <select name="biobanco_id"   required>
+                                                                  <option value="">Seleccione Biobanco</option>
+                                                                   {{-- @foreach($biobancos as $biobanco)
+                                                                        <option  value="{{ $biobanco->id }}" selected>{{ $biobanco->nombreCor }}</option>
+                                                                    @endforeach --}}
+                                                                </select>
+                                                          </tr>
+                                                          {{-- Datos de representante precargados --}}
+                                                            <td><div class="panel-title ">Datos de Representante</div> </td>        
+                                                           <tr>
+                                                            <td>Nombre:</td>
+                                                            <td><label for="" > </label></td>
+                                                          </tr>
+                                                          
+                                                          <tr>
+                                                            <td>Apellido</td>
+                                                             <td><label for=""> </label></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Telefono de contacto:</td>
+                                                             <td><label for=""> </label></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
                                                     <div class="modal-footer">                    
                                                          <div class="row">
                                                                 <div class="col-md-4 col-lg-offset-2 ">

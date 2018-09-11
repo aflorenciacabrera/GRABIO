@@ -35,9 +35,10 @@
                                         <tr>
                                           <label for="">Biobanco:</label>
                                               <select name="biobanco_id"   required>
-                                                 @foreach($biobancos as $biobanco)
+                                                <option value="">Seleccione Biobanco</option>
+                                                 {{-- @foreach($biobancos as $biobanco)
                                                       <option  value="{{ $biobanco->id }}" selected>{{ $biobanco->nombreCor }}</option>
-                                                  @endforeach
+                                                  @endforeach --}}
                                               </select>
                                         </tr>
                                         {{-- Datos de representante precargados --}}
