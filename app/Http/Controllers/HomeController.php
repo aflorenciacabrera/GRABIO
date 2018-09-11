@@ -288,7 +288,6 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
     public function crearBiobanco (Request $request)
       {
 
-         
         $b = new biobanco; 
 
       $b->foto= $request->foto;
@@ -322,5 +321,23 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       //   return redirect(url('/productor/buscar'));
 
       // }
+
+
+      //Almacenamiento
+     public function almacenamiento(){
+      return view('almacenamiento.almacenamiento');
+    }
+    //Armario
+    public function armarioRegistro(){
+      return view('almacenamiento.armario');
+    }
+    //Congelador
+    public function congeladorRegistro(){
+      return view('almacenamiento.congelador');
+    }
+    //Tanque
+    public function tanqueRegistro(){
+      return view('almacenamiento.tanque');
+    }
 
 }

@@ -103,9 +103,9 @@
           </a>
          {{--  <div class="collapse" id="toggleDemo0" style="height: 0px;"> --}}
             <ul class="nav nav-list">
-              <li><a href="#">Congelador</a></li>
-              <li><a href="#">Tanques</a></li>
-              <li><a href="#">Armarios</a></li>
+              <li><a href="{{ url('/almacenamiento/congelador') }}">Congelador</a></li>
+              <li><a href="{{ url('/almacenamiento/tanque') }}">Tanques</a></li>
+              <li><a href="{{ url('/almacenamiento/armario') }}">Armarios</a></li>
                
             </ul>
          {{--  </div> --}}

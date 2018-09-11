@@ -30,9 +30,6 @@ Route::post('responsable/biobanco','HomeController@crearBiobanco');
 
 Route::group(['middleware'=>['auth','Admin']],function(){
 
-
-
-
 //Principal
 Route::get('/principal', 'HomeController@principal');
 // PERFIL
@@ -55,6 +52,18 @@ Route::get('deposito/muestra','HomeController@muestraRegistro');
 Route::post('deposito/muestra','HomeController@crearMuestra');
 //Historicos
 Route::get('/historico','HomeController@historico');
+
+//Unidad de Almacenamiento
+Route::get('/almacenamiento','HomeController@almacenamiento');
+//Armario
+Route::get('/almacenamiento/armario','HomeController@armarioRegistro');
+Route::post('almacenamiento/armario','HomeController@crearArmario');
+//Congelador
+Route::get('/almacenamiento/congelador','HomeController@congeladorRegistro');
+Route::post('almacenamiento/congelador','HomeController@crearCongelador');
+//Tanque
+Route::get('/almacenamiento/tanque','HomeController@tanqueRegistro');
+Route::post('almacenamiento/tanque','HomeController@crearTanque');
 });
 
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
