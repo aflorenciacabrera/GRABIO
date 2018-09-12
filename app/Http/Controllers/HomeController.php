@@ -344,4 +344,8 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return view('almacenamiento.posiciones');
     }
 
+    public function corte(){
+      return view('viales.corteMuestra');
+    }
+
 }
