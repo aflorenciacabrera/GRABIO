@@ -91,11 +91,11 @@
 			      <tbody>
 			        <tr>
 			          <th scope="row">1</th>
-			          	  <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-primary btn-circle">A.1 <i class="glyphicon glyphicon-list"></i></a></td>
-				          <td><a href="" type="button" class="btn btn-success btn-circle " >B.1 <i class="glyphicon glyphicon-list"></i></a>
+			          	  <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-danger btn-circle">A.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-success btn-circle " >B.1 <i class="glyphicon glyphicon-list"></i></a>
 				          </td>
-				          <td><a href="" type="button" class="btn btn-danger btn-circle ">C.1 <i class="glyphicon glyphicon-list"></i></a></td>
-				          <td><a href="" type="button" class="btn btn-warning btn-circle ">D.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-danger btn-circle ">C.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-warning btn-circle ">D.1 <i class="glyphicon glyphicon-list"></i></a></td>
 				          {{-- <td>E.1</td>
 				          <td>F.1</td> --}}
 			        </tr>

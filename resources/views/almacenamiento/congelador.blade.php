@@ -83,37 +83,35 @@
 			          <th>B</th>
 			          <th>C</th>
 			          <th>D</th>
-			          <th>E</th>
-			          <th>F</th>
+			          
 			        </tr>
 			      </thead>
 			      <tbody>
 			        <tr>
 			          <th scope="row">1</th>
-			          	  <td>A.1</td>
-				          <td>B.1</td>
-				          <td>C.1</td>
-				          <td>D.1</td>
-				          <td>E.1</td>
-				          <td>F.1</td>
+			          	  <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-danger btn-circle">A.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-success btn-circle " >B.1 <i class="glyphicon glyphicon-list"></i></a>
+				          </td>
+				          <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-danger btn-circle ">C.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          <td><a href="{{ url('almacenamiento/posiciones') }}" type="button" class="btn btn-warning btn-circle ">D.1 <i class="glyphicon glyphicon-list"></i></a></td>
+				          {{-- <td>E.1</td>
+				          <td>F.1</td> --}}
 			        </tr>
 			        <tr>
 			          <th scope="row">2</th>
-			          	  <td>A.2</td>
-				          <td>B.2</td>
-				          <td>C.2</td>
-				          <td>D.2</td>
-				          <td>E.2</td>
-				          <td>F.2</td>
+			          	  <td></td>
+				          <td></td>
+				          <td></td>
+				          <td></td>
+				         
 			        </tr>
 			        <tr>
 			          <th scope="row">3</th>
-			          	  <td>A.3</td>
-				          <td>B.3</td>
-				          <td>C.3</td>
-				          <td>D.3</td>
-				          <td>E.3</td>
-				          <td>F.3</td>
+			          	  <td></td>
+				          <td></td>
+				          <td></td>
+				          <td></td>
+				          
 			        </tr>
 			      </tbody>
     		</table>
