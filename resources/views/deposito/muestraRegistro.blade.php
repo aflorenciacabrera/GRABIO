@@ -127,27 +127,36 @@
 
                            
 
-                            <label for="name" class="col-md-2 col-form-label "> Cesion:</label>
+                            <label for="name" class="col-md-2 col-form-label "> Órgano:</label>
 
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="id_cesion" value="" required autofocus>
+                                <input id="name" type="text" class="form-control" name="organo" value="" required autofocus>
                             </div>
        
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> Fuente:</label>
-
-                            <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="id_fuente" value="" required autofocus>
+                            <label for="name" class="col-md-2 col-form-label "> Fecha de Cirugía:</label>
+                            
+                            <div class="col-md-2">
+                                <input id="name" type="date" class="form-control" name="fecha" value="" required autofocus>
+                                
                             </div>
-                        
-                            <label for="name" class="col-md-2 col-form-label ">Naturaleza </label>
+                              <label for="name" class="col-md-2 col-form-label ">Naturaleza </label>
 
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="naturaleza" value="" required autofocus>
                             </div>
-                        </div>
+                            </div>
+                             <div class="form-group row">
+                       <label for="name" class="col-md-5 col-form-label "> Código de Anatpomía Patológica Diagnóstico:</label>
+
+                            <div class="col-md-7">
+                                <input id="name" type="text" class="form-control" name="organo" value="" required autofocus>
+                            </div>
+                           </div>
+                          
+                       
                          <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Cantidad:</label>
 
@@ -164,21 +173,23 @@
                          <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Fecha de Entrada:</label>
 
-                            <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="fecha_entrada" value="" required autofocus>
+                            <div class="col-md-2">
+                                <input id="name" type="date" class="form-control" name="fechaE" value="" required autofocus>
+                                
                             </div>
                        
                             <label for="name" class="col-md-2 col-form-label "> Fecha de Salida:</label>
 
-                            <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="fecha_salida" value="" required autofocus>
+                            <div class="col-md-2">
+                                <input id="name" type="date" class="form-control" name="fechaS" value="" required autofocus>
+                                
                             </div>
                         </div>
                          <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> Localización:</label>
+                            <label for="name" class="col-md-2 col-form-label "> Observaciones:</label>
 
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="localizacion" value="" required autofocus>
+                                <input id="name" type="text" class="form-control" name="observaciones" value="" required autofocus>
                             </div>
                        
                             <label for="name" class="col-md-2 col-form-label "> Diagnóstico:</label>

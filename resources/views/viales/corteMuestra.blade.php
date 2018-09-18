@@ -37,7 +37,7 @@
 			          <th>Concentración</th>
 			          <th>Fecha de Entrada</th>
 			          <th>Fecha de Salida</th>
-			          <th>Localización</th>
+			          <th>Órgano</th>
 			          <th>Diagnóstico</th>
 			          
 			        </tr>

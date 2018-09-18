@@ -352,4 +352,8 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return view('viales.corteMuestra');
     }
 
+    public function solicitudMuestra(){
+      return view('deposito.solicitudMuestra');
+    }
+
 }

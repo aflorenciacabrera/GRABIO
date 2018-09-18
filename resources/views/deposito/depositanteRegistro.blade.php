@@ -62,8 +62,22 @@
                         <div class="col-md-4 col-lg-3 " align="center">
                           <input id="avatar" name="avatar"  type="file" accept="image/*" value="{{ old('avatar') }}" required autofocus>
                         </div>
+
+            
                         </div>
-                       
+                         <div class="form-group row">
+                          <label for="name" class="col-md-3 col-form-label "> Acuerdo de depósito</label>
+                            <div class="col-md-4">
+                                <select name="acuerdo" id="acuerdo">
+                                    <option value="femenino"> SI </option>
+                                    <option value="masculino"> NO </option>
+                                </select>
+                                                     
+                            </div>
+                      
+                           
+                            
+                        </div>
                         <div class="panel-footer">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Aceptar') }}

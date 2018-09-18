@@ -72,6 +72,9 @@ Route::get('viales/corte','HomeController@corte');
 Route::get('/historico','HomeController@historico');
 //Operaciones
 Route::get('/operaciones','HomeController@operaciones');
+
+//Solicitud de Muestra
+Route::get('solicitud/muestra','HomeController@solicitudMuestra');
 });
 
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');

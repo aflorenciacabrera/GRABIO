@@ -102,7 +102,7 @@
           </h4>
           </a>
          {{--  <div class="collapse" id="toggleDemo0" style="height: 0px;"> --}}
-            <ul class="nav nav-list">
+            <ul class="">
               <li><a href="{{ url('/almacenamiento/congelador') }}">Congelador</a></li>
               <li><a href="{{ url('/almacenamiento/tanque') }}">Tanques</a></li>
               <li><a href="{{ url('/almacenamiento/armario') }}">Armarios</a></li>
@@ -118,10 +118,11 @@
           <small>Gestión de Muestras {{-- <span class="caret"> --}}</span></small>
        </a> 
        {{--    <div class="collapse" id="toggleDemo" style="height: 0px;"> --}}
-            <ul class="nav nav-list">
-              <li><a href="{{ url('/deposito/depositante') }}">Depositante</a></li> 
-              <li><a href="{{ url('deposito/paciente') }}">Pacientes</a></li>
-              <li><a href="{{ url('deposito/muestra') }}">Muestras</a></li>
+            <ul class="">
+              <li type="disc"><a href="{{ url('/deposito/depositante') }}">Depositante</a></li> 
+              <li type="disc"><a href="{{ url('deposito/paciente') }}">Pacientes</a></li>
+              <li type="disc"><a href="{{ url('deposito/muestra') }}">Muestras</a></li>
+              <li type="disc"><a href="{{ url('solicitud/muestra') }}">Cesión</a></li>
              
             </ul>
          {{--  </div> --}}
