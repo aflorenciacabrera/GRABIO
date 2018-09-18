@@ -13,9 +13,13 @@
 		    	<option value="">seleccionar muestas</option>
 		    </select>
 		    <select name="" id="">
-		    	<option value="">seleccionar corte</option>
+		    	<option value="">seleccionar Vial</option>
 		    </select>
-		    <label for="">N° de Corte</label>
+		    
+		   
+		   	<label for=""></label>
+               <input   type="number"  name="" min="0.00" max="10000.00" step="0.01" placeholder="N° de Corte" />
+          
         </div>
 
         <h3 class="page-header">Viales</h3>
@@ -35,14 +39,13 @@
 			          <th>Fecha de Salida</th>
 			          <th>Localización</th>
 			          <th>Diagnóstico</th>
-			          <th>Guardar o Ceder</th>
+			          
 			        </tr>
 			      </thead>
 			      <tbody>
 			        <tr>
-			          <th scope="row">1</th>
+			          <th scope="row">V 1</th>
 			          	  <td></td>
-				          <td></td>
 				          <td></td>
 				          <td></td>
 				          <td></td>
@@ -50,12 +53,12 @@
 				          <td></td>
 				          <td></td>
 				         
+				         
 			        </tr>
 
 			        <tr>
-			          <th scope="row">2</th>
+			          <th scope="row">V 2</th>
 			          	  <td></td>
-				          <td></td>
 				          <td></td>
 				          <td></td>
 				          <td></td>
@@ -63,9 +66,10 @@
 				          <td></td>
 				          <td></td>
 				          
+				          
 			        </tr>
 			        <tr>
-			          <th scope="row">3</th>
+			          <th scope="row">V 3</th>
 			          	  <td></td>
 				          <td></td>
 				          <td></td>
@@ -73,7 +77,7 @@
 				          <td></td>
 				          <td></td>
 				          <td></td>
-				          <td></td>
+				         
 				        
 			        </tr>
 			      </tbody>
@@ -82,6 +86,17 @@
 	
 	</div>
 </div>
-</div>
+ <div align="center">
+        	
+		 <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="">
+		    Guardar</button> 
+</div></div>
+<script>	
+$(document).ready(function(){
+    $('.editbtn').click(function(){
+        $(this).html($(this).html() == 'Guardar' ? 'Ceder' : 'Guardar');
+    });
+});
+       </script>
            
 @endsection

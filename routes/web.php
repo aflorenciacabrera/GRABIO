@@ -50,8 +50,7 @@ Route::post('deposito/paciente','HomeController@crearPaciente');
 //Muestras
 Route::get('deposito/muestra','HomeController@muestraRegistro');
 Route::post('deposito/muestra','HomeController@crearMuestra');
-//Historicos
-Route::get('/historico','HomeController@historico');
+
 
 //Unidad de Almacenamiento
 Route::get('/almacenamiento','HomeController@almacenamiento');
@@ -68,6 +67,11 @@ Route::post('almacenamiento/tanque','HomeController@crearTanque');
 Route::get('/almacenamiento/posiciones','HomeController@posiciones');
 //Corte de las muestras
 Route::get('viales/corte','HomeController@corte');
+
+//Historicos
+Route::get('/historico','HomeController@historico');
+//Operaciones
+Route::get('/operaciones','HomeController@operaciones');
 });
 
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');

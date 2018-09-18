@@ -283,6 +283,10 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return view('historico');
     }
 
+    public function operaciones(){
+      return view('operaciones');
+    }
+
 
 
     public function crearBiobanco (Request $request)

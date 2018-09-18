@@ -136,7 +136,7 @@
                
               <li><a href="{{ url('viales/corte') }}">Selección de Muestras para cortes</a></li><br><br>
              
-               <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Operación </a></li>
+               <li><a href="{{ url('/operaciones') }}"><i class="glyphicon glyphicon-cog"></i> Operación </a></li>
                <li><a href="{{ url('/historico') }}"><i class="glyphicon glyphicon-list-alt"></i> Historicos</a></li>
             </ul>
       {{--     </div>  --}}
