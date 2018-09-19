@@ -138,13 +138,13 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Fecha de Cirugía:</label>
                             
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <input id="name" type="date" class="form-control" name="fecha" value="" required autofocus>
                                 
                             </div>
                               <label for="name" class="col-md-2 col-form-label ">Naturaleza </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <input id="name" type="text" class="form-control" name="naturaleza" value="" required autofocus>
                             </div>
                             </div>
@@ -173,14 +173,14 @@
                          <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Fecha de Entrada:</label>
 
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <input id="name" type="date" class="form-control" name="fechaE" value="" required autofocus>
                                 
                             </div>
                        
                             <label for="name" class="col-md-2 col-form-label "> Fecha de Salida:</label>
 
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <input id="name" type="date" class="form-control" name="fechaS" value="" required autofocus>
                                 
                             </div>
