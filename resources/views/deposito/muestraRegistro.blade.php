@@ -149,11 +149,11 @@
                             </div>
                             </div>
                              <div class="form-group row">
-                       <label for="name" class="col-md-5 col-form-label "> Código de Anatpomía Patológica Diagnóstico:</label>
+                                <label for="name" class="col-md-5 col-form-label "> Código de Anatpomía Patológica Diagnóstico:</label>
 
-                            <div class="col-md-7">
-                                <input id="name" type="text" class="form-control" name="organo" value="" required autofocus>
-                            </div>
+                                <div class="col-md-7">
+                                    <input id="name" type="text" class="form-control" name="organo" value="" required autofocus>
+                                </div>
                            </div>
                           
                        
