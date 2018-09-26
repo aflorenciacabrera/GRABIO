@@ -16,14 +16,15 @@ class CreateMuestrasTable extends Migration
         Schema::create('muestras', function (Blueprint $table) {
             $table->increments('id');
             $table->string('muestra');
-            $table->string('id_cesion');
-            $table->string('id_fuente');
+            $table->string('organo');
+            $table->string('fechaCiru');
             $table->string('naturaleza');
+            $table->string('capd');
             $table->string('cantidad');
             $table->string('concentracion');
-            $table->string('fecha_entrada');
-            $table->string('fecha_salida');
-            $table->string('localizacion');
+            $table->string('fechaE');
+            $table->string('fechaS');
+            $table->string('observaciones');
             $table->string('diagnostico');
             $table->integer('paciente_id')->unsigned();
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');

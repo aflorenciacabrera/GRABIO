@@ -139,7 +139,7 @@
                             <label for="name" class="col-md-2 col-form-label "> Fecha de Cirugía:</label>
                             
                             <div class="col-md-3">
-                                <input id="name" type="date" class="form-control" name="fecha" value="" required autofocus>
+                                <input id="name" type="date" class="form-control" name="fechaCiru" value="" required autofocus>
                                 
                             </div>
                               <label for="name" class="col-md-2 col-form-label ">Naturaleza </label>
@@ -149,10 +149,10 @@
                             </div>
                             </div>
                              <div class="form-group row">
-                                <label for="name" class="col-md-5 col-form-label "> Código de Anatpomía Patológica Diagnóstico:</label>
+                                <label for="name" class="col-md-5 col-form-label "> Código de Anatomía Patológica Diagnóstico:</label>
 
                                 <div class="col-md-7">
-                                    <input id="name" type="text" class="form-control" name="organo" value="" required autofocus>
+                                    <input id="name" type="text" class="form-control" name="capd" value="" required autofocus>
                                 </div>
                            </div>
                           

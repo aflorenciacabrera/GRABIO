@@ -19,8 +19,8 @@ class MuestraController extends Controller
       { 
         $m = new muestra; 
       $m->muestra = $request->muestra;  
-      $m->id_cesion = $request->id_cesion;
-      $m->id_fuente = $request->id_fuente;
+      $m->organo = $request->organo;
+      $m->fechaCiru = $request->fechaCiru;
       $m->naturaleza = $request->naturaleza;
       $m->cantidad = $request->cantidad;
       $m->concentracion = $request->concentracion;

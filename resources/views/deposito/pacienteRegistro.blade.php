@@ -8,7 +8,7 @@
                 <div class="card-header text-center"><h4>{{ __('Ingreso de Paciente') }}</h4></div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{url('paciente/ingreso')}}">
+                    <form method="POST" action="{{url('deposito/paciente')}}">
                         @csrf
 
                         <div class="form-group row">
