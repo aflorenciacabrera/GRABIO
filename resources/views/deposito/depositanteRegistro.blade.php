@@ -37,19 +37,19 @@
                             </div>
                         </div> --}}
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> Teléfono</label>
+                            <label class="col-md-2 col-form-label "> Teléfono</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="telefono" value="" required autofocus>                          
+                                <input  type="text" class="form-control" name="telefono" value="" required autofocus>                          
                             </div>
                         
                             <label for="name" class="col-md-2 col-form-label "> Nombre de contacto</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="nombContac" value="" required autofocus>                          
+                                <input  type="text" class="form-control" name="nombContac" value="" required autofocus>                          
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label "> Descripción  </label>
+                            <label class="col-md-2 col-form-label "> Descripción  </label>
                             <div class="col-md-8">                               
                                <input id="name" type="text" class="form-control" name="descripcion" value="" required autofocus>                          
                             </div>
@@ -69,8 +69,8 @@
                           <label for="name" class="col-md-3 col-form-label "> Acuerdo de depósito</label>
                             <div class="col-md-4">
                                 <select name="acuerdo" id="acuerdo">
-                                    <option value="femenino"> SI </option>
-                                    <option value="masculino"> NO </option>
+                                    <option value="Si"> SI </option>
+                                    <option value="No"> NO </option>
                                 </select>
                                                      
                             </div>

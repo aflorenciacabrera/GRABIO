@@ -42,14 +42,14 @@ Route::get('admin/suspender/{tipo}/{user}','HomeController@suspender');
 //Deposito
 Route::get('/deposito','HomeController@deposito');
 //Depositante
-Route::get('/deposito/depositante','HomeController@depositanteRegistro');
-Route::post('deposito/depositante','HomeController@crearDepositante');
+Route::get('/deposito/depositante','DepositanteController@depositanteRegistro');
+Route::post('deposito/depositante','DepositanteController@crearDepositante');
 //Pacientes
-Route::get('/deposito/paciente','HomeController@pacienteRegistro');
-Route::post('deposito/paciente','HomeController@crearPaciente');
+Route::get('/deposito/paciente','PacienteController@pacienteRegistro');
+Route::post('deposito/paciente','PacienteController@crearPaciente');
 //Muestras
-Route::get('deposito/muestra','HomeController@muestraRegistro');
-Route::post('deposito/muestra','HomeController@crearMuestra');
+Route::get('deposito/muestra','MuestraController@muestraRegistro');
+Route::post('deposito/muestra','MuestraController@crearMuestra');
 
 
 //Unidad de Almacenamiento

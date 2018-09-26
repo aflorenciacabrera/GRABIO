@@ -3,8 +3,7 @@
 namespace grabio\Http\Controllers;
 
 use grabio\User;
-use grabio\paciente;
-use grabio\muestra;
+
 use grabio\biobanco;
 use grabio\seleccion;
 
@@ -199,86 +198,12 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
 
     }
 
-    
-
    //Deposito
      public function deposito(){
       return view('deposito.deposito');
     }
-    public function depositanteRegistro(){
-      return view('deposito.depositanteRegistro');
-    }
-    
-    //Depositante
-     public function crearDepositante (Request $request)
-      {
- 
-        $p = new paciente; 
-
-      $p->nombre= $request->nombre;
-      $p->apellido= $request->apellido;
-      $p->dni= $request->dni;
-      $p->direccion= $request->direccion;
-      $p->telefono= $request->telefono;
-      // $p->grupo= $request->grupo;
-      // $p->factor= $request->factor;
-      $p->sexo= $request->sexo;
-
-      $p->save();
-     // return view("institucion.mostrarCapacidad");
-      return redirect(url('deposito'));
-      }
-
-      public function pacienteRegistro(){
-      return view('deposito.pacienteRegistro');
-    }
-
-    //Paciente
-     public function crearPaciente (Request $request)
-      {
-        $p = new paciente; 
-
-      $p->nombre= $request->nombre;
-      $p->apellido= $request->apellido;
-      $p->dni= $request->dni;
-      $p->direccion= $request->direccion;
-      $p->telefono= $request->telefono;
-      // $p->grupo= $request->grupo;
-      // $p->factor= $request->factor;
-      $p->sexo= $request->sexo;
-
-      $p->save();
-     // return view("institucion.mostrarCapacidad");
-      return redirect(url('deposito'));
-      }
-
-       //Muestra
-
-      public function muestraRegistro(){
-      return view('deposito.muestraRegistro');
-    }
-
-   
-    public function crearMuestra (Request $request)
-      { 
-        $m = new muestra; 
-      $m->muestra = $request->muestra;  
-      $m->id_cesion = $request->id_cesion;
-      $m->id_fuente = $request->id_fuente;
-      $m->naturaleza = $request->naturaleza;
-      $m->cantidad = $request->cantidad;
-      $m->concentracion = $request->concentracion;
-      $m->fecha_entrada = $request->fecha_entrada;
-      $m->fecha_salida = $request->fecha_salida;
-      $m->localizacion = $request->localizacion;
-      $m->diagnostico = $request->diagnostico;
-      $m->paciente_id = $request->paciente_id;
-
-      $m->save();
-     // return view("institucion.mostrarCapacidad");
-      return redirect(url('deposito'));
-      }
-
+  
+     
     public function historico(){
       return view('historico');
     }
