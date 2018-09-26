@@ -14,7 +14,6 @@ class MuestraController extends Controller
       return view('deposito.muestraRegistro');
     }
 
-   
     public function crearMuestra (Request $request)
       { 
         $m = new muestra; 
@@ -22,14 +21,14 @@ class MuestraController extends Controller
       $m->organo = $request->organo;
       $m->fechaCiru = $request->fechaCiru;
       $m->naturaleza = $request->naturaleza;
+      $m->capd = $request->capd;
       $m->cantidad = $request->cantidad;
       $m->concentracion = $request->concentracion;
-      $m->fecha_entrada = $request->fecha_entrada;
-      $m->fecha_salida = $request->fecha_salida;
-      $m->localizacion = $request->localizacion;
+      $m->fecha_entrada = $request->fechaE;
+      $m->fecha_salida = $request->fechaS;
+      $m->localizacion = $request->observaciones;
       $m->diagnostico = $request->diagnostico;
       $m->paciente_id = $request->paciente_id;
-
       $m->save();
      // return view("institucion.mostrarCapacidad");
       return redirect(url('deposito'));

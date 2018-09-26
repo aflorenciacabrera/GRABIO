@@ -122,7 +122,7 @@
               <li type="disc"><a href="{{ url('/deposito/depositante') }}">Depositante</a></li> 
               <li type="disc"><a href="{{ url('deposito/paciente') }}">Pacientes</a></li>
               <li type="disc"><a href="{{ url('deposito/muestra') }}">Muestras</a></li>
-              <li type="disc"><a href="{{ url('solicitud/muestra') }}">Cesión</a></li>
+              <li type="disc"><a href="{{ url('deposito/cesion') }}">Cesión</a></li>
              
             </ul>
          {{--  </div> --}}

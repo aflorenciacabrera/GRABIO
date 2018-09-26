@@ -7,7 +7,7 @@
                 <div class="card-header text-center"><h4>{{ __('Solicitud') }}</h4></div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{url('solicitud/muestra')}}">
+                    <form method="POST" action="{{url('deposito/cesion')}}">
                         @csrf
                         <div class=" "  align="center">
                             <h4> Datos del Solicitante</h4>

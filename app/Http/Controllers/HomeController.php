@@ -278,7 +278,7 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
     }
 
     public function solicitudMuestra(){
-      return view('deposito.solicitudMuestra');
+      return view('deposito.cesion');
     }
 
 }
