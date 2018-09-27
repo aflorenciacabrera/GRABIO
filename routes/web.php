@@ -73,9 +73,10 @@ Route::get('/historico','HomeController@historico');
 //Operaciones
 Route::get('/operaciones','HomeController@operaciones');
 
-//Solicitud de Muestra
-Route::get('deposito/cesion','HomeController@solicitudMuestra');
+//cesion
+Route::get('deposito/cesion','CesionController@cesion');
 });
+Route::post('deposito/cesion','CesionController@crearCesion');
 
 Route::get('admin/activar/{tipo}/{user}','HomeController@activar');
 

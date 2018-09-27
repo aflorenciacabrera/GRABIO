@@ -19,49 +19,49 @@
                             <label for="name" class="col-md-2 col-form-label "> Lugar de trabajo:</label>
 
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="nombre" value="" required autofocus>
+                                <input id="name" type="text" class="form-control" name="LugarTrab" value="" required autofocus>
                             </div>
                         
                        
                             <label for="name" class="col-md-2 col-form-label "> Contacto:</label>
 
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="apellido" value="" required autofocus>
+                                <input id="name" type="text" class="form-control" name="contacto" value="" required autofocus>
                             </div>
                         </div>
    
                         <div class="form-group row ">
                             <label for="name" class="col-md-2 col-form-label "> Solicitud de Cesión:</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="dni" value="" required autofocus>                          
+                                <input id="name" type="text" class="form-control" name="solicitud" value="" required autofocus>                          
                             </div>
                        
                             <label for="name" class="col-md-2 col-form-label "> Evaluación del Comité Científico:</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="direccion" value="" required autofocus>
+                                <input id="name" type="text" class="form-control" name="evaComCien" value="" required autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Evaluación del CEI:</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="telefono" value="" required autofocus>                          
+                                <input id="name" type="text" class="form-control" name="evaluacionCEI" value="" required autofocus>                          
                             </div>
                         
                             <label for="name" class="col-md-2 col-form-label "> Acuerdo de Transferencia de Material:</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="telefono" value="" required autofocus> 
+                                <input id="name" type="text" class="form-control" name="acuTranMate" value="" required autofocus> 
                                                      
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Presupuesto:</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="telefono" value="" required autofocus>                          
+                                <input id="name" type="text" class="form-control" name="presupuesto" value="" required autofocus>                          
                             </div>
                         
                             <label for="name" class="col-md-2 col-form-label "> Factura:</label>
                             <div class="col-md-4">
-                                <input id="name" type="text" class="form-control" name="telefono" value="" required autofocus> 
+                                <input id="name" type="text" class="form-control" name="factura" value="" required autofocus> 
                                                      
                             </div>
                         </div>

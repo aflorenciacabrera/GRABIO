@@ -21,7 +21,6 @@ class CreateDepositantesTable extends Migration
             $table->string('nombContac');
             $table->string('avatar'); 
             $table->string('acuerdo');
-            
             $table->timestamps();
         });
     }
