@@ -22,6 +22,7 @@ class CesionController extends Controller
         $c->acuTranMate= $request->acuTranMate;
         $c->presupuesto= $request->presupuesto;
         $c->factura= $request->factura;
+    
         $c-> save();
 
         return redirect(url('deposito'));

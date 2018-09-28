@@ -24,9 +24,9 @@ class MuestraController extends Controller
       $m->capd = $request->capd;
       $m->cantidad = $request->cantidad;
       $m->concentracion = $request->concentracion;
-      $m->fecha_entrada = $request->fechaE;
-      $m->fecha_salida = $request->fechaS;
-      $m->localizacion = $request->observaciones;
+      $m->fechaE = $request->fechaE;
+      $m->fechaS = $request->fechaS;
+      $m->observaciones = $request->observaciones;
       $m->diagnostico = $request->diagnostico;
       $m->paciente_id = $request->paciente_id;
       $m->save();
