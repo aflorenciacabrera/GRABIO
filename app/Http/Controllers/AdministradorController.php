@@ -8,7 +8,5 @@ class AdministradorController extends Controller
 {
     //
 
-    
-
    
 }
