@@ -26,6 +26,7 @@ class PacienteController extends Controller
       // $p->grupo= $request->grupo;
       // $p->factor= $request->factor;
       $p->sexo= $request->sexo;
+      $p->consentimiento= $request->consentimiento;
 
       $p->save();
      // return view("institucion.mostrarCapacidad");

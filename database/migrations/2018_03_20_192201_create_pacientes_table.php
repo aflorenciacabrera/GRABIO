@@ -20,9 +20,9 @@ class CreatePacientesTable extends Migration
              $table->string('dni');
              $table->string('direccion');
              $table->string('telefono');
-             // $table->string('grupo');
-             // $table->string('factor');
+             
              $table->string('sexo');
+             $table->string('consentimiento');
             $table->timestamps();
         });
     }

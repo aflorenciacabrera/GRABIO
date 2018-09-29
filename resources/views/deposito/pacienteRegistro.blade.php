@@ -57,8 +57,8 @@
                                 <input id="name" type="text" class="form-control" name="consentimiento" value="" required autofocus>   
                                 </div>   --}}
                                  <select name="consentimiento" id="consentimiento">
-                                    <option value="femenino"> SI  </option>
-                                    <option value="masculino"> NO </option>
+                                    <option value="si"> SI  </option>
+                                    <option value="no"> NO </option>
                                 </select>                     
                             
                             

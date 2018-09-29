@@ -60,7 +60,8 @@
                         
                             <label for="name" class="col-md-2 col-form-label "> Sexo</label>
                             <div class="col-md-4">
-                                <select name="sexo" id="sexo">
+                                <select name="sexo" id="sexo" required>
+                                     <option value=""> -  </option>
                                     <option value="femenino"> Femenino </option>
                                     <option value="masculino"> Masculino </option>
                                 </select>
@@ -68,7 +69,15 @@
                             </div>
                         </div>
 
-                      
+                      <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label "> Consentimineto Informado</label>
+                           
+                                 <select name="consentimiento" id="consentimiento" required>
+                                    <option value=""> -  </option>
+                                    <option value="si"> SI  </option>
+                                    <option value="no"> NO </option>
+                                </select>                     
+                        </div>
 
                         <div class="panel-footer">
                             <button type="submit" class="btn btn-primary">
@@ -113,7 +122,9 @@
 
                             <div class="col-md-3">
                                 <select name="paciente_id" id="" required>
+                                       <option value=""> -  </option>
                                     @foreach ( $pacientes as $paciente)
+                                  
                                 <option value={{$paciente->id}}> {{$paciente->nombre}}</option>
                                     @endforeach
                                     
