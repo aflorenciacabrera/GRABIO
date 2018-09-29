@@ -9,7 +9,6 @@ class MuestraController extends Controller
 {
     //
       //Muestra
-
       public function muestraRegistro(){
          $pacientes = paciente::all();
       return view('deposito.muestraRegistro', compact('pacientes'));
