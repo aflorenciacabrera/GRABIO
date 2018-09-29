@@ -35,10 +35,7 @@ public function users()
   {
     return $this->belongsTo('User', 'id');
   }
-   public function pacientes()
-  {
-    return $this->belongsTo('paciente', 'id');
-  }
+   
 
  public function biobancos()
   {
