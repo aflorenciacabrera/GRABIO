@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use grabio\user;
 use grabio\biobanco;
+use grabio\paciente;
 
 class User extends Authenticatable
 {
@@ -33,6 +34,10 @@ class User extends Authenticatable
 public function users()
   {
     return $this->belongsTo('User', 'id');
+  }
+   public function pacientes()
+  {
+    return $this->belongsTo('paciente', 'id');
   }
 
  public function biobancos()

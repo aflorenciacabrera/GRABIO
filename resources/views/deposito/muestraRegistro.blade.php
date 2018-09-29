@@ -112,8 +112,11 @@
                         <label for="name" class="col-md-3 col-form-label "> Paciente:</label>
 
                             <div class="col-md-3">
-                                <select name="paciente_id" id="">
-                                    <option value="1">  Seleccione paciente</option>
+                                <select name="paciente_id" id="" required>
+                                    @foreach ( $pacientes as $paciente)
+                                <option value={{$paciente->id}}> {{$paciente->nombre}}</option>
+                                    @endforeach
+                                    
                                 </select>
                                
                             </div>

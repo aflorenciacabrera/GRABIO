@@ -9,6 +9,7 @@ class PacienteController extends Controller
 {
     //
     public function pacienteRegistro(){
+      $pacientes = paciente::all();
       return view('deposito.pacienteRegistro');
     }
 

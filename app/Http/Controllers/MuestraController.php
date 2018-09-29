@@ -3,7 +3,7 @@
 namespace grabio\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use grabio\paciente;
 use grabio\muestra;
 class MuestraController extends Controller
 {
@@ -11,7 +11,8 @@ class MuestraController extends Controller
       //Muestra
 
       public function muestraRegistro(){
-      return view('deposito.muestraRegistro');
+         $pacientes = paciente::all();
+      return view('deposito.muestraRegistro', compact('pacientes'));
     }
 
     public function crearMuestra (Request $request)

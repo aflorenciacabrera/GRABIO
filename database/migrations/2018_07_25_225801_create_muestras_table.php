@@ -26,7 +26,7 @@ class CreateMuestrasTable extends Migration
             $table->string('fechaS');
             $table->string('observaciones');
             $table->string('diagnostico');
-            $table->integer('paciente_id')->unsigned()->nullable();
+            $table->integer('paciente_id')->unsigned();
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
             $table->timestamps();
         });
