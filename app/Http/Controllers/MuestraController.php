@@ -4,6 +4,7 @@ namespace grabio\Http\Controllers;
 
 use Illuminate\Http\Request;
 use grabio\paciente;
+use grabio\depositante;
 use grabio\muestra;
 class MuestraController extends Controller
 {
@@ -11,7 +12,8 @@ class MuestraController extends Controller
       //Muestra
       public function muestraRegistro(){
          $pacientes = paciente::all();
-      return view('deposito.muestraRegistro', compact('pacientes'));
+          $depositantes = depositante::all();
+      return view('deposito.muestraRegistro', compact('pacientes'), compact('depositantes'));
     }
 
     public function crearMuestra (Request $request)
@@ -29,6 +31,7 @@ class MuestraController extends Controller
       $m->observaciones = $request->observaciones;
       $m->diagnostico = $request->diagnostico;
       $m->paciente_id = $request->paciente_id;
+       $m->depositante_id = $request->depositante_id;
       $m->save();
      // return view("institucion.mostrarCapacidad");
       return redirect(url('deposito'));
@@ -50,5 +53,21 @@ class MuestraController extends Controller
      // return view("institucion.mostrarCapacidad");
       return redirect(url('deposito/muestra'));
       }
+
+      
+      public function crearDepositanteMuestra(Request $request){
+        $d = new depositante;
+
+        $d->nombre= $request->nombre;
+        $d->correo= $request->correo;
+        $d->telefono= $request->telefono;
+        $d->nombContac= $request->nombContac;
+        $d->avatar= $request->avatar;
+        $d->acuerdo= $request->acuerdo;
+
+        $d-> save();
+
+        return redirect(url('deposito/muestra'));
+    }
 
 }

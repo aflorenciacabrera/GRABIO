@@ -14,7 +14,7 @@
         	<a href="{{url('deposito/depositante')}}" class="btn btn-default filter-button">Ingreso de Depositante</a>
         	<a href="{{url('deposito/paciente')}}" class="btn btn-default filter-button">Ingreso de Paciente</a>
         	<a href="{{url('deposito/muestra')}}" class="btn btn-default filter-button">Ingreso de Muestra</a>
-        	<a href="{{url('solicitud/muestra')}}" class="btn btn-default filter-button active">Cesión</a>
+        	<a href="{{url('solicitud/muestra')}}" class="btn btn-default filter-button active">Solicitud Cesión</a>
         	
           </div>
     <div class="row">
@@ -29,7 +29,7 @@
                        <th>Muestra</th>
                        <th>Paciente</th>
                        <th>Depositante</th>               
-                       
+                       <th>Cesión</th>
                      </thead>
                      <tbody>             
                       <tr>
