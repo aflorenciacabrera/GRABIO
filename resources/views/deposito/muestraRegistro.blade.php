@@ -24,7 +24,7 @@
                                     </div>
                                   </div>
                                    <div class="card-body">
-                    <form method="POST" action="{{url('deposito/paciente')}}">
+                    <form method="POST" action="{{url('deposito/pacimuestra')}}">
                         @csrf
 
                         <div class="form-group row">

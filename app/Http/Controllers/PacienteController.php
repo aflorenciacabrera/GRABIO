@@ -23,8 +23,7 @@ class PacienteController extends Controller
       $p->dni= $request->dni;
       $p->direccion= $request->direccion;
       $p->telefono= $request->telefono;
-      // $p->grupo= $request->grupo;
-      // $p->factor= $request->factor;
+      
       $p->sexo= $request->sexo;
       $p->consentimiento= $request->consentimiento;
 

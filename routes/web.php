@@ -50,6 +50,7 @@ Route::post('deposito/paciente','PacienteController@crearPaciente');
 //Muestras
 Route::get('deposito/muestra','MuestraController@muestraRegistro');
 Route::post('deposito/muestra','MuestraController@crearMuestra');
+Route::post('deposito/pacimuestra','MuestraController@crearPacienteMuestra'); 
 
 
 //Unidad de Almacenamiento

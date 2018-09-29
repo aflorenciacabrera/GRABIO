@@ -34,4 +34,21 @@ class MuestraController extends Controller
       return redirect(url('deposito'));
       }
 
+        public function crearPacienteMuestra (Request $request)
+      {
+        $p = new paciente; 
+
+      $p->nombre= $request->nombre;
+      $p->apellido= $request->apellido;
+      $p->dni= $request->dni;
+      $p->direccion= $request->direccion;
+      $p->telefono= $request->telefono;
+      $p->sexo= $request->sexo;
+      $p->consentimiento= $request->consentimiento;
+
+      $p->save();
+     // return view("institucion.mostrarCapacidad");
+      return redirect(url('deposito/muestra'));
+      }
+
 }
