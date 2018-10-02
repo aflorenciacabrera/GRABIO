@@ -51,9 +51,7 @@ class HomeController extends Controller
            
         if(Auth::user()->hasRole('responsable')){
           
-
            $users = User::all()->take(10);
-
 
         return view('responsable.principal', compact('users'));
 
@@ -273,9 +271,7 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
       return view('almacenamiento.posiciones');
     }
 
-    public function corte(){
-      return view('viales.corteMuestra');
-    }
+    
 
     
 

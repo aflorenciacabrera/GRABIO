@@ -10,12 +10,15 @@
         <div align="center">
         	
 		    <select name="" id="">
-		    	<option value="">seleccionar muestas</option>
+				
+				<option value="">seleccionar muestas</option>
+				@foreach ($muestras as $muestra)
+					<option value="{{$muestra->id}}">{{$muestra->muestra}}</option>
+				@endforeach
 		    </select>
 		    <select name="" id="">
 		    	<option value="">seleccionar Vial</option>
 		    </select>
-		    
 		   
 		   	<label for=""></label>
                <input   type="number"  name="" min="0.00" max="10000.00" step="0.01" placeholder="N° de Corte" />

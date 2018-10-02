@@ -68,7 +68,7 @@ Route::post('almacenamiento/tanque','HomeController@crearTanque');
 //Posiciones
 Route::get('/almacenamiento/posiciones','HomeController@posiciones');
 //Corte de las muestras
-Route::get('viales/corte','HomeController@corte');
+Route::get('viales/corte','VialController@corte');
 
 //Historicos
 Route::get('/historico','HomeController@historico');
