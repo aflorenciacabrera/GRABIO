@@ -31,7 +31,8 @@ class VialController extends Controller
       }
 
        public function operaciones(){
-      return view('operaciones');
-    }
+          $muestras = muestra::all();
+      return view('operaciones',compact('muestras'));
+       }
 
 }

@@ -5,24 +5,25 @@
 	<div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
             <h1 class="gallery-title text-center">Operaciones</h1> 
      </div>
-        {{-- <div align="center">
-     
-		</div> --}}
-		 <form method="POST" action="{{url('#')}}">
-                        @csrf
+        
+		 {{-- <form method="POST" action="{{url('#')}}">
+						@csrf
+		 --}}
+
 		<button class="pull-right" type="submit" class="btn btn-success">{{ __('Guardar') }} </button>
 		<h3 class="page-header">Viales</h3>
-
-		<table class="table  table-bordered">
-			<thead>
-				<tr>
-				<th>  <select name="" id=""><option value="">seleccionar Vial</option></select></th>
-				<th><label for="">Muestras:</label>  </th>
-				<th> <button  type="submit" class="btn btn-success ">{{ __('Ver') }} </button></th>
-				</tr>
-			</thead>
-		</table>
- 		
+		<div align="center">
+		
+				 <select name="" id="">
+					 <option value="">seleccionar muestra</option>
+					 @foreach ($muestras as $muestra)
+					<option value="{{$muestra->id}}">{{$muestra->muestra}}</option>
+					@endforeach
+				</select>
+				{{-- <th><label for="">Muestras:</label>  </th> --}}
+				 <button  type="submit" class="btn btn-default ">{{ __('Ver detalles') }} </button>
+				<br></br>
+ 		</div>
 
         <div class="gallery center col-md-18 col-md-offset-0">
     <div class="row">
