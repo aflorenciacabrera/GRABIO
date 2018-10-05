@@ -15,22 +15,22 @@ class Roletableseeder extends Seeder
     public function run()
     {
         $role              = new Role();
-        $role->name        = 'admin';
+        $role->name        = 'Admin';
         $role->description = 'Administrador';
         $role->save();
         
         $role              = new Role();
-        $role->name        = 'responsable';
+        $role->name        = 'Responsable';
         $role->description = 'Responsable';
         $role->save();
         
         $role               = new Role();
-        $role->name         = 'investigador';
+        $role->name         = 'Investigador';
         $role ->description = 'Investigador';
         $role->save(); 
 
         $role               = new Role();
-        $role -> name       = 'tecnico';
+        $role -> name       = 'Técnico';
         $role->description  = 'Técnico';
         $role -> save();
 

@@ -16,17 +16,17 @@ class Usertableseeder extends Seeder
    public function run()
     {
     
-    $role_admin  = Role::where('name', 'admin')->first();
-    $role_tecnico = Role::where('name', 'tecnico')->first();
-    $role_responsable = Role::where('name', 'responsable')->first();
-    $role_investigador = Role::where('name','investigador')->first();
+    $role_admin  = Role::where('name', 'Admin')->first();
+    $role_tecnico = Role::where('name', 'Técnico')->first();
+    $role_responsable = Role::where('name', 'Responsable')->first();
+    $role_investigador = Role::where('name','Investigador')->first();
 
 
     $admin = new User();
     $admin->avatar = 'default.jpg';
     $admin->name = 'Manager Name';
     $admin->email = 'admin@example.com';
-    $admin->rol = 'admin';
+    $admin->rol = 'Admin';
     $admin->nombre = 'Florencia';
     $admin->apellido = 'Cabrera';
     $admin->telefono = '3795053426';
@@ -42,7 +42,7 @@ class Usertableseeder extends Seeder
     $responsable->avatar = 'default.jpg';
     $responsable->name='Responsable';
     $responsable->email = 'respo@example.com';
-    $responsable->rol = 'responsable';
+    $responsable->rol = 'Responsable';
     $responsable->nombre = 'Ivan';
     $responsable->apellido = 'Sambrana';
     $responsable->telefono = '3795053430';
@@ -60,7 +60,7 @@ class Usertableseeder extends Seeder
     $tecnico->avatar = 'default.jpg';
     $tecnico->name = 'Tecnico'; 
     $tecnico->email = 'tecnico@example.com';
-    $tecnico->rol = 'tecnico';
+    $tecnico->rol = 'Técnico';
     $tecnico->nombre = 'Andrea';
     $tecnico->apellido = 'Cabrera';
     $tecnico->telefono = '3795053426';
@@ -76,7 +76,7 @@ class Usertableseeder extends Seeder
      $investigador->avatar = 'default.jpg';
     $investigador->name = 'Investigador';
     $investigador->email = 'investi@example.com';
-    $investigador->rol = 'investigador';
+    $investigador->rol = 'Investigador';
     $investigador->nombre = 'Veronica';
     $investigador->apellido = 'Tribbia';
     $investigador->telefono = '3795053426';
