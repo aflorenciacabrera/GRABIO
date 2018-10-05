@@ -30,4 +30,8 @@ class VialController extends Controller
       return redirect(url('viales.corteMuestra'));
       }
 
+       public function operaciones(){
+      return view('operaciones');
+    }
+
 }

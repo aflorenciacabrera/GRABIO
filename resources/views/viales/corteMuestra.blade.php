@@ -16,7 +16,10 @@
 					<option value="{{$muestra->id}}">{{$muestra->muestra}}</option>
 				@endforeach
 				</select>
-				<div class="pull-right"><a href="#paciente"  class="btn  btn-success  right" type='button'  data-toggle="modal" >  Aceptar </a></div> 
+				{{-- <div class="pull-right"><a href=""  class="btn  btn-success  right" type='button'  data-toggle="modal" >  Aceptar </a></div>  --}}
+				 <button class="pull-right" type="submit" class="btn btn-primary">
+                                {{ __('Aceptar') }}
+                            </button>
 		    {{-- <select name="" id="">
 		    	<option value="">seleccionar Vial</option>
 		    </select> --}}
@@ -90,11 +93,12 @@
 	
 	</div>
 </div>
- <div align="center">
+ {{-- <div align="center">
         	
 		 <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="">
 		    Guardar</button> 
-</div></div>
+</div> --}}
+</div>
 <script>	
 $(document).ready(function(){
     $('.editbtn').click(function(){

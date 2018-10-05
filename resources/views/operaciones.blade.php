@@ -5,13 +5,24 @@
 	<div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
             <h1 class="gallery-title text-center">Operaciones</h1> 
      </div>
-        <div align="center">
-        	
-		    
-          
-        </div>
+        {{-- <div align="center">
+     
+		</div> --}}
+		 <form method="POST" action="{{url('#')}}">
+                        @csrf
+		<button class="pull-right" type="submit" class="btn btn-success">{{ __('Guardar') }} </button>
+		<h3 class="page-header">Viales</h3>
 
-        <h3 class="page-header">Viales</h3>
+		<table class="table  table-bordered">
+			<thead>
+				<tr>
+				<th>  <select name="" id=""><option value="">seleccionar Vial</option></select></th>
+				<th><label for="">Muestras:</label>  </th>
+				<th> <button  type="submit" class="btn btn-success ">{{ __('Ver') }} </button></th>
+				</tr>
+			</thead>
+		</table>
+ 		
 
         <div class="gallery center col-md-18 col-md-offset-0">
     <div class="row">
@@ -76,7 +87,7 @@
 			
 	
 	</div>
-</div>
+</div></form>
 		 {{-- <div align="center">
 		        	
 				 <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="">

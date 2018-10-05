@@ -73,7 +73,8 @@ Route::get('viales/corte','VialController@corte');
 //Historicos
 Route::get('/historico','HomeController@historico');
 //Operaciones
-Route::get('/operaciones','HomeController@operaciones');
+Route::get('/operaciones','VialController@operaciones');
+Route::post('/operaciones','VialController@');
 
 //cesion
 Route::get('deposito/cesion','CesionController@cesion');
