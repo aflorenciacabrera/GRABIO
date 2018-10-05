@@ -15,13 +15,14 @@
 				@foreach ($muestras as $muestra)
 					<option value="{{$muestra->id}}">{{$muestra->muestra}}</option>
 				@endforeach
-		    </select>
-		    <select name="" id="">
+				</select>
+				<div class="pull-right"><a href="#paciente"  class="btn  btn-success  right" type='button'  data-toggle="modal" >  Aceptar </a></div> 
+		    {{-- <select name="" id="">
 		    	<option value="">seleccionar Vial</option>
-		    </select>
+		    </select> --}}
 		   
 		   	<label for=""></label>
-               <input   type="number"  name="" min="0.00" max="10000.00" step="0.01" placeholder="N° de Corte" />
+               <input   type="number"  name="" min="0" max="10000" step="1" placeholder="Corte" />
           
         </div>
 

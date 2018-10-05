@@ -4,9 +4,7 @@ namespace grabio;
 
 use Illuminate\Database\Eloquent\Model;
 
-class vial extends Model
+class corte extends Model
 {
     //
-
-    
 }

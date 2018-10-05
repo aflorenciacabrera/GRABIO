@@ -47,8 +47,9 @@
                                               
                       @else
 
-                                                
-                           <div class="col-md-8 col-md-offset-2" > <p> <h4> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h4> </p></div>
+                             
+                           {{-- <div class=" pull-right" > <p> <h4> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h4> </p></div>
+                <br></br> --}}
                           <ul class="navbar-nav ml-auto navbar-right ">
                               
                                <div class="row" style="padding-top:10px"> 
@@ -57,7 +58,8 @@
 
                                   <div class="btn-group">
                                       
-                                       <span class="pull-right"> 
+                                       <span class="pull-right">
+                                         <p> <h5> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h5> </p> 
                                          <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
                                       <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a>
                                       <a  class="btn btn-sm btn-default" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }} <i class="glyphicon glyphicon-share"></i></a>

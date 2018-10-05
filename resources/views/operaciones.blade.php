@@ -26,22 +26,23 @@
 			          <th>Concentración</th>
 			          <th>Fecha de Entrada</th>
 			          <th>Fecha de Salida</th>
-			          <th>Localización</th>
+			          <th>Órgano</th>
 			          <th>Diagnóstico</th>
 			          <th>Ceder a Receptor</th>
 			          
 			        </tr>
 			      </thead>
 			      <tbody>
+					
 			        <tr>
-			          <th scope="row">V 1</th>
-			          	  <td><input type="text" name="" class="form-control"></td>
-				          <td><input type="text" name="" class="form-control"></td>
-				          <td><input type="text" name="" class="form-control"></td>
-				          <td><input type="text" name="" class="form-control"></td>
-				          <td><input type="text" name="" class="form-control"></td>
-				          <td><input type="text" name="" class="form-control"></td>
-				          <td><input type="text" name="" class="form-control"></td>
+			          <th scope="row">V <label for="">1</label></th>
+			          	  <td><input type="text" name="naturaleza" class="form-control"></td>
+				          <td><input type="text" name="cantidad" class="form-control"></td>
+				          <td><input type="text" name="concentracion" class="form-control"></td>
+				          <td><input type="text" name="fecha_entrada" class="form-control"></td>
+				          <td><input type="text" name="fecha_salida" class="form-control"></td>
+				          <td><input type="text" name="organo" class="form-control"></td>
+				          <td><input type="text" name="diagnostico" class="form-control"></td>
 				         <td><button class="editbtn">Ceder</button></td>
 				         
 			        </tr>
