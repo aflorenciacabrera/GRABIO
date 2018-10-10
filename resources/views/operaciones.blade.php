@@ -102,6 +102,8 @@ $(document).ready(function(){
         $(this).html($(this).html() == 'Guardar' ? 'Ceder' : 'Guardar');
     });
 });
-       </script> --}}
+	   </script> --}}
+	   
+	   
            
 @endsection

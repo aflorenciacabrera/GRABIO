@@ -42,4 +42,20 @@ class VialController extends Controller
       return view('operaciones',compact('muestras'));
        }
 
+       public function editvial(Request $request){
+
+         $vial =vial::findOrFail($request->id);  
+
+        $vial->naturaleza = $request->naturaleza;
+        $vial->concentracion = $request->concentracion;
+        $vial->fecha_entrada = $request->fecha_entrada;
+        $vial->fecha_salida = $request->fecha_salida;
+        $vial->organo = $request->organo;
+        $vial->diagnostico = $request->diagnostico;
+
+        $vial->save();
+
+       return redirect(url('viales/corte'));
+       }
+
 }
