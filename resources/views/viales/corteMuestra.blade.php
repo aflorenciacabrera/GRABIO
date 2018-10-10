@@ -3,15 +3,16 @@
 @section('content')
 
 
-<div class="col-md-8 col-md-offset-0" class="text-center" > 
+<div class="col-md-10 col-md-offset-0" class="text-center" > 
 	<div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
             <h1 class="gallery-title text-center">Selección de Muestra para Corte</h1> 
      </div>
         <div align="center">
-        	
-		    <select name="" id="">
+        	<form method="POST" action="{{url('viales/corte')}}">
+						@csrf
+		    <select name="muestra_id" id="muestra" required>
 				
-				<option value="">seleccionar muestas</option>
+				<option value="">-</option>
 				@foreach ($muestras as $muestra)
 					<option value="{{$muestra->id}}">{{$muestra->muestra}}</option>
 				@endforeach
@@ -25,7 +26,7 @@
 		    </select> --}}
 		   
 		   	<label for=""></label>
-               <input   type="number"  name="" min="0" max="10000" step="1" placeholder="Corte" />
+               <input   type="number"  name="cantidad" min="0" max="10000" step="1" placeholder="Corte" />
           
         </div>
 
@@ -34,59 +35,52 @@
         <div class="gallery center col-md-18 col-md-offset-0">
     <div class="row">
 		
-    	    <h1 class="page-header"></h1>
+			  @if($viales->count())  
+			
+			<h1 class="page-header"></h1>
+			@foreach ($viales as $vial)
+			
             <table class="table table-stripped table-bordered">
 			      <thead>
 			        <tr>
 			          <th>#</th>
 			          <th>Naturaleza</th>
-			          <th>Cantidad</th>
+			          {{-- <th>Cantidad</th> --}}
 			          <th>Concentración</th>
 			          <th>Fecha de Entrada</th>
 			          <th>Fecha de Salida</th>
 			          <th>Órgano</th>
 			          <th>Diagnóstico</th>
-			          
+			          <th>Ceder a Receptor</th>
+			          <th>Editar</th>
 			        </tr>
 			      </thead>
 			      <tbody>
+					
+					
+				
 			        <tr>
-			          <th scope="row">V 1</th>
-			          	  <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				         
-				         
-			        </tr>
-
-			        <tr>
-			          <th scope="row">V 2</th>
-			          	  <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
+			          <th scope="row">V <label for="">{{$vial->id}}</label></th>
+			          	  <td><label for="">{{$vial->naturaleza}}</label></td>
+						 <td><label for="">{{$vial->concentracion}}</label></td>
+						  <td><label for="">{{$vial->fecha_entrada}}</label></td>
+						   <td><label for="">{{$vial->fecha_salida}}</label></td>
+							<td><label for="">{{$vial->organo}}</label></td>
+							  <td><label for="">{{$vial->diagnostico}}</label></td>
 				          
-				          
-			        </tr>
-			        <tr>
-			          <th scope="row">V 3</th>
-			          	  <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
-				          <td></td>
+						 <td><button class="editbtn">Ceder</button></td>
+						  <td><button class="editbtn">Editar</button></td>
 				         
-				        
-			        </tr>
+			        </tr>	
+					@endforeach
+					
+						
+					@else
+						<tr>
+							<td colspan="8">No hay registrados de viales !!</td>
+						</tr>
+							
+			        	@endif
 			      </tbody>
     		</table>
 			
@@ -98,7 +92,7 @@
 		 <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="">
 		    Guardar</button> 
 </div> --}}
-</div>
+</div></form>
 <script>	
 $(document).ready(function(){
     $('.editbtn').click(function(){

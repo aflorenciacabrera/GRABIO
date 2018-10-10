@@ -132,6 +132,7 @@ class HomeController extends Controller
       return redirect(url('/perfil'));
 
     }
+   
      public function subir_imagen(Request $request){
       if($request->hasFile('avatar')){
         $avatar = $request->file('avatar');

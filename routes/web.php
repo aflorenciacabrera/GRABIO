@@ -69,7 +69,7 @@ Route::post('almacenamiento/tanque','HomeController@crearTanque');
 Route::get('/almacenamiento/posiciones','HomeController@posiciones');
 //Corte de las muestras
 Route::get('viales/corte','VialController@corte');
-
+Route::post('viales/corte','VialController@crearvial');
 //Historicos
 Route::get('/historico','HomeController@historico');
 //Operaciones

@@ -5,18 +5,24 @@ namespace grabio\Http\Controllers;
 use Illuminate\Http\Request;
 use grabio\muestra;
 use grabio\vial;
+use DB;
 class VialController extends Controller
 {
     //
 
     public function corte(){
         $muestras = muestra::all();
-      return view('viales.corteMuestra', compact('muestras') );
+        $viales = vial::all();
+      return view('viales.corteMuestra', compact('muestras'),  compact('viales') );
     }
 
-     public function crearMuestra (Request $request)
+     public function crearvial (Request $request)
       { 
-        $v = new vial; 
+     
+       
+       for ($i=0; $i < $request->cantidad ; $i++) {       
+          $v = new vial; 
+        $v->muestra_id = $request->muestra_id;
         $v->naturaleza = $request->naturaleza;
         $v->cantidad = $request->cantidad;  
         $v->concentracion = $request->concentracion;
@@ -26,8 +32,9 @@ class VialController extends Controller
         $v->diagnostico = $request->diagnostico;
 
       $v->save();
-     // return view("institucion.mostrarCapacidad");
-      return redirect(url('viales.corteMuestra'));
+        }
+
+      return redirect(url('viales/corte'));
       }
 
        public function operaciones(){

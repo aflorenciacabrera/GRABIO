@@ -16,13 +16,13 @@ class CreateVialsTable extends Migration
 
         Schema::create('vials', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('naturaleza');
+            $table->string('naturaleza')->nullable();
             $table->string('cantidad');
-            $table->string('concentracion');
-            $table->string('fecha_entrada');
-            $table->string('fecha_salida');
-            $table->string('organo');
-            $table->string('diagnostico');
+            $table->string('concentracion')->nullable();
+            $table->string('fecha_entrada')->nullable();
+            $table->string('fecha_salida')->nullable();
+            $table->string('organo')->nullable();
+            $table->string('diagnostico')->nullable();
             $table->integer('muestra_id')->unsigned();
             $table->foreign('muestra_id')->references('id')->on('muestras')->onDelete('cascade');
             $table->timestamps();
