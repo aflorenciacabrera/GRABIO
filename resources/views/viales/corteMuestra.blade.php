@@ -12,7 +12,7 @@
 						@csrf
 		    <select name="muestra_id" id="muestra" required>
 				
-				<option value="">-</option>
+				<option value="">Seleccionar Muestra</option>
 				@foreach ($muestras as $muestra)
 					<option value="{{$muestra->id}}">{{$muestra->muestra}}</option>
 				@endforeach
