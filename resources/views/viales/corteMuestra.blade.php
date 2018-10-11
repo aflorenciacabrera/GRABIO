@@ -115,7 +115,7 @@
 							  <td><label for="">{{$vial->diagnostico}}</label></td>
 				          
 						 <td><button class="editbtn">Ceder</button></td>
-						  <td><a href="#edit{{$vial->id}}"  class="btn  btn-warning  right" type='button'  data-toggle="modal" >   <i class="glyphicon glyphicon-edit"></i></a>
+						  <td><a href="{{ url('viales/corte/editar') }}"  class="btn  btn-warning  right" type='button'   >   <i class="glyphicon glyphicon-edit"></i></a>
 							  </td>
 
 			        </tr>	
