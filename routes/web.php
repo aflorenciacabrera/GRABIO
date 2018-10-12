@@ -70,7 +70,8 @@ Route::get('/almacenamiento/posiciones','HomeController@posiciones');
 //Corte de las muestras
 Route::get('viales/corte','VialController@corte');
 Route::post('viales/corte','VialController@crearvial');
-Route::get('viales/corte/editar','VialController@editvial');
+Route::get('viales/corte/editar/','VialController@editvial');
+Route::put('viales/corte/editar/{id}','VialController@editarvial');
 //Historicos
 Route::get('/historico','HomeController@historico');
 //Operaciones

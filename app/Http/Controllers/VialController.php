@@ -17,14 +17,16 @@ class VialController extends Controller
     }
 
     public function editvial(){
-       
-      return view('viales.editarCorte' );
+      // $viales = vial::findOrFail($id);
+      //   return view('viales.editarCorte',array("vial"=>$viales)); 
+       $muestras = muestra::all(); 
+        $viales = vial::all();
+      return view('viales.editarCorte', compact('muestras'),  compact('viales') );
     }
 
      public function crearvial (Request $request)
       { 
-     
-       
+
        for ($i=0; $i < $request->cantidad ; $i++) {       
           $v = new vial; 
         $v->muestra_id = $request->muestra_id;
