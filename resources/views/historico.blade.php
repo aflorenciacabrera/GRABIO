@@ -64,7 +64,9 @@
 			    </tbody>
 			        
 			</table>
-
+<div class=" "  align="center">
+                           
+                        
 				<div class="clearfix"></div>
 				<ul class="pagination center">
 				  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
@@ -75,6 +77,7 @@
 				  <li><a href="#">5</a></li>
 				  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
 				</ul>     
+				</div>
             </div>
         </div>
 	</div>
