@@ -3,7 +3,7 @@
 @section('content')
 
 		<div class="col-md-8 col-md-offset-0" class="text-center" >
-            <h1 class="gallery-title text-center">Historial</h1> 
+            <h1 class="gallery-title text-center">historial</h1> 
             <div class="container">
 	<div class="row">
 
