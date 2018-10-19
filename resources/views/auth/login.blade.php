@@ -65,7 +65,8 @@
                                     {{ __('Login') }}
                                 </button>
                                 <span class="pull-right">                        
-                            <a href="{{ url('/') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
+                            <a href="{{ url('/') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button" type="button" class="btn  btn-danger  ">Cancelar
+                                <i class="glyphicon glyphicon-share-alt"></i></a>
                             </span>
 
                                 {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
