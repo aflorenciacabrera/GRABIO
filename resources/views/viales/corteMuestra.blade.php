@@ -107,15 +107,15 @@
 				
 			        <tr>
 			          <th scope="row">V <label for="">{{$vial->id}}</label></th>
-			          	  <td><label for="">{{$vial->naturaleza}}</label></td>
-						 <td><label for="">{{$vial->concentracion}}</label></td>
-						  <td><label for="">{{$vial->fecha_entrada}}</label></td>
-						   <td><label for="">{{$vial->fecha_salida}}</label></td>
-							<td><label for="">{{$vial->organo}}</label></td>
-							  <td><label for="">{{$vial->diagnostico}}</label></td>
+			          	  <td> {{$vial->naturaleza}}</td>
+						 <td>{{$vial->concentracion}}</td>
+						  <td>{{$vial->fecha_entrada}}</td>
+						   <td>{{$vial->fecha_salida}}</td>
+							<td>{{$vial->organo}}</td>
+							  <td>{{$vial->diagnostico}}</td>
 				          
 						 <td><button class="editbtn">Ceder</button></td>
-						  <td><a href="{{ url('viales/corte/editar') }}"  class="btn  btn-warning  right" type='button'   >   <i class="glyphicon glyphicon-edit"></i></a>
+						  <td><a href="{{ url('viales/corte/editar/'.$vial->id) }}"  class="btn  btn-warning  right" type='button'   >   <i class="glyphicon glyphicon-edit"></i></a>
 							  </td>
 
 			        </tr>	

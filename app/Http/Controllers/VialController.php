@@ -16,17 +16,31 @@ class VialController extends Controller
       return view('viales.corteMuestra', compact('muestras'),  compact('viales') );
     }
 
-    public function editvial(){
-      // $viales = vial::findOrFail($id);
-      //   return view('viales.editarCorte',array("vial"=>$viales)); 
+
+    public function editarvial($id){
        $muestras = muestra::all(); 
-        $viales = vial::all();
-      return view('viales.editarCorte', compact('muestras'),  compact('viales') );
+      $vial = vial::findOrFail($id);
+     
+      return view('viales.editarCorte',array("vial"=>$vial), compact('muestras')); 
+      // return view('viales.editarCorte', compact('muestras'),  compact('viales') );
+    }
+
+    public function editar(Request $request, $id){
+        $v = vial::findOrFail($id);
+        
+        $v->naturaleza = $request->naturaleza;
+        $v->concentracion = $request->concentracion;
+        $v->fecha_entrada = $request->fecha_entrada;
+        $v->fecha_salida = $request->fecha_salida;
+        $v->organo = $request->organo;
+        $v->diagnostico = $request->diagnostico;
+
+        $v->save();
+        return redirect(url('viales/corte'));
     }
 
      public function crearvial (Request $request)
       { 
-
        for ($i=0; $i < $request->cantidad ; $i++) {       
           $v = new vial; 
         $v->muestra_id = $request->muestra_id;
@@ -44,10 +58,16 @@ class VialController extends Controller
       return redirect(url('viales/corte'));
       }
 
-       public function operaciones(){
-          $muestras = muestra::all();
-      return view('operaciones',compact('muestras'));
-       }
+       
+
+    //     public function vial()
+    // {
+    //      $vial = vial::orderBy('id');//->take(10)->get();->paginate(10)
+    //     return view('viales.editarCorte',array('viales.editarCorte'=>$vial));
+        
+    // }
+
+
 
        
 
