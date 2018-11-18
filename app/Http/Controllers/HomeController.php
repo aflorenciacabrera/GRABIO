@@ -193,7 +193,7 @@ public function activar($tipo,$user){
         
         $user->estado = 0;
         $user->save();
-return back()->with('suspendido','Usuario '.$user->name .' suspendido');;
+return back()->with('suspendido','Usuario '.$user->name .' suspendido');
 
     }
 
