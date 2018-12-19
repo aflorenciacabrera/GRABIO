@@ -66,7 +66,13 @@ class VialController extends Controller
     //     return view('viales.editarCorte',array('viales.editarCorte'=>$vial));
         
     // }
+  public function historico(){
+      return view('historico');
+    }
 
+    public function operaciones(){
+      return view('operaciones');
+    }
 
 
        

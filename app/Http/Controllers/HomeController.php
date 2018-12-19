@@ -203,13 +203,7 @@ return back()->with('suspendido','Usuario '.$user->name .' suspendido');
     }
   
      
-    public function historico(){
-      return view('historico');
-    }
-
-    public function operaciones(){
-      return view('operaciones');
-    }
+  
 
 
 

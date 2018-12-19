@@ -73,10 +73,10 @@ Route::post('viales/corte','VialController@crearvial');
 Route::get('viales/corte/editar/{id}','VialController@editarvial');
 Route::put('viales/corte/editar/{id}','VialController@editar');
 //Historicos
-Route::get('/historico','HomeController@historico');
+Route::get('/historico','VialController@historico');
 //Operaciones
 Route::get('/operaciones','VialController@operaciones');
-Route::post('/operaciones','VialController@');
+// Route::post('/operaciones','VialController@');
 
 //cesion
 Route::get('deposito/cesion','CesionController@cesion');

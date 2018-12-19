@@ -70,19 +70,19 @@ $(document).ready(function(){
 });
        </script>
 
-
+{{-- 
        <table class="table table-header-rotated">
   <thead>
     <tr>
       <!-- First column header is not rotated -->
       <th></th>
       <!-- Following headers are rotated -->
-      <th class="rotate"><div><span> 1</span></div></th>
-        <th class="rotate"><div><span> 2</span></div></th>
-        <th class="rotate"><div><span> 3</span></div></th>
-        <th class="rotate"><div><span> 4</span></div></th>
-        <th class="rotate"><div><span>  5</span></div></th>
-        <th class="rotate"><div><span>  6</span></div></th>
+      <th class="rotate"><div><span> A</span></div></th>
+        <th class="rotate"><div><span> B</span></div></th>
+        <th class="rotate"><div><span> C</span></div></th>
+        <th class="rotate"><div><span> D</span></div></th>
+        <th class="rotate"><div><span>  E</span></div></th>
+        <th class="rotate"><div><span>  F</span></div></th>
     </tr> 
   </thead>
   <tbody>
@@ -114,6 +114,6 @@ $(document).ready(function(){
       <td><input checked="checked" name="column6[]" type="radio" value="row3-column6"></td>
     </tr>
   </tbody>
-</table>
+</table> --}}
 </div></div>
 @endsection
