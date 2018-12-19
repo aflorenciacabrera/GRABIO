@@ -58,51 +58,56 @@
                                 <input id="name" type="text" class="form-control" name="diagnostico" value="{{$vial->diagnostico}}"  autofocus>                          
                             </div>
 <br><br><br>
-                        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
-                                <h3 class="gallery-title text-center ">Datos de muestra vinculada  </h3> 
-                            @foreach ($muestras as $muestra)                  
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="form-group"> 
-                                
-                                <table class="table table-user-information">   
-                                <tbody> 
-                                <tr>         
-                                    <td><label>Muestra:</label></td>
-                                    <td> {{$muestra->muestra}}</td> 
-                                    <td><label>Órgano:</label></td>
-                                    <td> {{$muestra->organo}}</td>
-                                     <td><label>Fecha de Cirugía:</label></td>
-                                    <td>{{$muestra->fechaCiru}}</td>
-                                     <td><label>Naturaleza:</label></td>
-                                    <td>{{$muestra->naturaleza}}</td>
-                                </tr> 
-                                <p></p>
-                                <tr>         
-                                    <td><label>Código de Anatomía Patológica Diagnóstico:</label></td>
-                                    <td>{{$muestra->capd}}</td>
-                                    <td><label> Cantidad:</label></td>
-                                    <td>{{$muestra->cantidad}}</td>
-                                    <td><label>Concentración:</label></td>
-                                    <td>{{$muestra->concentracion}}</td>
-                                     </tr> 
-                                    <tr>
-                                    <td><label> Fecha de Entrada:</label></td>
-                                    <td>{{$muestra->fechaE}}</td>
-                                    <td><label>Fecha de Salida:</label></td>
-                                    <td>{{$muestra->fechaS}}</td>
-                                    <td><label>Observaciones:</label></td>
-                                    <td>{{$muestra->observaciones}}</td>
-                                    <td><label> Diagnóstico:</label></td>
-                                    <td>{{$muestra->diagnostico}}</td>              
-                                </tr> 
-                                </tbody>
-                                </table>
-                                    
-                            </div></div></div>
+                       
 
+ <div class="container ">
+             <div  align="center" >            
+<div class="col-md-5 col-md-offset-3">
+    <div class="form-area">  
+        <form role="form">
+        <br style="clear:both">
+        <hr>
+                    <h3 style="margin-bottom: 25px; text-align: center; gallery-title ">Datos de muestra vinculada</h3>
+                     <hr>  @foreach ($muestras as $muestra)   
+                        <div class="form-group">
+                            <label>Muestra:</label> {{$muestra->muestra}}
                         </div>
-                         @endforeach
+                        <div class="form-group">
+                             <label>Órgano:</label> {{$muestra->organo}}
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de Cirugía:</label> {{$muestra->fechaCiru}}
+                        </div>
+                        <div class="form-group">
+                            <label>Naturaleza:</label> {{$muestra->naturaleza}}
+                        </div>
+                        <div class="form-group">
+                            <label>Código de Anatomía Patológica Diagnóstico:</label> {{$muestra->capd}} 
+                        </div>
+                        <div class="form-group">             
+                            <label> Cantidad:</label> {{$muestra->cantidad}} 
+                        </div>
+                        <div class="form-group">            
+                             <label>Concentración:</label>  {{$muestra->concentracion}} 
+                        </div>
+                        <div class="form-group">             
+                             <label> Fecha de Entrada:</label> {{$muestra->fechaE}} 
+                        </div>
+                        <div class="form-group">         
+                             <label>Fecha de Salida:</label>  {{$muestra->fechaS}}
+                        </div>
+                        <div class="form-group">         
+                             <label>Observaciones:</label> {{$muestra->observaciones}}
+                        </div>
+                        <div class="form-group">         
+                             <label> Diagnóstico:</label> {{$muestra->diagnostico}}                         
+                        </div>
+             @endforeach 
+        
+        </form>
+    </div>
+</div>
+</div></div>
                         </div>
 
                          </div>
